@@ -10,6 +10,4 @@ class Bulbasaur extends Pokemon
   {
     echo "Bulbasaur Attacking!!";
   }
-  
 }
-

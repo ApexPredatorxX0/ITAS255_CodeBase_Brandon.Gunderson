@@ -57,4 +57,3 @@ class Pokemon {
     echo "Base class, no attack";
   }
 }
-?>
