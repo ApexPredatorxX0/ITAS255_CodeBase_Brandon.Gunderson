@@ -10,4 +10,4 @@ COPY . /var/www/html
 #
 # And then to run and be able to edit files, we use a volume:
 #
-# docker run --rm -it --volume $(pwd):/var/www/html -p 8080:80 apachephp
+# docker run --rm -it --volume "$(pwd):/var/www/html" -p 8080:80 apachephp

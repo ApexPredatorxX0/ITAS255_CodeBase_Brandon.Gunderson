@@ -1,20 +1,20 @@
 <!doctype html>
 <html>
+
 <head>
     <meta charset="utf-8">
     <title>Pokemon Nanaimo Map!</title>
-    <script
-        src="https://code.jquery.com/jquery-3.4.1.min.js"
-        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
-        crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous">
     </script>
     <script>
-
         var map;
         var myMarkers = [];
 
         function initMap() {
-            var nanaimo = {lat: 49.159700, lng: -123.907750};
+            var nanaimo = {
+                lat: 49.159700,
+                lng: -123.907750
+            };
             map = new google.maps.Map(document.getElementById('map'), {
                 zoom: 13,
                 center: nanaimo
@@ -29,25 +29,25 @@
             myMarkers = [];
         }
 
-        $(document).ready(function () {
+        $(document).ready(function() {
 
             console.log("Document ready!");
 
-            $('#reset').click(function () {
+            $('#reset').click(function() {
 
                 // remove any previous markers
                 clearMarkers();
 
                 var url = 'getPokemon.php?reset=true';
                 var data = {};
-                $.getJSON(url, data, function (data, status) {
+                $.getJSON(url, data, function(data, status) {
                     console.log("Back from the reset");
                     var showData = $('#show-data');
                     showData.text("Session Reset");
                 });
             });
 
-            $('#get-data').click(function () {
+            $('#get-data').click(function() {
 
                 // remove any previous markers
                 // DC: note this might be somewhat inefficient.. for performance you might have to keep an index
@@ -64,37 +64,37 @@
                 };
                 console.log("Sending request for Pokemon marker list...");
 
-                $.getJSON(url, data, function (data, status) {
-                    console.log("Ajax call completed, status is: " + status);
+                $.getJSON(url, data, function(data, status) {
+                        console.log("Ajax call completed, status is: " + status);
 
-                    // show the  message from the data
-                    showData.text(data.message);
+                        // show the  message from the data
+                        showData.text(data.message);
 
-                    //console.log("Setting up markers");
+                        //console.log("Setting up markers");
 
-                    data.markers.forEach(function (marker) {
-                        //console.log("Creating marker on map");
-                        var myLatlng = new google.maps.LatLng(marker.lat, marker.long);
+                        data.markers.forEach(function(marker) {
+                            //console.log("Creating marker on map");
+                            var myLatlng = new google.maps.LatLng(marker.lat, marker.long);
 
-                        //var image = marker.image;
+                            //var image = marker.image;
 
-                        var myIcon = new google.maps.MarkerImage(("images/" + marker.image), null, null, null, new google.maps.Size(40,40));
+                            var myIcon = new google.maps.MarkerImage(("images/" + marker.image), null, null, null, new google.maps.Size(40, 40));
 
-                        var mmarker = new google.maps.Marker({
-                            position: myLatlng,
-                            map: map,
-                            title:marker.name,
-                            icon: myIcon
+                            var mmarker = new google.maps.Marker({
+                                position: myLatlng,
+                                map: map,
+                                title: marker.name,
+                                icon: myIcon
+                            });
+
+                            // add this marker to our array of markers
+                            myMarkers.push(mmarker);
                         });
-
-                        // add this marker to our array of markers
-                        myMarkers.push(mmarker);
+                    })
+                    .error(function(jqXHR, textStatus, errorThrown) {
+                        console.log("error " + textStatus);
+                        console.log("incoming Text " + jqXHR.responseText);
                     });
-                })
-                .error(function(jqXHR, textStatus, errorThrown) {
-                     console.log("error " + textStatus);
-                     console.log("incoming Text " + jqXHR.responseText);
-                     });
 
             });
         });
@@ -102,19 +102,18 @@
 </head>
 
 <body>
-<div id="map" style="width: 800px; height: 600px"></div>
-<a href="#" id="get-data">Attack! (one round)</a>
-<br>
-<a href="#" id="reset">Reset</a>
+    <div id="map" style="width: 800px; height: 600px"></div>
+    <a href="#" id="get-data">Attack! (one round)</a>
+    <br>
+    <a href="#" id="reset">Reset</a>
 
-<div id="show-data"></div>
+    <div id="show-data"></div>
 
-<!-- NOTE this google map is using an ITAS Google Map key! Do not use for any of your private applications hosted live anywhere-->
-<script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=_YOUR_GOOGLE_MAP_KEYi_&callback=initMap">
-</script>
+    <!-- NOTE this google map is using an ITAS Google Map key! Do not use for any of your private applications hosted live anywhere-->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAGSxLOCh-pWE4dUZeMw4yvpgAa0fqLBjg&callback=initMap">
+    </script>
 
 
 </body>
-</html>
 
+</html>
