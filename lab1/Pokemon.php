@@ -47,6 +47,20 @@ class Pokemon {
     $this->longitude = $longitude;
   }
 
+
+  //__construct function
+  public function __construct($name, $image, $weight, $hp, $latitude, $longitude, $type)
+  {
+    $this->name = $name;
+    $this->image = $image;
+    $this->weight = $weight;
+    $this->hp = $hp;
+    $this->latitude = $latitude;
+    $this->longitude = $longitude;
+    $this->type = $type;
+  }
+
+
   //toString function
   public function __toString() {
     echo "Name: " . $name . ", Image: " . $image . ", Weight: " . $weight . ", HP: " . $hp . ", Latitude: " . $latitude . ", Longitude: " . $longitude . ", Type: " . $type . ".";
