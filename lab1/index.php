@@ -38,13 +38,13 @@ $ash = new Trainer("Steve", "Pokedex");
 
 echo $ash;
 
-$Steve = new Bulbasaur(34, 69, 12.5, 54.23);
-$Steve2 = new Bulbasaur(34, 69, 12.5, 54.23);
-$Steve3 = new Bulbasaur(34, 69, 12.5, 54.23);
-$Bob = new Pikachu(12, 45, 12.4, 345.2);
-$George = new Paras(45, 23, 123, 234);
-$George2 = new Paras(45, 23, 123, 234);
-$George3 = new Paras(45, 23, 123, 234);
+$Steve = new Bulbasaur("Steve", 34, 69, 12.5, 54.23);
+$Steve2 = new Bulbasaur("Jerry", 34, 69, 12.5, 54.23);
+$Steve3 = new Bulbasaur("Samantha", 34, 69, 12.5, 54.23);
+$Bob = new Pikachu("Spike", 12, 45, 12.4, 345.2);
+$George = new Paras("Tommy", 45, 23, 123, 234);
+$George2 = new Paras("Smoz", 45, 23, 123, 234);
+$George3 = new Paras("Kerry", 45, 23, 123, 234);
 
 
 
