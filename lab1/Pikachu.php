@@ -4,10 +4,10 @@ class Pikachu extends Pokemon
 {
   function __construct($weight, $hp, $latitude, $longitude)
   {
-    parent::__construct("Pikachu", "pikachu.jpg", $weight, $hp, $latitude, $longitude, "pikachu");
+    parent::__construct("Pikachu", "pikachu.png", $weight, $hp, $latitude, $longitude, "electric");
   }
   public function attack()
   {
-    echo "Pikachu Attacking!!";
+    echo "<br>Pikachu Attacking!!";
   }
 }

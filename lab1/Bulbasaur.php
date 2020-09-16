@@ -8,14 +8,18 @@ class Bulbasaur extends Pokemon
     $this->hp = $hp;
     $this->latitude = $latitude;
     $this->longitude = $longitude;
-    parent::__construct("Bulbasaur", "bulbasaur.jpg", $weight, $hp, $latitude, $longitude, "grass");
+    parent::__construct("Bulbasaur", "bulbasaur.png", $weight, $hp, $latitude, $longitude, "grass");
   }
   public function attack()
   {
-    echo "Bulbasaur Attacking!!";
+    echo "<br>Bulbasaur Attacking!!";
   }
   
 }
 $Steve = new Bulbasaur(34, 69, 12.5, 54.23);
 
-$Steve->__toString();
+//$Steve->__toString();
+
+////echo $Steve;
+
+//$Steve->getName();

@@ -9,6 +9,7 @@ class Pokemon {
   private $latitude;
   private $longitude;
   private $type;
+  public $i;
 
   //get functions
   public function getName() {
@@ -63,11 +64,11 @@ class Pokemon {
 
   //toString function
   public function __toString() {
-    echo "Name: " . $name . ", Image: " . $image . ", Weight: " . $weight . ", HP: " . $hp . ", Latitude: " . $latitude . ", Longitude: " . $longitude . ", Type: " . $type . ".";
+    return "<br>Name: " . $this->name . ", Image: <img src='images/" . $this->image . "' width='50'>, Weight: " . $this->weight . ", HP: " . $this->hp . ", Latitude: " . $this->latitude . ", Longitude: " . $this->longitude . ", Type: " . $this->type . ".";
   }
 
   //attack function
   public function Attack() {
-    echo "Base class, no attack";
+    echo "<br>Base class, no attack";
   }
 }

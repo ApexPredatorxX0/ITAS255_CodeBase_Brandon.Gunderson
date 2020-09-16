@@ -10,7 +10,7 @@ error_reporting(E_ERROR | E_WARNING | E_PARSE);
 function __autoload ($class_name) {
 	require_once $class_name . '.php';
 }
-
+/*
 $world = World::getInstance();
 
 echo "<br>Loading pokemon from the two text files...";
@@ -31,4 +31,41 @@ for ($i=0; $i < 10; $i++) {
 	$world->battle();
 	echo "<br>Round[" . $i . "]  messages from the world: " . $world->getMessage();
 	$world->clearMessage();
+}
+*/
+
+$ash = new Trainer("Steve", "Pokedex");
+
+echo $ash;
+
+$Steve = new Bulbasaur(34, 69, 12.5, 54.23);
+$Steve2 = new Bulbasaur(34, 69, 12.5, 54.23);
+$Steve3 = new Bulbasaur(34, 69, 12.5, 54.23);
+$Bob = new Pikachu(12, 45, 12.4, 345.2);
+$George = new Paras(45, 23, 123, 234);
+$George2 = new Paras(45, 23, 123, 234);
+$George3 = new Paras(45, 23, 123, 234);
+
+
+
+$ash->add($Steve);
+$ash->add($Steve2);
+$ash->add($Steve3);
+$ash->add($Bob);
+$ash->add($George);
+$ash->add($George2);
+$ash->add($George3);
+
+
+$ash->printAll($pokedex);
+
+echo "<br>";
+
+$ash->attackAll($pokedex);
+
+$classes = get_declared_classes();
+echo "<br>";
+
+foreach($classes as $class) {
+  echo "<br>" . $class;
 }
