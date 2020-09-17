@@ -9,7 +9,6 @@ class Pokemon {
   private $latitude;
   private $longitude;
   private $type;
-  public $i;
 
   //get functions
   public function getName() {
