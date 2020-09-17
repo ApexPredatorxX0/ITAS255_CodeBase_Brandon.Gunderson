@@ -64,11 +64,11 @@ class Pokemon {
 
   //toString function
   public function __toString() {
-    return "<br>Name: " . $this->name . ", Image: <img src='images/" . $this->image . "' width='50'>, Weight: " . $this->weight . ", HP: " . $this->hp . ", Latitude: " . $this->latitude . ", Longitude: " . $this->longitude . ", Type: " . $this->type . ".";
+    return "<tr><td>" . $this->name . "</td><td><img src='images/" . $this->image . "' width='50'></td><td>" . $this->weight . "</td><td>" . $this->hp . "</td><td>" . $this->latitude . "</td><td>" . $this->longitude . "</td><td>" . $this->type . "</td>";
   }
 
   //attack function
   public function Attack() {
-    echo "<br>Base class, no attack";
+    echo "<br>" . $this->name . " Attacking!!";
   }
 }

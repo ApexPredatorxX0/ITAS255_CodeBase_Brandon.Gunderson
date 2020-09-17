@@ -3,9 +3,10 @@ require_once("Pokemon.php");
 class Trainer extends Pokemon {
   private $pokedex;
 
-  public function __construct($name)
+  public function __construct($name, $image)
   {
     $this->name = $name;
+    $this->image = $image;
     //$this->pokedex = $pokedex;
     $this->pokedex = array();
   }
@@ -17,15 +18,19 @@ class Trainer extends Pokemon {
 
   public function printAll()
   {
+    echo "<br><table border='1'>";
+    echo "<tr><td>Name</td><td>Image</td><td>Weight</td><td>HP</td><td>Latitude</td><td>Longitude</td><td>Type</td></tr>";
     //$this->pokedex = $pokedex;
     foreach ($this->pokedex as $pokemon) {
-      echo "<br>" . $pokemon;
+      echo $pokemon;
     }
+
+    echo "</table>";
   }
 
   public function __toString()
   {
-    return "<br>Name: " . $this->name . ".";
+    return "<br>Name: " . $this->name . ", Image: <img src='images/" . $this->image . "' width='50'><br>";
   }
 
   public function attackAll() {

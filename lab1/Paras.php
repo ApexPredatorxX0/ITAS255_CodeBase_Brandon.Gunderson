@@ -6,8 +6,8 @@ class Paras extends Pokemon
   {
     parent::__construct($name, "paras.png", $weight, $hp, $latitude, $longitude, "bug");
   }
-  public function attack()
-  {
-    echo "<br>Paras Attacking!!";
-  }
+  // public function attack()
+  // {
+  //   echo "<br>Paras Attacking!!";
+  // }
 }
