@@ -30,14 +30,25 @@ session_start();
 		require_once $class_name . '.php';
 	}
 	/*
-$world = World::getInstance();
 
-echo "<br>Loading pokemon from the two text files...";
+	/*
+$classes = get_declared_classes();
+echo "<br>";
+foreach($classes as $class) {
+  echo "<br>" . $class;
+}
+*/
 
-$loadedPokemon = $world->load();
+	$world = World::getInstance();
 
-$i = 0;
+	echo "<br>Loading pokemon from the two text files...";
 
+	$ash = new Trainer("Ash", "trainer.png", 144.34, 54.76);
+
+	$loadedPokemon = $world->load();
+
+	$i = 0;
+	/*
 echo "<br>Starting looping through to test the world battle function!<br>";
 for ($i=0; $i < 10; $i++) {
 
@@ -53,7 +64,8 @@ for ($i=0; $i < 10; $i++) {
 }
 */
 
-	$ash = new Trainer("Ash", "trainer.png", 144.34, 54.76);
+
+	//$ash = new Trainer("Ash", "trainer.png", 144.34, 54.76);
 
 	echo $ash;
 
@@ -64,6 +76,7 @@ for ($i=0; $i < 10; $i++) {
 	$George = new Paras("Tommy", 45, 23, 123, 234);
 	$George2 = new Paras("Smoz", 45, 23, 123, 234);
 	$George3 = new Paras("Kerry", 45, 23, 123, 234);
+	$Pidgey1 = new Pidgey("Johnny", 33, 13, 342, 343, 56, true, 12);
 
 
 
@@ -74,6 +87,7 @@ for ($i=0; $i < 10; $i++) {
 	$ash->add($George);
 	$ash->add($George2);
 	$ash->add($George3);
+	$ash->add($Pidgey1);
 
 
 	$ash->printAll($pokedex);
@@ -82,6 +96,11 @@ for ($i=0; $i < 10; $i++) {
 
 	$ash->attackAll($Steve3);
 
+	
+
+
+//$pidgey = new Pidgey("Johnny", 43, 34, 12, 33, 4, false, 45);
+//$world->load();
 /*
 $classes = get_declared_classes();
 echo "<br>";
@@ -89,3 +108,4 @@ foreach($classes as $class) {
   echo "<br>" . $class;
 }
 */
+//require_once("map.php");

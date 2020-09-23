@@ -101,7 +101,7 @@ addMessage() // add a String to the current message //queue to be sent back with
 getMessage() // return the current jsonMessage
 clearMessage() // reset the current jsonMessage
 
-Method getJSON() that returns the valid JSON to represent a marker for each of the wild pokemon, the trainer, the trainer’s pokemon and the current "message" to send back - see directions to support his below in Part 10
+Method getJSON() that returns the valid JSON to represent a marker for each of the wild pokemon, the trainer, the trainer’s pokemon and the current "message" to send back - see directions to support this below in Part 10
 
 ## PART 9 ---LOAD FILES------------------------------------------------------------------
 
@@ -215,7 +215,9 @@ The complete JSON string returned by calling \$world->getJSON() will look someth
 
 Note: "messsage" is the final key-value pair returned from the World to map.php. It is a simple mechanism to allow us to send messages from the World to be displayed in the browser... to help debug code or send messages from your server-side scripts you can call:
 
+```php
 $world = World::getInstance();
 $world->addMessage("Hello from stuff happening on the server");
+```
 
 If you look in the getPokemon.php script, the message is cleared at the end of this file, so that we only get new messages each time we call getPokemon.php().

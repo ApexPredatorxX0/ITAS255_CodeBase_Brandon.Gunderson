@@ -1,8 +1,8 @@
 <?php
 class Pidgey extends Pokemon implements Flyer {
-  private $speed;
-  private $isFlying;
-  private $direction;
+  protected $speed;
+  protected $isFlying;
+  protected $direction;
 
   public function __construct($name, $weight, $hp, $latitude, $longitude, $speed, $isFlying, $direction)
   {

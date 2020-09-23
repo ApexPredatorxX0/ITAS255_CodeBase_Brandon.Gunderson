@@ -12,7 +12,7 @@
  * A List of Wild Pokemon
  * A Single Trainer (who has a list of Pokemons on a Pokedex)
  *
- * Note this is a Singleton and there should only every be one World object.
+ * Note this is a Singleton and there should only ever be one World object.
  */
 class World
 {
@@ -83,6 +83,7 @@ class World
      */
     public function load()
     {
+        //$ash = new Trainer("Ash", "trainer.png", 144.34, 54.76);
         // croftd: added code to read first the file for wildPokemon,
         // and second the file for trainer's pokemon
         $this->wildPokemon = $this->loadPokemon("wildPokemon.txt");
@@ -215,7 +216,7 @@ class World
 
             // Create a new Pokemon object using the name of the class we read in
             // and the other four variables
-            $poke = new $name($weight, $hp, $lat, $long);
+            $pokemon = new $name($name, $weight, $hp, $lat, $long);
 
             // we need to add this to the array of pokemon
 
