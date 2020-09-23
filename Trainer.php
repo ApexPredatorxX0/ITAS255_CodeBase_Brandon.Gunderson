@@ -1,16 +1,19 @@
 <?php
-require_once("Pokemon.php");
-class Trainer extends Pokemon {
+//require_once("Pokemon.php");
+class Trainer extends Character
+{
   private $pokedex;
 
-  public function __construct($name, $image)
+  public function __construct($name, $image, $latitude, $longitude)
   {
     $this->name = $name;
     $this->image = $image;
+    $this->latitude = $latitude;
+    $this->longitude = $longitude;
     //$this->pokedex = $pokedex;
     $this->pokedex = array();
   }
-  
+
   public function add(Pokemon $pokemon)
   {
     $this->pokedex[] = $pokemon;
@@ -30,13 +33,20 @@ class Trainer extends Pokemon {
 
   public function __toString()
   {
-    return "<br>Name: " . $this->name . ", Image: <img src='images/" . $this->image . "' width='50'><br>";
+    return "<table><tr><td>Name</td><td>Image</td></tr><tr><td>" . $this->name . "</td><td><img src='images/" . $this->image . "' width='50'</td></tr></table>";
   }
 
-  public function attackAll() {
+  public function attackAll(Pokemon $other)
+  {
+    echo "All pokemon are attacking " . $other->name . "!!<br>";
     foreach ($this->pokedex as $pokemon) {
-      $pokemon->attack();
+      $pokemon->attack($other);
     }
+  }
+
+  public function getDamage()
+  {
+    return 6;
   }
 }
 

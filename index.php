@@ -53,7 +53,7 @@ for ($i=0; $i < 10; $i++) {
 }
 */
 
-	$ash = new Trainer("Ash", "trainer.png");
+	$ash = new Trainer("Ash", "trainer.png", 144.34, 54.76);
 
 	echo $ash;
 
@@ -80,7 +80,7 @@ for ($i=0; $i < 10; $i++) {
 
 	echo "<br>";
 
-	$ash->attackAll($pokedex);
+	$ash->attackAll($Steve3);
 
 /*
 $classes = get_declared_classes();

@@ -105,7 +105,7 @@ Method getJSON() that returns the valid JSON to represent a marker for each of t
 
 ## PART 9 ---LOAD FILES------------------------------------------------------------------
 
-I put two text files on the portal that contain a list of ’Wild Pikachu’ and a list of Pikachu for the trainer's array to contain.
+I put two text files on the portal that contain a list of ’Wild Pokemon’ and a list of Pokemon for the trainer's array to contain.
 
 Write a method in the World - loadPokemon(\$filename) that takes a filename as a parameter, reads in the file(), and depending and creates a Pokemon for each pokemon description in the file. This function should return an array
 

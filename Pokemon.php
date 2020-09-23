@@ -1,17 +1,19 @@
 <?php
-class Pokemon {
+abstract class Pokemon extends Character
+{
 
   //variable declaration
-  private $name;
-  private $image;
+  //private $name;
+  //private $image;
   private $weight;
   private $hp;
-  private $latitude;
-  private $longitude;
+  //private $latitude;
+  //private $longitude;
   private $type;
 
   //get functions
-  public function getName() {
+  public function getName()
+  {
     return $this->name;
   }
   public function getImage()
@@ -40,10 +42,12 @@ class Pokemon {
   }
 
   //set functions
-  public function setLatitude($latitude) {
+  public function setLatitude($latitude)
+  {
     $this->latitude = $latitude;
   }
-  public function setLongitude($longitude) {
+  public function setLongitude($longitude)
+  {
     $this->longitude = $longitude;
   }
 
@@ -62,12 +66,22 @@ class Pokemon {
 
 
   //toString function
-  public function __toString() {
+  public function __toString()
+  {
     return "<tr><td>" . $this->name . "</td><td><img src='images/" . $this->image . "' width='50'></td><td>" . $this->weight . "</td><td>" . $this->hp . "</td><td>" . $this->latitude . "</td><td>" . $this->longitude . "</td><td>" . $this->type . "</td>";
   }
 
   //attack function
-  public function Attack() {
-    echo "<br>" . $this->name . " Attacking!!";
+  public function Attack(Pokemon $other)
+  {
+
+
+    $other->hp = $other->hp - $this->getDamage();
+
+    echo "<br>" . $this->name . " attacked " . $other->name . "!!";
+
+    echo " " . $other->name . "'s HP is now only " . $other->hp;
   }
+
+  public abstract function getDamage();
 }

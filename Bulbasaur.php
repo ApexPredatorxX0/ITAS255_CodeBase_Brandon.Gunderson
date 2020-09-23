@@ -10,12 +10,9 @@ class Bulbasaur extends Pokemon
   // {
   //   echo "<br>Bulbasaur Attacking!!";
   // }
-  
+
+  public function getDamage()
+  {
+    return 3;
+  }
 }
-$Steve = new Bulbasaur("Jack", 34, 69, 12.5, 54.23);
-
-//$Steve->__toString();
-
-////echo $Steve;
-
-//$Steve->getName();

@@ -10,4 +10,9 @@ class Paras extends Pokemon
   // {
   //   echo "<br>Paras Attacking!!";
   // }
+
+  public function getDamage()
+  {
+    return 3;
+  }
 }

@@ -16,6 +16,8 @@
  */
 class World
 {
+    // this is called the Singleton pattern, the World class is going to 
+    // contain a single instance of a World object and we will store it here
     static $instance;
 
     private $trainer; // Trainer
@@ -56,14 +58,16 @@ class World
     /**
      * @return array of the Wild Pokemon in the world.
      */
-    public function getWildPokemon() {
+    public function getWildPokemon()
+    {
         return $this->wildPokemon;
     }
 
     /**
      * @return array of the Trainer's pokemon
      */
-    public function getTrainersPokemon() {
+    public function getTrainersPokemon()
+    {
         return $this->trainer->getPokemon();
     }
 
@@ -79,14 +83,21 @@ class World
      */
     public function load()
     {
-	// croftd: TODO
+        // croftd: added code to read first the file for wildPokemon,
+        // and second the file for trainer's pokemon
+        $this->wildPokemon = $this->loadPokemon("wildPokemon.txt");
+
+        // This will only work, if Trainer class has a public variable 
+        // called pokedex to store an array of Pokemon read from the file
+        $this->trainer->pokedex = $this->loadPokemon("trainerPokemon.txt");
     }
 
     /**
      * When called, this function will find the nearest wild Pokemon, move the Trainer and his Pokemon to this
      * location, and attack. See the image created by @matthewt for the flow chart (in the REW301_code repo)
      */
-    public function battle() {
+    public function battle()
+    {
 
         $this->addMessage("Battling... ");
 
@@ -102,7 +113,8 @@ class World
      * @param $lon2 - second long coord
      * @return float - distance in kilometers between the two coords
      */
-    function distance($lat1, $lon1, $lat2, $lon2) {
+    function distance($lat1, $lon1, $lat2, $lon2)
+    {
         $theta = $lon1 - $lon2;
         $dist = sin(deg2rad($lat1)) * sin(deg2rad($lat2)) +
             cos(deg2rad($lat1)) * cos(deg2rad($lat2)) * cos(deg2rad($theta));
@@ -113,7 +125,7 @@ class World
         $miles = $dist * 60 * 1.1515;
 
         // return value in kilometers – or maybe we want meters precision?
-        return $miles *1.609344;
+        return $miles * 1.609344;
     }
 
     /**
@@ -155,7 +167,6 @@ class World
      */
     public function getJSON()
     {
-
         // croftd: This is just an example to make the initial map and getPokemon.php
         // talk to each other
         // To complete the lab you will have to loop through all the wild pokemon
@@ -169,20 +180,46 @@ class World
     ,"name": "Bulbasaur","image": "bulbasaur.png" },{"lat":  49.1790103,"long":  -123.9199447
     ,"name": "Pidgey","image": "pidgey.png" },{"lat":  49.1675630,"long":  -123.9383125,"name": "Pidgey","image": "pidgey.png" } ],
     "message": "BattleCount[0] <br>Server Messages: This is just test data!"}';
-    
+
         return $jsonToReturn;
     }
 
     /**
      * Function to load Pokemon objects from a csv file
+     * 
+     * WRITE YOUR CODE FOR STEP9 HERE - This function should return an array
      *
      * @param $filename
      * @return array containing Pokemon objects
      */
     public function loadPokemon($filename)
     {
+        // $filename gets passed in, it will contain something like "wildPokemon.txt"
         // croftd: currently does nothing
-        return null;
 
+        // Read the file in and convert to a set of lines
+        $lines = file($filename);
+
+        // create a blank array that we will add to each line we go through
+        $pokemons = array();
+
+        // Cycle through the array which will return each line
+        foreach ($lines as $line) {
+
+            // Parse the line, retrieving the variables
+            list($name, $weight, $hp, $lat, $long) = explode(",", $line);
+
+            echo "<br>Checking this worked, here is name: " . $name;
+            // Remove newline from $name if you need to
+            $name = trim($name);
+
+            // Create a new Pokemon object using the name of the class we read in
+            // and the other four variables
+            $poke = new $name($weight, $hp, $lat, $long);
+
+            // we need to add this to the array of pokemon
+
+        }
+        return $pokemons;
     }
 }

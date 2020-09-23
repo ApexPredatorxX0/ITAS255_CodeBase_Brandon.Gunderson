@@ -10,4 +10,9 @@ class Pikachu extends Pokemon
   // {
   //   echo "<br>Pikachu Attacking!!";
   // }
+
+  public function getDamage()
+  {
+    return 3;
+  }
 }
