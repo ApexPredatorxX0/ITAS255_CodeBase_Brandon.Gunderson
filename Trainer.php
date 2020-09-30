@@ -21,8 +21,8 @@ class Trainer extends Character
 
   public function printAll()
   {
-    echo "<br><table border='1'>";
-    echo "<tr><td>Name</td><td>Image</td><td>Weight</td><td>HP</td><td>Latitude</td><td>Longitude</td><td>Type</td><td>Speed</td><td>Is Flying</td><td>Direction</td></tr>";
+    echo "<br><table id=pokemon border='1'>";
+    echo "<tr><th>Name</th><th>Image</th><th>Weight</th><th>HP</th><th>Latitude</th><th>Longitude</th><th>Type</th><th>Speed</th><th>Is Flying</th><th>Direction</th></tr>";
     //$this->pokedex = $pokedex;
     foreach ($this->pokedex as $pokemon) {
       echo $pokemon;

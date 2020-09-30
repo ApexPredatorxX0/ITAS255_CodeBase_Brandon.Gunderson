@@ -12,6 +12,19 @@ session_start();
 			background-attachment: fixed;
 			background-size: 100% 100%;
 		}
+
+		table#pokemon td {
+			border: 1px solid black;
+		}
+		
+		#pokemon {
+			border: 1px solid black;
+		}
+
+		table#pokemon td:empty {
+			border: 0px;
+		}
+
 	</style>
 </head>
 
