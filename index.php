@@ -43,6 +43,7 @@ session_start();
 	{
 		require_once $class_name . '.php';
 	}
+	
 	/*
 
 	/*
@@ -129,3 +130,5 @@ foreach($classes as $class) {
 	$world->load(); // load the wild and trainer pokemon
 	$json = $world->getJSON();
 	echo "<br>$json";
+
+	//require_once "map.php";

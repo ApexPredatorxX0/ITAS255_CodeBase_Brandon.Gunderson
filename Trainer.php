@@ -22,7 +22,7 @@ class Trainer extends Character
   public function printAll()
   {
     echo "<br><table id=pokemon border='1'>";
-    echo "<tr><th>Name</th><th>Image</th><th>Weight</th><th>HP</th><th>Latitude</th><th>Longitude</th><th>Type</th><th>Speed</th><th>Is Flying</th><th>Direction</th></tr>";
+    echo "<tr><th>Name</th><th>Image</th><th>Weight</th><th>HP</th><th>Latitude</th><th>Longitude</th><th>Type</th>";
     //$this->pokedex = $pokedex;
     foreach ($this->pokedex as $pokemon) {
       echo $pokemon;
@@ -51,7 +51,7 @@ class Trainer extends Character
 
   public function getJSON()
   {
-    $tpoke = array();
+      $tpoke = array();
     $tpoke = '{' . '"lat"' . ': ' . $this->lat . ',' . '"long"' . ': ' . $this->long . ',' . '"name"' . ': ' . '"' . $this->name . '"' . ',' . '"image"' . ': ' . '"' . $this->image . '"' . '}';
 
     return $tpoke;

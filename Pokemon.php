@@ -68,7 +68,7 @@ abstract class Pokemon extends Character
   //toString function
   public function __toString()
   {
-    return "<tr><td>" . $this->name . "</td><td><img src='images/" . $this->image . "' width='50'></td><td>" . $this->weight . "</td><td>" . $this->hp . "</td><td>" . $this->latitude . "</td><td>" . $this->longitude . "</td><td>" . $this->type . "</td><td>" . $this->speed . "</td><td>" . $this->isFlying . "</td><td>" . $this->direction . "</td>";
+    return "<tr><td>" . $this->name . "</td><td><img src='images/" . $this->image . "' width='50'></td><td>" . $this->weight . "</td><td>" . $this->hp . "</td><td>" . $this->latitude . "</td><td>" . $this->longitude . "</td><td>" . $this->type . "</td>";
   }
 
   //attack function

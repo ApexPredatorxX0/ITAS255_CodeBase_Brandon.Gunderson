@@ -4,4 +4,6 @@ abstract class Character {
   protected $image;
   protected $latitude;
   protected $longitude;
+
+  public abstract function getJSON();
 }

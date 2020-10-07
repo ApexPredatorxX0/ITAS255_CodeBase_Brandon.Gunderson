@@ -4,12 +4,9 @@ class Pidgey extends Pokemon implements Flyer {
   protected $isFlying;
   protected $direction;
 
-  public function __construct($name, $weight, $hp, $latitude, $longitude, $speed, $isFlying, $direction)
+  public function __construct($name, $weight, $hp, $latitude, $longitude)
   {
-    parent::__construct($name, "pidgey.png", $weight, $hp, $latitude, $longitude, "flying");
-    $this->speed = $speed;
-    $this->isFlying = $isFlying;
-    $this->direction = $direction;
+    parent::__construct($name, "pidgey.png", $weight, $hp, $latitude, $longitude, "Flying");
   }
 
   public function getDamage()
