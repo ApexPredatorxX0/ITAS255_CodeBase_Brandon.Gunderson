@@ -13,6 +13,5 @@ class Pikachu extends Pokemon
 
   public function getDamage()
   {
-    return 3;
-  }
+    return $this->getWeight() * 1.5;  }
 }

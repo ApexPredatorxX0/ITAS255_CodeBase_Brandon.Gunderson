@@ -14,8 +14,7 @@ class Pidgey extends Pokemon implements Flyer {
 
   public function getDamage()
   {
-    return 3;
-  }
+    return $this->getWeight() * 0.4;  }
 
   public function takeoff()
   {

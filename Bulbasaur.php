@@ -13,6 +13,6 @@ class Bulbasaur extends Pokemon
 
   public function getDamage()
   {
-    return 3;
+    return $this->getWeight()*0.3;
   }
 }
