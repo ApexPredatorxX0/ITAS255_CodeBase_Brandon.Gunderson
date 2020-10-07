@@ -5,6 +5,8 @@ session_start();
 <head>
 	<title>PHPmon</title>
 
+	<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+
 	<style>
 		body {
 			background-image: url('images/background.png');
@@ -16,7 +18,7 @@ session_start();
 		table#pokemon td {
 			border: 1px solid black;
 		}
-		
+
 		#pokemon {
 			border: 1px solid black;
 		}
@@ -24,7 +26,6 @@ session_start();
 		table#pokemon td:empty {
 			border: 0px;
 		}
-
 	</style>
 </head>
 

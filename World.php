@@ -171,10 +171,12 @@ class World
 
         $markers = '{"markers": [';
 
+        //echo "Creating Wild Pokemon JSON";    
         // loop through our array of wild pokemon and get the JSON data
         foreach ($this->wildPokemon as $wpoke) {
             $markers .= $wpoke->getJSON();
             $markers .= ', ';
+            //echo "Added JSON for poke";
         }
 
         $length = count($this->trainer->pokedex);
@@ -228,6 +230,7 @@ class World
             $pokemon = new $name($name, $weight, $hp, $lat, $long);
 
             // we need to add this to the array of pokemon
+            $pokemons[] = $pokemon;
 
         }
         return $pokemons;
