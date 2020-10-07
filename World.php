@@ -168,21 +168,30 @@ class World
      */
     public function getJSON()
     {
-        // croftd: This is just an example to make the initial map and getPokemon.php
-        // talk to each other
-        // To complete the lab you will have to loop through all the wild pokemon
-        // and all the trainer's pokemon and add build a JSON string to return
 
-        $jsonToReturn = '{"markers": [{"lat":  49.159720,"long":  -123.907773,"name": "Paras","image": "paras.png" },{"lat":  49.171154,"long":  -123.971443
-    ,"name": "Pidgey","image": "pidgey.png" },{"lat":  49.152864,"long":  -123.94873
-    ,"name": "Paras","image": "paras.png" },{"lat":  49.1350026,"long":  -123.9220046
-    ,"name": "Paras","image": "paras.png" },{"lat":  49.178561,"long":  -123.857631
-    ,"name": "Bulbasaur","image": "bulbasaur.png" },{"lat":  49.162736,"long":  -123.892478
-    ,"name": "Bulbasaur","image": "bulbasaur.png" },{"lat":  49.1790103,"long":  -123.9199447
-    ,"name": "Pidgey","image": "pidgey.png" },{"lat":  49.1675630,"long":  -123.9383125,"name": "Pidgey","image": "pidgey.png" } ],
-    "message": "BattleCount[0] <br>Server Messages: This is just test data!"}';
+        $markers = '{"markers": [';
 
-        return $jsonToReturn;
+        // loop through our array of wild pokemon and get the JSON data
+        foreach ($this->wildPokemon as $wpoke) {
+            $markers .= $wpoke->getJSON();
+            $markers .= ', ';
+        }
+
+        $length = count($this->trainer->pokedex);
+
+        for ($count = 0; $count < $length; $count++) {
+            $tpoke = $this->trainer->pokedex[$count];
+            $markers .= $tpoke->getJSON();
+
+            if ($count < $length - 1) {
+                $markers .= ', ';
+            }
+        }
+
+
+        $markers .= '], "message": "' . $this->getMessage() . '"}';
+
+        return $markers;
     }
 
     /**

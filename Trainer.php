@@ -48,6 +48,14 @@ class Trainer extends Character
   {
     return 6;
   }
+
+  public function getJSON()
+  {
+    $tpoke = array();
+    $tpoke = '{' . '"lat"' . ': ' . $this->lat . ',' . '"long"' . ': ' . $this->long . ',' . '"name"' . ': ' . '"' . $this->name . '"' . ',' . '"image"' . ': ' . '"' . $this->image . '"' . '}';
+
+    return $tpoke;
+  }
 }
 
 //$ash = new Trainer("Steve");

@@ -109,16 +109,22 @@ for ($i=0; $i < 10; $i++) {
 
 	$ash->attackAll($Steve3);
 
-	
 
 
-//$pidgey = new Pidgey("Johnny", 43, 34, 12, 33, 4, false, 45);
-//$world->load();
-/*
+
+	//$pidgey = new Pidgey("Johnny", 43, 34, 12, 33, 4, false, 45);
+	//$world->load();
+	/*
 $classes = get_declared_classes();
 echo "<br>";
 foreach($classes as $class) {
   echo "<br>" . $class;
 }
 */
-//require_once("map.php");
+	//require_once("map.php");
+
+
+	$world = World::getInstance();
+	$world->load(); // load the wild and trainer pokemon
+	$json = $world->getJSON();
+	echo "<br>$json";
