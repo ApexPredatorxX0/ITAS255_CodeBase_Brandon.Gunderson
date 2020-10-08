@@ -307,7 +307,7 @@ class World
         }
         //$markers .= '</br> "Caught Bois Printed" </br></br>';
 
-        $markers .= $this->trainer->getJSON();
+        $markers .= ', ' . $this->trainer->getJSON();
         //$markers .= '</br> "Ya Boi Printed" </br></br>';
 
 
