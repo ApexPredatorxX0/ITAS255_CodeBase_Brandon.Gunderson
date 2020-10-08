@@ -1,6 +1,8 @@
 <?php
 session_start();
 
+// required for some warning Notices in newer versions of PHP that mess up the JSON return
+error_reporting(E_ERROR | E_WARNING | E_PARSE);
 /**
  * croftd: Start of script to create the Pokemon World, and send the list of Pokemon back to the caller
  * This is the bootstrap that handles the SESSION and autoloading etc...

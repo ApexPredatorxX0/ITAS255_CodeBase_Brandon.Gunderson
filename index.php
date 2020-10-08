@@ -43,7 +43,7 @@ session_start();
 	{
 		require_once $class_name . '.php';
 	}
-	
+
 	/*
 
 	/*
@@ -54,14 +54,13 @@ foreach($classes as $class) {
 }
 */
 
-	$world = World::getInstance();
+	/* $world = World::getInstance();
 
 	echo "<br>Loading pokemon from the two text files...";
 
+
+	$loadedPokemon = $world->load(); */
 	$ash = new Trainer("Ash", "trainer.png", 144.34, 54.76);
-
-	$loadedPokemon = $world->load();
-
 	$i = 0;
 	/*
 echo "<br>Starting looping through to test the world battle function!<br>";
@@ -91,7 +90,7 @@ for ($i=0; $i < 10; $i++) {
 	$George = new Paras("Tommy", 45, 23, 123, 234);
 	$George2 = new Paras("Smoz", 45, 23, 123, 234);
 	$George3 = new Paras("Kerry", 45, 23, 123, 234);
-	$Pidgey1 = new Pidgey("Johnny", 33, 13, 342, 343, 56, true, 12);
+	$Pidgey1 = new Pidgey("Johnny", 33, 13, 342, 343);
 
 
 
@@ -123,7 +122,6 @@ foreach($classes as $class) {
   echo "<br>" . $class;
 }
 */
-	//require_once("map.php");
 
 
 	$world = World::getInstance();
@@ -132,3 +130,24 @@ foreach($classes as $class) {
 	echo "<br>$json";
 
 	//require_once "map.php";
+	$trainer = $world->getTrainer();
+	echo $trainer;
+	$trainer->printAll($pokedex);
+
+	$world->getWildPokemon();
+
+	//$world->battle();
+	//$world->battle();
+//require_once("map.php");
+	for ($i; $i < 10; $i++) {
+		//echo "<br><br><b>Battle Round: " . $i . "</b>";
+		$world->battle();
+		//echo $trainer;
+		$trainer->printAll($pokedex);
+
+		$world->getWildPokemon();
+	}
+
+	//echo "Test";
+
+	

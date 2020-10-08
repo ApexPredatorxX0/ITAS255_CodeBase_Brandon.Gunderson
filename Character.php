@@ -1,9 +1,8 @@
 <?php
-abstract class Character {
+abstract class Character
+{
   protected $name;
   protected $image;
   protected $latitude;
   protected $longitude;
-
-  public abstract function getJSON();
 }

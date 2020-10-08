@@ -1,5 +1,6 @@
 <?php
-class Pidgey extends Pokemon implements Flyer {
+class Pidgey extends Pokemon implements Flyer
+{
   protected $speed;
   protected $isFlying;
   protected $direction;
@@ -11,7 +12,8 @@ class Pidgey extends Pokemon implements Flyer {
 
   public function getDamage()
   {
-    return $this->getWeight() * 0.4;  }
+    return $this->getWeight() * 0.4;
+  }
 
   public function takeoff()
   {
@@ -37,10 +39,4 @@ class Pidgey extends Pokemon implements Flyer {
   {
     return $this->direction;
   }
-
 }
-
-
-
-
-?>

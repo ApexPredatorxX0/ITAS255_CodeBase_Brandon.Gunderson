@@ -1,5 +1,6 @@
 <?php
-interface Flyer {
+interface Flyer
+{
   function takeoff();
 
   function land();

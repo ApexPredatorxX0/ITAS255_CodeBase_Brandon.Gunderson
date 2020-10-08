@@ -47,7 +47,11 @@ class World
 
     private function __construct()
     {
-        //$this->trainer = new Trainer('Dave', 'trainer.png', 49.159706, -123.907757);
+        $this->trainer = new Trainer('Gary', 'gary.png', 49.159706, -123.907757);
+    }
+    public function getTrainer()
+    {
+        return $this->trainer;
     }
 
     // Also required for Singleton
@@ -60,7 +64,14 @@ class World
      */
     public function getWildPokemon()
     {
-        return $this->wildPokemon;
+        //return $this->wildPokemon->getPokemon();;
+        echo "<br>Wildy Pokes";
+        echo "<br><table id=pokemon border='1'>";
+        echo "<tr><th>Name</th><th>Image</th><th>Weight</th><th>HP</th><th>Latitude</th><th>Longitude</th><th>Type</th></tr>";
+        foreach ($this->wildPokemon as $wildy) {
+            echo $wildy;
+        }
+        echo "</table>";
     }
 
     /**
@@ -74,8 +85,22 @@ class World
     /**
      *
      */
-    public function removePokemon(Pokemon $pokemon)
+    public function removeTPokemon(Pokemon $pokemon)
     {
+        //unset($this->pokedex[$pokemon];
+        if (($key = array_search($pokemon, $this->trainer->pokedex)) !== false) {
+            unset($this->trainer->pokedex[$key]);
+        } else
+            $this->trainer->pokedex = array_values($this->trainer->pokedex);
+    }
+
+    public function removeWPokemon(Pokemon $pokemon)
+    {
+        //unset($this->pokedex[$pokemon];
+        if (($key = array_search($pokemon, $this->wildPokemon)) !== false) {
+            unset($this->wildPokemon[$key]);
+        } else
+            $this->wildPokemon = array_values($this->wildPokemon);
     }
 
     /**
@@ -97,12 +122,101 @@ class World
      * When called, this function will find the nearest wild Pokemon, move the Trainer and his Pokemon to this
      * location, and attack. See the image created by @matthewt for the flow chart (in the REW301_code repo)
      */
+    protected $c = 0;
     public function battle()
     {
-
+        
+        echo "<br><br><b>Battle Round: " . $this->c . "</b>";
+        $this->c++;
+        battleStart:
         $this->addMessage("Battling... ");
+        if (count($this->wildPokemon) == 0) {
+            echo "<br><br><b><u>All wild pokemon are passed out!!!</u></b>";
+            return;
+            
+        }
 
         // Does nothing yet...
+        $nearestWild = null;
+        $nearestDistance = 0;
+
+        foreach ($this->wildPokemon as $wild) {
+
+            $distance = $this->distance(
+                $this->trainer->getLatitude(),
+                $this->trainer->getLongitude(),
+                $wild->getLatitude(),
+                $wild->getLongitude()
+            );
+
+            // the first time through, we will assume this distance is the closest one, as we haven't checked the others...
+            if ($nearestWild == null) {
+                $nearestWild = $wild;
+                $nearestDistance = $distance;
+            } else if ($distance < $nearestDistance) {
+                //$wild = $nearestDistance;
+                $nearestWild = $wild;
+                $nearestDistance = $distance;
+            }
+
+            // the next time through, you'll need an else if statement to check if the next $wild's distance is less than $nearestDistance, and if so set this as $nearestWild
+        }
+        $this->addMessage("Found the next nearest wild pokemon: " . $wild->getName());
+
+        // update the Trainer and the Trainer's pokemon to these co-ordinates
+        $this->trainer->setLatitude($nearestWild->getLatitude());
+        $this->trainer->setLongitude($nearestWild->getLongitude());
+
+        foreach ($this->trainer->getPokemon() as $tPoke) {
+            // same idea - update the lat/long for each of the trainer's $tPoke
+            $tPoke->setLatitude($nearestWild->getLatitude());
+            $tPoke->setLongitude($nearestWild->getLongitude());
+            // etc...
+        }
+
+        foreach ($this->trainer->getPokemon() as $tPoke) {
+            $tPokeAlive = true;
+            // attack the current wild pokemon
+            if ($tPoke->getHp() > 0) {
+                $tPokeAlive = true;
+            } else {
+                $tPokeAlive = false;
+            }
+            /*           if ($nearestWild->getHp() > 0) {
+                $nearestAlive = true;
+            } else {
+                $nearestAlive = false;
+            } */
+            $i = 0;
+            while ($tPokeAlive == true && $i < 10) {
+                $i++;
+                echo "<br>Trainer pokemon " . $tPoke->getName() . " attacking.";
+                $tPoke->attack($nearestWild);
+                $this->addMessage("Trainer_" . $tPoke->getName() . " attacked Wild_" . $nearestWild->getName() . " HP:" . $nearestWild->getHp());
+
+                // if $nearestWild has getHitPoint() > 0, then let the nearest wild attack $tPoke
+                if ($nearestWild->getHp() > 0) {
+                    echo "<br>Wild Pokemon " . $nearestWild->getName() . " Attacking.";
+                    $nearestWild->attack($tPoke);
+                } else if ($nearestWild->getHp() <= 0) {
+                    echo "<br><br><u>The wild pokemon " . $nearestWild->getName() . " has passed out!!!</u><br>";
+                    $this->removeWPokemon($nearestWild);
+                    //goto battleStart;
+                    //exit;
+                    //continue;
+                    //die;
+                    return;
+                }
+
+                // etc. etc.. you will have to translate my directions above into working code!
+                if ($tPoke->getHp() <= 0) {
+                    $tPokeAlive = false;
+                    echo "<br><br><u>" . $this->trainer->getName() . "'s Pokemon " . $tPoke->getName() . " has passed out!!!</u><br><br>";
+                    $this->removeTPokemon($tPoke);
+                }
+            }
+        }
+        
     }
 
     /**
@@ -178,17 +292,23 @@ class World
             $markers .= ', ';
             //echo "Added JSON for poke";
         }
+        //$markers .= '</br> "Wildy Bois Printed" </br></br>';
 
         $length = count($this->trainer->pokedex);
 
         for ($count = 0; $count < $length; $count++) {
             $tpoke = $this->trainer->pokedex[$count];
+            echo $count;
             $markers .= $tpoke->getJSON();
 
             if ($count < $length - 1) {
                 $markers .= ', ';
             }
         }
+        //$markers .= '</br> "Caught Bois Printed" </br></br>';
+
+        $markers .= $this->trainer->getJSON();
+        //$markers .= '</br> "Ya Boi Printed" </br></br>';
 
 
         $markers .= '], "message": "' . $this->getMessage() . '"}';
@@ -231,7 +351,6 @@ class World
 
             // we need to add this to the array of pokemon
             $pokemons[] = $pokemon;
-
         }
         return $pokemons;
     }

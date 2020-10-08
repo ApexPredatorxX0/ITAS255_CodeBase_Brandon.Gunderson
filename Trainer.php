@@ -14,26 +14,62 @@ class Trainer extends Character
     $this->pokedex = array();
   }
 
+  public function getName()
+  {
+    return $this->name;
+  }
+  public function getImage()
+  {
+    return $this->image;
+  }
+  public function getLatitude()
+  {
+    return $this->latitude;
+  }
+  public function getLongitude()
+  {
+    return $this->longitude;
+  }
+
+
+  public function setLatitude($latitude)
+  {
+    $this->latitude = $latitude;
+  }
+  public function setLongitude($longitude)
+  {
+    $this->longitude = $longitude;
+  }
+
   public function add(Pokemon $pokemon)
   {
     $this->pokedex[] = $pokemon;
   }
 
+  public function getPokemon()
+  {
+    return $this->pokedex;
+  }
   public function printAll()
   {
+    echo "Trainer " . $this->name . "'s Pokemon";
     echo "<br><table id=pokemon border='1'>";
-    echo "<tr><th>Name</th><th>Image</th><th>Weight</th><th>HP</th><th>Latitude</th><th>Longitude</th><th>Type</th>";
+    echo "<tr><th>Name</th><th>Image</th><th>Weight</th><th>HP</th><th>Latitude</th><th>Longitude</th><th>Type</th></tr>";
     //$this->pokedex = $pokedex;
-    foreach ($this->pokedex as $pokemon) {
+      foreach ($this->pokedex as $pokemon) {
       echo $pokemon;
-    }
-
+    } 
+ /*    for ($i = 0; $i < count($this->pokedex); $i++) {
+      echo "Count is: " . $i;
+      echo $this->pokedex[$i];
+    } */
+//<td>" . current($this->pokedex) . "</td>" .
     echo "</table>";
   }
 
   public function __toString()
   {
-    return "<table><tr><td>Name</td><td>Image</td></tr><tr><td>" . $this->name . "</td><td><img src='images/" . $this->image . "' width='50'</td></tr></table>";
+    return "<table><tr><th>Name</th><th>Image</th><th>Lat</th><th>Long</th></tr><tr><td>" . $this->name . "</td><td><img src='images/" . $this->image . "' width='50'></td><td>" . $this->latitude . "</td><td>" . $this->longitude . "</td></tr></table>";
   }
 
   public function attackAll(Pokemon $other)
@@ -51,8 +87,8 @@ class Trainer extends Character
 
   public function getJSON()
   {
-      $tpoke = array();
-    $tpoke = '{' . '"lat"' . ': ' . $this->lat . ',' . '"long"' . ': ' . $this->long . ',' . '"name"' . ': ' . '"' . $this->name . '"' . ',' . '"image"' . ': ' . '"' . $this->image . '"' . '}';
+    $tpoke = array();
+    $tpoke = '{' . '"lat"' . ': ' . $this->latitude . ',' . '"long"' . ': ' . $this->longitude . ',' . '"name"' . ': ' . '"' . $this->name . '"' . ',' . '"image"' . ': ' . '"' . $this->image . '"' . '}';
 
     return $tpoke;
   }

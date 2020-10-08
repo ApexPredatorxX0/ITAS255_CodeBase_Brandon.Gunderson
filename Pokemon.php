@@ -68,7 +68,7 @@ abstract class Pokemon extends Character
   //toString function
   public function __toString()
   {
-    return "<tr><td>" . $this->name . "</td><td><img src='images/" . $this->image . "' width='50'></td><td>" . $this->weight . "</td><td>" . $this->hp . "</td><td>" . $this->latitude . "</td><td>" . $this->longitude . "</td><td>" . $this->type . "</td>";
+    return "<tr><td>" . $this->name . "</td><td><img src='images/" . $this->image . "' width='50'></td><td>" . $this->weight . "</td><td>" . $this->hp . "</td><td>" . $this->latitude . "</td><td>" . $this->longitude . "</td><td>" . $this->type . "</td></tr>";
   }
 
   //attack function
@@ -78,9 +78,9 @@ abstract class Pokemon extends Character
 
     $other->hp = $other->hp - $this->getDamage();
 
-    echo "<br>" . $this->name . " attacked " . $other->name . "!!";
+    echo "<br>" . $this->name . " attacked " . $other->name . " doing " . $this->getDamage() . " damage!!";
 
-    echo " " . $other->name . "'s HP is now only " . $other->hp;
+    echo " " . $other->name . "'s HP is now only " . $other->hp . ".<br>";
   }
 
   public abstract function getDamage();

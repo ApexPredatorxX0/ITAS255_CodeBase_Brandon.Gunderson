@@ -1,10 +1,3 @@
-<?php
-//function __autoload($class_name)
-//{
-//    require_once $class_name . '.php';
-//}
-
-?>
 <!doctype html>
 <html>
 
@@ -13,6 +6,8 @@
     <title>Pokemon Nanaimo Map!</title>
     <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous">
     </script>
+    <!-- old version of JQuery! -->
+    <!-- <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script> -->
     <script>
         var map;
         var myMarkers = [];
@@ -71,7 +66,8 @@
                 };
                 console.log("Sending request for Pokemon marker list...");
 
-                $.getJSON(url, data, function(data, status) {
+                try {
+                    $.getJSON(url, data, function(data, status) {
                         console.log("Ajax call completed, status is: " + status);
 
                         // show the  message from the data
@@ -98,10 +94,9 @@
                             myMarkers.push(mmarker);
                         });
                     })
-                    .error(function(jqXHR, textStatus, errorThrown) {
-                        console.log("error " + textStatus);
-                        console.log("incoming Text " + jqXHR.responseText);
-                    });
+                } catch (error) {
+                    console.log("Error requesting JSON data: " + error);
+                }
 
             });
         });
