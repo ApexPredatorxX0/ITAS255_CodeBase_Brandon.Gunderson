@@ -87,7 +87,6 @@ class World
      */
     public function removeTPokemon(Pokemon $pokemon)
     {
-        //unset($this->pokedex[$pokemon];
         if (($key = array_search($pokemon, $this->trainer->pokedex)) !== false) {
             unset($this->trainer->pokedex[$key]);
         } else
@@ -96,7 +95,6 @@ class World
 
     public function removeWPokemon(Pokemon $pokemon)
     {
-        //unset($this->pokedex[$pokemon];
         if (($key = array_search($pokemon, $this->wildPokemon)) !== false) {
             unset($this->wildPokemon[$key]);
         } else
@@ -154,7 +152,6 @@ class World
                 $nearestWild = $wild;
                 $nearestDistance = $distance;
             } else if ($distance < $nearestDistance) {
-                //$wild = $nearestDistance;
                 $nearestWild = $wild;
                 $nearestDistance = $distance;
             }
@@ -182,14 +179,7 @@ class World
             } else {
                 $tPokeAlive = false;
             }
-            /*           if ($nearestWild->getHp() > 0) {
-                $nearestAlive = true;
-            } else {
-                $nearestAlive = false;
-            } */
-            $i = 0;
-            while ($tPokeAlive == true && $i < 10) {
-                $i++;
+            while ($tPokeAlive == true) {
                 echo "<br>Trainer pokemon " . $tPoke->getNickname() . " attacking.";
                 $tPoke->attack($nearestWild);
                 $this->addMessage("Trainer_" . $tPoke->getNickname() . " attacked Wild_" . $nearestWild->getNickname() . " HP:" . $nearestWild->getHp());
@@ -201,10 +191,6 @@ class World
                 } else if ($nearestWild->getHp() <= 0) {
                     echo "<br><br><u>The wild pokemon " . $nearestWild->getNickname() . " has passed out!!!</u><br>";
                     $this->removeWPokemon($nearestWild);
-                    //goto battleStart;
-                    //exit;
-                    //continue;
-                    //die;
                     return;
                 }
 
@@ -212,7 +198,7 @@ class World
                 if ($tPoke->getHp() <= 0) {
                     $tPokeAlive = false;
                     echo "<br><br><u>" . $this->trainer->getName() . "'s Pokemon " . $tPoke->getNickname() . " has passed out!!!</u><br><br>";
-                    $this->removeTPokemon($tPoke);
+                    //$this->removeTPokemon($tPoke);
                 }
             }
         }

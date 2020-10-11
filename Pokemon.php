@@ -46,6 +46,9 @@ abstract class Pokemon extends Character
   }
 
   //set functions
+  public function setHp($hp) {
+    $this->hp = $hp;
+  }
   public function setLatitude($latitude)
   {
     $this->latitude = $latitude;
@@ -87,6 +90,10 @@ abstract class Pokemon extends Character
 
 
     $other->hp = $other->hp - $this->getDamage();
+
+    if ($other->hp <= 0) {
+      $other->setHp(0);
+    }
 
     echo "<br>" . $this->nickname . " attacked " . $other->nickname . " doing " . $this->getDamage() . " damage!!";
 
