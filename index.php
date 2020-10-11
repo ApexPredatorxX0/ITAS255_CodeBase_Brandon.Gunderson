@@ -83,21 +83,21 @@ for ($i=0; $i < 10; $i++) {
 
 	echo $ash;
 
-	$Steve = new Bulbasaur("Steve", 34, 69, 12.5, 54.23);
-	$Steve2 = new Bulbasaur("Jerry", 34, 69, 12.5, 54.23);
-	$Steve3 = new Bulbasaur("Samantha", 34, 69, 12.5, 54.23);
-	$Bob = new Pikachu("Spike", 12, 45, 12.4, 345.2);
-	$George = new Paras("Tommy", 45, 23, 123, 234);
-	$George2 = new Paras("Smoz", 45, 23, 123, 234);
-	$George3 = new Paras("Kerry", 45, 23, 123, 234);
-	$Pidgey1 = new Pidgey("Johnny", 33, 13, 342, 343);
+	//$Steve = new Bulbasaur("Steve", 34, 69, 12.5, 54.23);
+	//$Steve2 = new Bulbasaur("Jerry", 34, 69, 12.5, 54.23);
+	//$Steve3 = new Bulbasaur("Samantha", 34, 69, 12.5, 54.23);
+	//$Bob = new Pikachu("Spike", 12, 45, 12.4, 345.2);
+	$George = new Paras("Paras", 45, 23, 123, 234, "Tommy");
+	$George2 = new Paras("Paras", 45, 23, 123, 234, "Smoz");
+	$George3 = new Paras("Paras", 45, 23, 123, 234, "Kerry");
+	$Pidgey1 = new Pidgey("Pidgey", 33, 13, 342, 343, "Johnny");
 
 
 
-	$ash->add($Steve);
-	$ash->add($Steve2);
-	$ash->add($Steve3);
-	$ash->add($Bob);
+	//$ash->add($Steve);
+	//$ash->add($Steve2);
+	//$ash->add($Steve3);
+	//$ash->add($Bob);
 	$ash->add($George);
 	$ash->add($George2);
 	$ash->add($George3);
@@ -108,7 +108,7 @@ for ($i=0; $i < 10; $i++) {
 
 	echo "<br>";
 
-	$ash->attackAll($Steve3);
+	$ash->attackAll($George3);
 
 
 

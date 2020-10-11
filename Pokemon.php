@@ -10,6 +10,7 @@ abstract class Pokemon extends Character
   //private $latitude;
   //private $longitude;
   private $type;
+  private $nickname;
 
   //get functions
   public function getName()
@@ -40,6 +41,9 @@ abstract class Pokemon extends Character
   {
     return $this->type;
   }
+  public function getNickname() {
+    return $this->nickname;
+  }
 
   //set functions
   public function setLatitude($latitude)
@@ -53,8 +57,11 @@ abstract class Pokemon extends Character
 
 
   //__construct function
-  public function __construct($name, $image, $weight, $hp, $latitude, $longitude, $type)
-  {
+  public function __construct($name, $image, $weight, $hp, $latitude, $longitude, $type, $nickname)
+  {  
+     if ($nickname == NULL) {
+      $nickname = $name;
+    }
     $this->name = $name;
     $this->image = $image;
     $this->weight = $weight;
@@ -62,13 +69,16 @@ abstract class Pokemon extends Character
     $this->latitude = $latitude;
     $this->longitude = $longitude;
     $this->type = $type;
+    $this->nickname = $nickname;
+
+ 
   }
 
 
   //toString function
   public function __toString()
   {
-    return "<tr><td>" . $this->name . "</td><td><img src='images/" . $this->image . "' width='50'></td><td>" . $this->weight . "</td><td>" . $this->hp . "</td><td>" . $this->latitude . "</td><td>" . $this->longitude . "</td><td>" . $this->type . "</td></tr>";
+    return "<tr><td>" . $this->nickname . "</td><td><img src='images/" . $this->image . "' width='50'></td><td>" . $this->weight . "</td><td>" . $this->hp . "</td><td>" . $this->latitude . "</td><td>" . $this->longitude . "</td><td>" . $this->type . "</td></tr>";
   }
 
   //attack function
@@ -78,9 +88,9 @@ abstract class Pokemon extends Character
 
     $other->hp = $other->hp - $this->getDamage();
 
-    echo "<br>" . $this->name . " attacked " . $other->name . " doing " . $this->getDamage() . " damage!!";
+    echo "<br>" . $this->nickname . " attacked " . $other->nickname . " doing " . $this->getDamage() . " damage!!";
 
-    echo " " . $other->name . "'s HP is now only " . $other->hp . ".<br>";
+    echo " " . $other->nickname . "'s HP is now only " . $other->hp . ".<br>";
   }
 
   public abstract function getDamage();
@@ -88,7 +98,7 @@ abstract class Pokemon extends Character
   public function getJSON()
   {
     //$tpoke = array();
-    $tpoke = '{' . '"lat"' . ': ' . $this->latitude . ',' . '"long"' . ': ' . $this->longitude . ',' . '"name"' . ': ' . '"' . $this->name . '"' . ',' . '"image"' . ': ' . '"' . $this->image . '"' . '}';
+    $tpoke = '{' . '"lat"' . ': ' . $this->latitude . ',' . '"long"' . ': ' . $this->longitude . ',' . '"name"' . ': ' . '"' . $this->name . '"' . ',' . '"image"' . ': ' . '"' . $this->image . '"' . '"nickname"' . ': ' . '"' . $this->nickname . '"' . '}';
 
     return $tpoke;
   }

@@ -190,16 +190,16 @@ class World
             $i = 0;
             while ($tPokeAlive == true && $i < 10) {
                 $i++;
-                echo "<br>Trainer pokemon " . $tPoke->getName() . " attacking.";
+                echo "<br>Trainer pokemon " . $tPoke->getNickname() . " attacking.";
                 $tPoke->attack($nearestWild);
-                $this->addMessage("Trainer_" . $tPoke->getName() . " attacked Wild_" . $nearestWild->getName() . " HP:" . $nearestWild->getHp());
+                $this->addMessage("Trainer_" . $tPoke->getNickname() . " attacked Wild_" . $nearestWild->getNickname() . " HP:" . $nearestWild->getHp());
 
                 // if $nearestWild has getHitPoint() > 0, then let the nearest wild attack $tPoke
                 if ($nearestWild->getHp() > 0) {
-                    echo "<br>Wild Pokemon " . $nearestWild->getName() . " Attacking.";
+                    echo "<br>Wild Pokemon " . $nearestWild->getNickname() . " Attacking.";
                     $nearestWild->attack($tPoke);
                 } else if ($nearestWild->getHp() <= 0) {
-                    echo "<br><br><u>The wild pokemon " . $nearestWild->getName() . " has passed out!!!</u><br>";
+                    echo "<br><br><u>The wild pokemon " . $nearestWild->getNickname() . " has passed out!!!</u><br>";
                     $this->removeWPokemon($nearestWild);
                     //goto battleStart;
                     //exit;
@@ -211,7 +211,7 @@ class World
                 // etc. etc.. you will have to translate my directions above into working code!
                 if ($tPoke->getHp() <= 0) {
                     $tPokeAlive = false;
-                    echo "<br><br><u>" . $this->trainer->getName() . "'s Pokemon " . $tPoke->getName() . " has passed out!!!</u><br><br>";
+                    echo "<br><br><u>" . $this->trainer->getName() . "'s Pokemon " . $tPoke->getNickname() . " has passed out!!!</u><br><br>";
                     $this->removeTPokemon($tPoke);
                 }
             }
@@ -339,15 +339,15 @@ class World
         foreach ($lines as $line) {
 
             // Parse the line, retrieving the variables
-            list($name, $weight, $hp, $lat, $long) = explode(",", $line);
+            list($name, $weight, $hp, $lat, $long, $nickname) = explode(",", $line);
 
-            echo "<br>Checking this worked, here is name: " . $name;
+            echo "<br>Checking this worked, here is name: " . $nickname;
             // Remove newline from $name if you need to
             $name = trim($name);
 
             // Create a new Pokemon object using the name of the class we read in
             // and the other four variables
-            $pokemon = new $name($name, $weight, $hp, $lat, $long);
+            $pokemon = new $name($name, $weight, $hp, $lat, $long, $nickname);
 
             // we need to add this to the array of pokemon
             $pokemons[] = $pokemon;

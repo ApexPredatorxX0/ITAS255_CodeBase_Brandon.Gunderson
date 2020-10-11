@@ -2,9 +2,9 @@
 require_once("Pokemon.php");
 class Bulbasaur extends Pokemon
 {
-  public function __construct($name, $weight, $hp, $latitude, $longitude)
+  public function __construct($name, $weight, $hp, $latitude, $longitude, $nickname)
   {
-    parent::__construct($name, "bulbasaur.png", $weight, $hp, $latitude, $longitude, "grass");
+    parent::__construct($name, "bulbasaur.png", $weight, $hp, $latitude, $longitude, "grass", $nickname);
   }
   // public function attack()
   // {
