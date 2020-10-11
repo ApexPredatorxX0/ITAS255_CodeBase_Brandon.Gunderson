@@ -147,6 +147,7 @@ foreach($classes as $class) {
 
 		$world->getWildPokemon();
 	}
+	echo $trainer;
 
 	//echo "Test";
 
