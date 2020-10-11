@@ -180,7 +180,7 @@ class World
                 $tPokeAlive = false;
             }
             while ($tPokeAlive == true) {
-                echo "<br>Trainer pokemon " . $tPoke->getNickname() . " attacking.";
+                echo "<br>" . $this->trainer->getName() . "'s pokemon " . $tPoke->getNickname() . " attacking.";
                 $tPoke->attack($nearestWild);
                 $this->addMessage("Trainer_" . $tPoke->getNickname() . " attacked Wild_" . $nearestWild->getNickname() . " HP:" . $nearestWild->getHp());
 
