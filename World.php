@@ -123,7 +123,7 @@ class World
     protected $c = 0;
     public function battle()
     {
-        
+
         echo "<br><br><b>Battle Round: " . $this->c . "</b>";
         $this->c++;
         battleStart:
@@ -131,7 +131,6 @@ class World
         if (count($this->wildPokemon) == 0) {
             echo "<br><br><b><u>All wild pokemon are passed out!!!</u></b>";
             return;
-            
         }
 
         // Does nothing yet...
@@ -202,7 +201,7 @@ class World
                 }
             }
         }
-        
+        echo "<hr>";
     }
 
     /**
@@ -284,7 +283,7 @@ class World
 
         for ($count = 0; $count < $length; $count++) {
             $tpoke = $this->trainer->pokedex[$count];
-            echo $count;
+            //echo $count;
             $markers .= $tpoke->getJSON();
 
             if ($count < $length - 1) {
@@ -327,13 +326,14 @@ class World
             // Parse the line, retrieving the variables
             list($name, $weight, $hp, $lat, $long, $nickname) = explode(",", $line);
 
-            echo "<br>Checking this worked, here is name: " . $nickname;
             // Remove newline from $name if you need to
             $name = trim($name);
 
             // Create a new Pokemon object using the name of the class we read in
             // and the other four variables
             $pokemon = new $name($name, $weight, $hp, $lat, $long, $nickname);
+
+            echo "<br>Checking this worked, here is name: " . $pokemon->getNickname();
 
             // we need to add this to the array of pokemon
             $pokemons[] = $pokemon;

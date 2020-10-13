@@ -105,7 +105,7 @@ abstract class Pokemon extends Character
   public function getJSON()
   {
     //$tpoke = array();
-    $tpoke = '{' . '"lat"' . ': ' . $this->latitude . ',' . '"long"' . ': ' . $this->longitude . ',' . '"name"' . ': ' . '"' . $this->name . '"' . ',' . '"image"' . ': ' . '"' . $this->image . '"' . '"nickname"' . ': ' . '"' . $this->nickname . '"' . '}';
+    $tpoke = '{' . '"lat"' . ': ' . $this->latitude . ',' . '"long"' . ': ' . $this->longitude . ',' . '"name"' . ': ' . '"' . $this->name . '"' . ',' . '"image"' . ': ' . '"' . $this->image . '"' . ',' . '"nickname"' . ': ' . '"' . $this->nickname . '"' . '}';
 
     return $tpoke;
   }

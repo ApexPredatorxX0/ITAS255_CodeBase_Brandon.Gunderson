@@ -62,7 +62,7 @@ foreach($classes as $class) {
 
 	$loadedPokemon = $world->load(); */
 	$ash = new Trainer("Ash", "trainer.png", 144.34, 54.76);
-	$i = 0;
+	//$i = 0;
 	/*
 echo "<br>Starting looping through to test the world battle function!<br>";
 for ($i=0; $i < 10; $i++) {
@@ -124,11 +124,13 @@ foreach($classes as $class) {
 }
 */
 
-
+	echo "<br>";
 	$world = World::getInstance();
+	echo "<br>";
 	$world->load(); // load the wild and trainer pokemon
+	echo "<br>";
 	$json = $world->getJSON();
-	echo "<br>$json";
+	echo "$json";
 
 	//require_once "map.php";
 	$trainer = $world->getTrainer();
@@ -139,15 +141,18 @@ foreach($classes as $class) {
 
 	//$world->battle();
 	//$world->battle();
-//require_once("map.php");
-	for ($i; $i < 10; $i++) {
+require_once("map.php");
+	echo "<hr>";
+/* 	for ($i; $i < 10; $i++) {
+		//echo "<hr>";
 		//echo "<br><br><b>Battle Round: " . $i . "</b>";
 		$world->battle();
 		//echo $trainer;
 		$trainer->printAll($pokedex);
 
 		$world->getWildPokemon();
-	}
+		echo "<hr>";
+	} */
 	echo $trainer;
 
 	//echo "Test";
