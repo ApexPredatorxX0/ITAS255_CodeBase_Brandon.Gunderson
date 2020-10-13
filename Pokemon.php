@@ -95,9 +95,9 @@ abstract class Pokemon extends Character
       $other->setHp(0);
     }
 
-    echo "<br>" . $this->nickname . " attacked " . $other->nickname . " doing " . $this->getDamage() . " damage!!";
+    return $this->nickname . " attacked " . $other->nickname . " doing " . $this->getDamage() . " damage!!";
 
-    echo " " . $other->nickname . "'s HP is now only " . $other->hp . ".<br>";
+    return " " . $other->nickname . "'s HP is now only " . $other->hp;
   }
 
   public abstract function getDamage();
@@ -105,7 +105,7 @@ abstract class Pokemon extends Character
   public function getJSON()
   {
     //$tpoke = array();
-    $tpoke = '{' . '"lat"' . ': ' . $this->latitude . ',' . '"long"' . ': ' . $this->longitude . ',' . '"name"' . ': ' . '"' . $this->name . '"' . ',' . '"image"' . ': ' . '"' . $this->image . '"' . ',' . '"nickname"' . ': ' . '"' . $this->nickname . '"' . '}';
+    $tpoke = '{' . '"lat"' . ': ' . $this->latitude . ',' . '"long"' . ': ' . $this->longitude . ',' . '"name"' . ': ' . '"' . $this->name . '"' . ',' . '"image"' . ': ' . '"' . $this->image . '"' . '}';
 
     return $tpoke;
   }

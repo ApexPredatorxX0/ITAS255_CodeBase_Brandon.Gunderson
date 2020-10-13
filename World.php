@@ -123,13 +123,12 @@ class World
     protected $c = 0;
     public function battle()
     {
-
-        echo "<br><br><b>Battle Round: " . $this->c . "</b>";
+        $battletext = array();
+        $battletext .= "<br><br><b>Battle Round: " . $this->c . "</b>";
         $this->c++;
-        battleStart:
         $this->addMessage("Battling... ");
         if (count($this->wildPokemon) == 0) {
-            echo "<br><br><b><u>All wild pokemon are passed out!!!</u></b>";
+            $battletext .= "<br><br><b><u>All wild pokemon are passed out!!!</u></b>";
             return;
         }
 
@@ -157,7 +156,7 @@ class World
 
             // the next time through, you'll need an else if statement to check if the next $wild's distance is less than $nearestDistance, and if so set this as $nearestWild
         }
-        $this->addMessage("Found the next nearest wild pokemon: " . $wild->getName());
+        $this->addMessage("Found the next nearest wild pokemon " . $wild->getName() . "!!!");
 
         // update the Trainer and the Trainer's pokemon to these co-ordinates
         $this->trainer->setLatitude($nearestWild->getLatitude());
@@ -179,16 +178,16 @@ class World
                 $tPokeAlive = false;
             }
             while ($tPokeAlive == true) {
-                echo "<br>" . $this->trainer->getName() . "'s pokemon " . $tPoke->getNickname() . " attacking.";
-                $tPoke->attack($nearestWild);
-                $this->addMessage("Trainer_" . $tPoke->getNickname() . " attacked Wild_" . $nearestWild->getNickname() . " HP:" . $nearestWild->getHp());
+                $battletext .= "<br>" . $this->trainer->getName() . "'s pokemon " . $tPoke->getNickname() . " attacking.";
+                $battletext .= $tPoke->attack($nearestWild);
+                $this->addMessage("Trainer_" . $tPoke->getNickname() . " attacked Wild_" . $nearestWild->getNickname() . " HP" . $nearestWild->getHp() . "!!!");
 
                 // if $nearestWild has getHitPoint() > 0, then let the nearest wild attack $tPoke
                 if ($nearestWild->getHp() > 0) {
-                    echo "<br>Wild Pokemon " . $nearestWild->getNickname() . " Attacking.";
-                    $nearestWild->attack($tPoke);
+                    $battletext .= "<br>Wild Pokemon " . $nearestWild->getNickname() . " Attacking.";
+                    $battletext .= $nearestWild->attack($tPoke);
                 } else if ($nearestWild->getHp() <= 0) {
-                    echo "<br><br><u>The wild pokemon " . $nearestWild->getNickname() . " has passed out!!!</u><br>";
+                    $battletext .= "<br><br><u>The wild pokemon " . $nearestWild->getNickname() . " has passed out!!!</u><br>";
                     $this->removeWPokemon($nearestWild);
                     return;
                 }
@@ -196,12 +195,13 @@ class World
                 // etc. etc.. you will have to translate my directions above into working code!
                 if ($tPoke->getHp() <= 0) {
                     $tPokeAlive = false;
-                    echo "<br><br><u>" . $this->trainer->getName() . "'s Pokemon " . $tPoke->getNickname() . " has passed out!!!</u><br><br>";
+                    $battletext .= "<br><br><u>" . $this->trainer->getName() . "'s Pokemon " . $tPoke->getNickname() . " has passed out!!!</u><br><br>";
                     //$this->removeTPokemon($tPoke);
                 }
             }
         }
-        echo "<hr>";
+        $battletext .= "<hr>";
+        return;
     }
 
     /**
@@ -233,7 +233,7 @@ class World
      */
     public function addMessage($message)
     {
-        $this->message = $this->message . ", " . $message;
+        $this->message .= $message;
     }
 
     public function getMessage()
@@ -328,6 +328,7 @@ class World
 
             // Remove newline from $name if you need to
             $name = trim($name);
+            $nickname = trim($nickname);
 
             // Create a new Pokemon object using the name of the class we read in
             // and the other four variables
