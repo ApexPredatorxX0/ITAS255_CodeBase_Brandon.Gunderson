@@ -54,7 +54,7 @@ if (!isset($_SESSION['counter']) || $reset == true) {
 }
 
 // Only start battling after first round
-if ($_SESSION['counter'] > 1) {
+if ($_SESSION['counter'] >= 1) {
     $world->battle();
 }
 
