@@ -39,13 +39,14 @@
 
                 // remove any previous markers
                 clearMarkers();
-
+                var showData = $('#show-data');
+                showData.empty();
                 var url = 'getPokemon.php?reset=true';
                 var data = {};
                 $.getJSON(url, data, function(data, status) {
                     console.log("Back from the reset");
-                    var showData = $('#show-data');
-                    showData.text("Session Reset");
+                    
+                    showData.text(data.message);
                 });
             });
 
@@ -71,7 +72,9 @@
                         console.log("Ajax call completed, status is: " + status);
 
                         // show the  message from the data
-                        showData.text(data.message);
+                        $msg = data.message;
+                        showData.text($msg);
+
 
                         //console.log("Setting up markers");
 
@@ -105,9 +108,9 @@
 
 <body>
     <div id="map" style="width: 800px; height: 600px"></div>
-    <a href="#" id="get-data">Attack! (one round)</a>
+    <a href="#map" id="get-data">Attack! (one round)</a>
     <br>
-    <a href="#" id="reset">Reset</a>
+    <a href="#map" id="reset">Submit</a>
 
     <div id="show-data"></div>
 

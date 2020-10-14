@@ -95,9 +95,9 @@ abstract class Pokemon extends Character
       $other->setHp(0);
     }
 
-    return $this->nickname . " attacked " . $other->nickname . " doing " . $this->getDamage() . " damage!!";
+    return $this->nickname . " attacked " . $other->nickname . " doing " . $this->getDamage() . " damage!! " . $other->nickname . "'s HP is now only " . $other->hp;
 
-    return " " . $other->nickname . "'s HP is now only " . $other->hp;
+    //return " " . $other->nickname . "'s HP is now only " . $other->hp;
   }
 
   public abstract function getDamage();

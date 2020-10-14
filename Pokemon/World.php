@@ -123,12 +123,12 @@ class World
     protected $c = 0;
     public function battle()
     {
-        $battletext = array();
-        $battletext .= "<br><br><b>Battle Round: " . $this->c . "</b>";
+        $battletext = "";
+        $this->addMessage("<br><br><b>Battle Round: " . ($this->c + 1) . "</b><br>");
         $this->c++;
         $this->addMessage("Battling... ");
         if (count($this->wildPokemon) == 0) {
-            $battletext .= "<br><br><b><u>All wild pokemon are passed out!!!</u></b>";
+            $this->addMessage("<br><br><b><u>All wild pokemon are passed out!!!</u></b>");
             return;
         }
 
@@ -178,16 +178,18 @@ class World
                 $tPokeAlive = false;
             }
             while ($tPokeAlive == true) {
-                $battletext .= "<br>" . $this->trainer->getName() . "'s pokemon " . $tPoke->getNickname() . " attacking.";
-                $battletext .= $tPoke->attack($nearestWild);
-                $this->addMessage("Trainer_" . $tPoke->getNickname() . " attacked Wild_" . $nearestWild->getNickname() . " HP" . $nearestWild->getHp() . "!!!");
+                $battletext .= "<br>" . $this->trainer->getName() . "'s pokemon " . $tPoke->getNickname() . " attacking.<br>";
+                $battletext .=$tPoke->attack($nearestWild);
+                //$this->addMessage("Trainer_" . $tPoke->getNickname() . " attacked Wild_" . $nearestWild->getNickname() . " HP" . $nearestWild->getHp() . "!!!");
 
                 // if $nearestWild has getHitPoint() > 0, then let the nearest wild attack $tPoke
                 if ($nearestWild->getHp() > 0) {
-                    $battletext .= "<br>Wild Pokemon " . $nearestWild->getNickname() . " Attacking.";
+                    $battletext .= "<br>Wild Pokemon " . $nearestWild->getNickname() . " Attacking.<br>";
                     $battletext .= $nearestWild->attack($tPoke);
+                    
                 } else if ($nearestWild->getHp() <= 0) {
                     $battletext .= "<br><br><u>The wild pokemon " . $nearestWild->getNickname() . " has passed out!!!</u><br>";
+                    $this->addMessage($battletext);
                     $this->removeWPokemon($nearestWild);
                     return;
                 }
@@ -201,6 +203,7 @@ class World
             }
         }
         $battletext .= "<hr>";
+        $this->addMessage($battletext);
         return;
     }
 
@@ -233,7 +236,7 @@ class World
      */
     public function addMessage($message)
     {
-        $this->message .= $message;
+        $this->message .= $message . "<br>";
     }
 
     public function getMessage()
