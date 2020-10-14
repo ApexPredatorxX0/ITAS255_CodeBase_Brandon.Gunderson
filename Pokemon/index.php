@@ -51,7 +51,7 @@ session_start();
 	$world->load(); // load the wild and trainer pokemon
 	echo "<br>";
 	$json = $world->getJSON();
-	echo "$json";
+	//echo $json;
 
 	//require_once "map.php";
 	$trainer = $world->getTrainer();

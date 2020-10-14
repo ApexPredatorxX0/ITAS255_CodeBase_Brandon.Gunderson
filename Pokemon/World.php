@@ -337,7 +337,7 @@ class World
             // and the other four variables
             $pokemon = new $name($name, $weight, $hp, $lat, $long, $nickname);
 
-            echo "<br>Checking this worked, here is name: " . $pokemon->getNickname();
+            //echo "<br>Checking this worked, here is name: " . $pokemon->getNickname();
 
             // we need to add this to the array of pokemon
             $pokemons[] = $pokemon;
