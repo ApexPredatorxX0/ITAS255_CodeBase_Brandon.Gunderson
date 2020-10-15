@@ -52,19 +52,20 @@ class Trainer extends Character
   }
   public function printAll()
   {
-    echo "<br>Trainer " . $this->name . "'s Pokemon";
-    echo "<br><table id=pokemon border='1'>";
-    echo "<tr><th>Name</th><th>Image</th><th>Weight</th><th>HP</th><th>Latitude</th><th>Longitude</th><th>Type</th></tr>";
+    $traineys = "<br>Trainer " . $this->name . "'s Pokemon";
+    $traineys .= "<br><table id=pokemon border='1'>";
+    $traineys .= "<tr><th>Name</th><th>Image</th><th>Weight</th><th>HP</th><th>Latitude</th><th>Longitude</th><th>Type</th></tr>";
     //$this->pokedex = $pokedex;
       foreach ($this->pokedex as $pokemon) {
-      echo $pokemon;
-    } 
- /*    for ($i = 0; $i < count($this->pokedex); $i++) {
+      $traineys .= $pokemon;
+    }
+    /*    for ($i = 0; $i < count($this->pokedex); $i++) {
       echo "Count is: " . $i;
       echo $this->pokedex[$i];
     } */
-//<td>" . current($this->pokedex) . "</td>" .
-    echo "</table>";
+    //<td>" . current($this->pokedex) . "</td>" .
+    $traineys .= "</table>";
+    return $traineys;
   }
 
   public function __toString()

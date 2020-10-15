@@ -56,7 +56,7 @@ session_start();
 	//require_once "map.php";
 	$trainer = $world->getTrainer();
 	echo $trainer;
-	$trainer->printAll($pokedex);
+	$trainer->printAll();
 
 	$world->getWildPokemon();
 
@@ -70,9 +70,9 @@ session_start();
 
 		echo $world->getMessage();
 		$world->clearMessage();
-		$trainer->printAll($pokedex);
+		echo $trainer->printAll();
 
-		$world->getWildPokemon();
+		echo $world->getWildPokemon();
 		echo "<hr>";
 	}
 	echo $trainer;

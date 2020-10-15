@@ -64,14 +64,16 @@ class World
      */
     public function getWildPokemon()
     {
+        $wildys = "";
         //return $this->wildPokemon->getPokemon();;
-        echo "<br>Wildy Pokes";
-        echo "<br><table id=pokemon border='1'>";
-        echo "<tr><th>Name</th><th>Image</th><th>Weight</th><th>HP</th><th>Latitude</th><th>Longitude</th><th>Type</th></tr>";
+        $wildys = "<br>Wildy Pokes";
+        $wildys .= "<br><table id=pokemon border='1'>";
+        $wildys .= "<tr><th>Name</th><th>Image</th><th>Weight</th><th>HP</th><th>Latitude</th><th>Longitude</th><th>Type</th></tr>";
         foreach ($this->wildPokemon as $wildy) {
-            echo $wildy;
+            $wildys .= $wildy;
         }
-        echo "</table>";
+        $wildys .= "</table>";
+        return $wildys;
     }
 
     /**
@@ -79,7 +81,7 @@ class World
      */
     public function getTrainersPokemon()
     {
-        return $this->trainer->getPokemon();
+        return $this->trainer->printAll();
     }
 
     /**
@@ -156,18 +158,22 @@ class World
 
             // the next time through, you'll need an else if statement to check if the next $wild's distance is less than $nearestDistance, and if so set this as $nearestWild
         }
-        $this->addMessage("Found the next nearest wild pokemon " . $wild->getName() . "!!!");
+        $this->addMessage("Found the next nearest wild pokemon " . $nearestWild->getName() . "!!!");
 
         // update the Trainer and the Trainer's pokemon to these co-ordinates
-        $this->trainer->setLatitude($nearestWild->getLatitude());
-        $this->trainer->setLongitude($nearestWild->getLongitude());
-
+        $offsetY = -0.003;
+        $offsetX = 0.003;
+        $offsetCount = 1;
         foreach ($this->trainer->getPokemon() as $tPoke) {
             // same idea - update the lat/long for each of the trainer's $tPoke
-            $tPoke->setLatitude($nearestWild->getLatitude());
-            $tPoke->setLongitude($nearestWild->getLongitude());
+            $tPoke->setLatitude($nearestWild->getLatitude() + ($offsetY * $offsetCount));
+            $tPoke->setLongitude($nearestWild->getLongitude() + ($offsetX * $offsetCount));
+            $offsetCount++;
             // etc...
         }
+
+        $this->trainer->setLatitude($nearestWild->getLatitude());
+        $this->trainer->setLongitude($nearestWild->getLongitude());
 
         foreach ($this->trainer->getPokemon() as $tPoke) {
             $tPokeAlive = true;
@@ -299,8 +305,10 @@ class World
         //$markers .= '</br> "Ya Boi Printed" </br></br>';
 
 
-        $markers .= '], "message": "' . $this->getMessage() . '"}';
+        $markers .= '], "message": "' . $this->getMessage() . '"';
 
+        $markers .= ', "pokedata": "' . $this->getTrainersPokemon() . $this->getWildPokemon() . '"}';
+//pokedata": "' . $this->getWildPokemon() . 
         return $markers;
     }
 
@@ -331,6 +339,10 @@ class World
 
             // Remove newline from $name if you need to
             $name = trim($name);
+            $weight = trim($weight);
+            $hp = trim($hp);
+            $lat = trim($lat);
+            $long = trim($long);
             $nickname = trim($nickname);
 
             // Create a new Pokemon object using the name of the class we read in
