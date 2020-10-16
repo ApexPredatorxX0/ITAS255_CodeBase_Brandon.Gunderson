@@ -66,7 +66,7 @@ class World
     {
         $wildys = "";
         //return $this->wildPokemon->getPokemon();;
-        $wildys = "<br>Wildy Pokes";
+        $wildys = "<br><h2>Wildy Pokes</h2>";
         $wildys .= "<br><table id=pokemon border='1'>";
         $wildys .= "<tr><th>Name</th><th>Image</th><th>Weight</th><th>HP</th><th>Latitude</th><th>Longitude</th><th>Type</th></tr>";
         foreach ($this->wildPokemon as $wildy) {
@@ -307,7 +307,9 @@ class World
 
         $markers .= '], "message": "' . $this->getMessage() . '"';
 
-        $markers .= ', "pokedata": "' . $this->getTrainersPokemon() . $this->getWildPokemon() . '"}';
+        $markers .= ', "wilddata": "' . $this->getWildPokemon() . '"';
+
+        $markers .= ', "teamdata": "' . $this->getTrainersPokemon() . '"}';
 //pokedata": "' . $this->getWildPokemon() . 
         return $markers;
     }

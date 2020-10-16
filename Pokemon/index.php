@@ -9,7 +9,7 @@ session_start();
 
 	<style>
 		body {
-			background-image: url('images/background.png');
+			background-image: url('images/background-alt.png');
 			background-repeat: no-repeat;
 			background-attachment: fixed;
 			background-size: 100% 100%;
@@ -26,6 +26,23 @@ session_start();
 
 		table#pokemon td:empty {
 			border: 0px;
+		}
+
+		h2 {
+			margin: 0;
+		}
+
+		.header {
+			display: flex;
+			justify-content: center;
+			text-decoration: underline;
+		}
+
+		.battle-logs {
+			background-color: rgba(255, 255, 255, 0.9);
+			padding: 3%;
+			padding-top: 0;
+			
 		}
 	</style>
 </head>
@@ -45,26 +62,25 @@ session_start();
 		require_once $class_name . '.php';
 	}
 
-	echo "<br>";
 	$world = World::getInstance();
-	echo "<br>";
 	$world->load(); // load the wild and trainer pokemon
-	echo "<br>";
 	$json = $world->getJSON();
 	//echo $json;
 
+	echo "<div class='header'><h1> PHPMon </h1></div>";
 	//require_once "map.php";
 	$trainer = $world->getTrainer();
-	echo $trainer;
-	$trainer->printAll();
-
-	$world->getWildPokemon();
 
 	//$world->battle();
 	//$world->battle();
 	require_once("map.php");
 	echo "<hr>";
+		echo "<div class='battle-logs'>";	
+	echo "<div id='battlelog' id='BattleHeader'><h1 class='header'> Battle Logs </h1></div>";
 	for ($i; $i < 10; $i++) {
+
+
+
 
 		$world->battle();
 
@@ -74,7 +90,8 @@ session_start();
 
 		echo $world->getWildPokemon();
 		echo "<hr>";
+
 	}
-	echo $trainer;
+		echo "</div>";
 
 	//echo "Test";

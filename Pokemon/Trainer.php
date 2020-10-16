@@ -52,7 +52,7 @@ class Trainer extends Character
   }
   public function printAll()
   {
-    $traineys = "<br>Trainer " . $this->name . "'s Pokemon";
+    $traineys = "<br><h2>Trainer " . $this->name . "'s Pokemon</h2>";
     $traineys .= "<br><table id=pokemon border='1'>";
     $traineys .= "<tr><th>Name</th><th>Image</th><th>Weight</th><th>HP</th><th>Latitude</th><th>Longitude</th><th>Type</th></tr>";
     //$this->pokedex = $pokedex;
