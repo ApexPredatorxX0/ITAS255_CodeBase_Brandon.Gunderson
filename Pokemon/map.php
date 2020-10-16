@@ -171,12 +171,14 @@
                         $msg = data.message;
                         showData.html($msg);
 
+                        // show the data for each pokemon array
                         $wilddata = data.wilddata;
                         wildData.html($wilddata);
 
                         $teamdata = data.teamdata;
                         teamData.html($teamdata);
 
+                        //generates the markers using the marker data from the JSON.
                         data.markers.forEach(function(marker) {
 
                             var myLatlng = new google.maps.LatLng(marker.lat, marker.long);

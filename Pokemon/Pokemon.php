@@ -93,8 +93,10 @@ abstract class Pokemon extends Character
     return $this->nickname . " attacked " . $other->nickname . " doing " . $this->getDamage() . " damage!! " . $other->nickname . "'s HP is now only " . $other->hp;
   }
 
+  //adds the requirement that all pokemonhave a getDamage() function in their respective classes.
   public abstract function getDamage();
 
+  //returns the data needed for JSON loading for pokemon when called.
   public function getJSON()
   {
     $tpoke = '{' . '"lat"' . ': ' . $this->latitude . ',' . '"long"' . ': ' . $this->longitude . ',' . '"name"' . ': ' . '"' . $this->nickname . '"' . ',' . '"image"' . ': ' . '"' . $this->image . '"' . '}';

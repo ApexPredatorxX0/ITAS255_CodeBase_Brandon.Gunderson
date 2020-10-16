@@ -77,9 +77,7 @@ class World
         return $this->trainer->printAll();
     }
 
-    /**
-     *
-     */
+    //removes the pokemon from their respective arrays when called.
     public function removeTPokemon(Pokemon $pokemon)
     {
         if (($key = array_search($pokemon, $this->trainer->pokedex)) !== false) {
@@ -117,14 +115,18 @@ class World
         $this->addMessage("<br><br><b>Battle Round: " . ($this->c + 1) . "</b><br>");
         $this->c++;
         $this->addMessage("Battling... ");
+
+        //if all wild pokemon have "passed out" a.k.a. have been removed from the $wildPokemon array, print out a message and return.
         if (count($this->wildPokemon) == 0) {
             $this->addMessage("<br><br><b><u>All wild pokemon are passed out!!!</u></b>");
             return;
         }
 
+        //variable declarations needed for the battle.
         $nearestWild = null;
         $nearestDistance = 0;
 
+        //loops through each wild pokemon and finds the current closest one
         foreach ($this->wildPokemon as $wild) {
 
             $distance = $this->distance(
@@ -145,7 +147,7 @@ class World
         }
         $this->addMessage("Found the next nearest wild pokemon " . $nearestWild->getName() . "!!!");
 
-        // update the Trainer and the Trainer's pokemon to these co-ordinates
+        // update the Trainer's pokemon to the coordinates of the closest wild pokemon, also offsets each pokemon by a degree for easier visibility on the map.
         $offsetY = -0.003;
         $offsetX = 0.003;
         $offsetCount = 1;
@@ -154,28 +156,33 @@ class World
             $tPoke->setLatitude($nearestWild->getLatitude() + ($offsetY * $offsetCount));
             $tPoke->setLongitude($nearestWild->getLongitude() + ($offsetX * $offsetCount));
             $offsetCount++;
-            // etc...
         }
 
+        //updates the Trainers to the coordinates of the closest wild pokemon
         $this->trainer->setLatitude($nearestWild->getLatitude());
         $this->trainer->setLongitude($nearestWild->getLongitude());
 
+        //loops through battling the wild pokemon until one dies and returns
         foreach ($this->trainer->getPokemon() as $tPoke) {
             $tPokeAlive = true;
-            // attack the current wild pokemon
+            // checks to make sure the current selected pokemon isnt passed out
             if ($tPoke->getHp() > 0) {
                 $tPokeAlive = true;
             } else {
                 $tPokeAlive = false;
             }
+
+            //while the current pokemon is awake, attack until one passes out.
             while ($tPokeAlive == true) {
                 $battletext .= "<br>" . $this->trainer->getName() . "'s pokemon " . $tPoke->getNickname() . " attacking.<br>";
                 $battletext .=$tPoke->attack($nearestWild);
 
+                //if the wild pokemon survives the attack, it attacks back.
                 if ($nearestWild->getHp() > 0) {
                     $battletext .= "<br>Wild Pokemon " . $nearestWild->getNickname() . " Attacking.<br>";
                     $battletext .= $nearestWild->attack($tPoke);
                     
+                //if the wild pokemon passes out, remove it from the wild pokemon array and return    
                 } else if ($nearestWild->getHp() <= 0) {
                     $battletext .= "<br><br><u>The wild pokemon " . $nearestWild->getNickname() . " has passed out!!!</u><br>";
                     $this->addMessage($battletext);
@@ -183,6 +190,7 @@ class World
                     return;
                 }
 
+                //if the wild pokemon survives, and attakcs the current trainers pokemon so it passes out, change its $tPokeAlive value to false and add a passed out message to $battletext/.
                 if ($tPoke->getHp() <= 0) {
                     $tPokeAlive = false;
                     $battletext .= "<br><br><u>" . $this->trainer->getName() . "'s Pokemon " . $tPoke->getNickname() . " has passed out!!!</u><br><br>";
@@ -190,6 +198,7 @@ class World
             }
         }
         $battletext .= "<hr>";
+        //adds the report of the battle to the mesage box for JSON then returns.
         $this->addMessage($battletext);
         return;
     }
@@ -226,6 +235,7 @@ class World
         $this->message .= $message . "<br>";
     }
 
+    //prints out the current status of the message in the JSON
     public function getMessage()
     {
         return $this->message;
@@ -251,6 +261,7 @@ class World
             $markers .= ', ';
         }
 
+        //loop through the array of trainer pokemon and get the JSON data
         $length = count($this->trainer->pokedex);
 
         for ($count = 0; $count < $length; $count++) {
@@ -262,14 +273,17 @@ class World
             }
         }
 
+        //adds the JSON data for the trainer to the array.
         $markers .= ', ' . $this->trainer->getJSON();
 
+        //closes the markers tag and adds the message variable to the JSON data
         $markers .= '], "message": "' . $this->getMessage() . '"';
 
+        //adds both the tabled data for the wild pokemon and the trainer pokemon to the JSON data as two different fields.
         $markers .= ', "wilddata": "' . $this->getWildPokemon() . '"';
-
         $markers .= ', "teamdata": "' . $this->getTrainersPokemon() . '"}';
 
+        //returns added markers.
         return $markers;
     }
 

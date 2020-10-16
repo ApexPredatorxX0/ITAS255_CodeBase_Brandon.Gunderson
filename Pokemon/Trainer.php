@@ -41,15 +41,19 @@ class Trainer extends Character
     $this->longitude = $longitude;
   }
 
+  //adds pokemon to the $pokedex array
   public function add(Pokemon $pokemon)
   {
     $this->pokedex[] = $pokemon;
   }
 
+  //prints out the current pokemon for Trainer.
   public function getPokemon()
   {
     return $this->pokedex;
   }
+
+  //prints out a table data and calls each pokemon to echo themselves.
   public function printAll()
   {
     $traineys = "<br><h2>Trainer " . $this->name . "'s Pokemon</h2>";
@@ -69,6 +73,7 @@ class Trainer extends Character
     return "<table><tr><th>Name</th><th>Image</th><th>Lat</th><th>Long</th></tr><tr><td>" . $this->name . "</td><td><img src='images/" . $this->image . "' width='50'></td><td>" . $this->latitude . "</td><td>" . $this->longitude . "</td></tr></table>";
   }
 
+  //loops through all the trainers pokemon in $pokedex and runs attack() against the target Pokemon $other.
   public function attackAll(Pokemon $other)
   {
     echo "All pokemon are attacking " . $other->name . "!!<br>";
@@ -77,11 +82,7 @@ class Trainer extends Character
     }
   }
 
-  public function getDamage()
-  {
-    return 6;
-  }
-
+  //prints out the formatted data for when JSON is needed for Trainer.
   public function getJSON()
   {
     $tpoke = array();
