@@ -63,8 +63,6 @@
         }
     </style>
 
-    <!-- old version of JQuery! -->
-    <!-- <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script> -->
     <script>
         var map;
         var myMarkers = [];
@@ -93,7 +91,7 @@
 
             $('#reset').click(function() {
 
-                // remove any previous markers
+                // remove any previous markers and data from JSON
                 clearMarkers();
                 var showData = $('#battle-data');
                 showData.empty();
@@ -115,19 +113,15 @@
                             $msg = data.message;
                             showData.html($msg);
 
+                            // show the data for each pokemon array
                             $wilddata = data.wilddata;
                             wildData.html($wilddata);
 
                             $teamdata = data.teamdata;
                             teamData.html($teamdata);
 
-                            //console.log("Setting up markers");
-
                             data.markers.forEach(function(marker) {
-                                //console.log("Creating marker on map");
                                 var myLatlng = new google.maps.LatLng(marker.lat, marker.long);
-
-                                //var image = marker.image;
 
                                 var myIcon = new google.maps.MarkerImage(("images/" + marker.image), null, null, null, new google.maps.Size(40, 40));
 
@@ -151,8 +145,6 @@
             $('#get-data').click(function() {
 
                 // remove any previous markers
-                // DC: note this might be somewhat inefficient.. for performance you might have to keep an index
-                // of which marker is for which pokemon, and update the lat and long accordingly
                 clearMarkers();
 
                 var showData = $('#battle-data');
@@ -185,10 +177,8 @@
                         $teamdata = data.teamdata;
                         teamData.html($teamdata);
 
-                        //console.log("Setting up markers");
-
                         data.markers.forEach(function(marker) {
-                            //console.log("Creating marker on map");
+
                             var myLatlng = new google.maps.LatLng(marker.lat, marker.long);
 
                             var myIcon = new google.maps.MarkerImage(("images/" + marker.image), null, null, null, new google.maps.Size(40, 40));
@@ -232,7 +222,6 @@
         </div>
     </div>
 
-    <!-- NOTE this google map is using an ITAS Google Map key! Do not use for any of your private applications hosted live anywhere-->
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAGSxLOCh-pWE4dUZeMw4yvpgAa0fqLBjg&callback=initMap">
     </script>
 

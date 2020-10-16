@@ -6,13 +6,9 @@ class Bulbasaur extends Pokemon
   {
     parent::__construct($name, "bulbasaur.png", $weight, $hp, $latitude, $longitude, "grass", $nickname);
   }
-  // public function attack()
-  // {
-  //   echo "<br>Bulbasaur Attacking!!";
-  // }
 
   public function getDamage()
   {
-    return $this->getWeight()*0.3;
+    return $this->getWeight() * 0.3;
   }
 }

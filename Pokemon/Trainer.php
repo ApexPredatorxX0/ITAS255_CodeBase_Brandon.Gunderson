@@ -55,15 +55,11 @@ class Trainer extends Character
     $traineys = "<br><h2>Trainer " . $this->name . "'s Pokemon</h2>";
     $traineys .= "<br><table id=pokemon border='1'>";
     $traineys .= "<tr><th>Name</th><th>Image</th><th>Weight</th><th>HP</th><th>Latitude</th><th>Longitude</th><th>Type</th></tr>";
-    //$this->pokedex = $pokedex;
-      foreach ($this->pokedex as $pokemon) {
+    
+    foreach ($this->pokedex as $pokemon) {
       $traineys .= $pokemon;
     }
-    /*    for ($i = 0; $i < count($this->pokedex); $i++) {
-      echo "Count is: " . $i;
-      echo $this->pokedex[$i];
-    } */
-    //<td>" . current($this->pokedex) . "</td>" .
+
     $traineys .= "</table>";
     return $traineys;
   }
@@ -94,9 +90,3 @@ class Trainer extends Character
     return $tpoke;
   }
 }
-
-//$ash = new Trainer("Steve");
-
-//echo $ash;
-
-//$ash->printAll($pokedex);

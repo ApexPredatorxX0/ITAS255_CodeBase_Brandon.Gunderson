@@ -3,12 +3,8 @@ abstract class Pokemon extends Character
 {
 
   //variable declaration
-  //private $name;
-  //private $image;
   private $weight;
   private $hp;
-  //private $latitude;
-  //private $longitude;
   private $type;
   private $nickname;
 
@@ -88,7 +84,6 @@ abstract class Pokemon extends Character
   public function Attack(Pokemon $other)
   {
 
-
     $other->hp = $other->hp - $this->getDamage();
 
     if ($other->hp <= 0) {
@@ -96,15 +91,12 @@ abstract class Pokemon extends Character
     }
 
     return $this->nickname . " attacked " . $other->nickname . " doing " . $this->getDamage() . " damage!! " . $other->nickname . "'s HP is now only " . $other->hp;
-
-    //return " " . $other->nickname . "'s HP is now only " . $other->hp;
   }
 
   public abstract function getDamage();
 
   public function getJSON()
   {
-    //$tpoke = array();
     $tpoke = '{' . '"lat"' . ': ' . $this->latitude . ',' . '"long"' . ': ' . $this->longitude . ',' . '"name"' . ': ' . '"' . $this->nickname . '"' . ',' . '"image"' . ': ' . '"' . $this->image . '"' . '}';
 
     return $tpoke;

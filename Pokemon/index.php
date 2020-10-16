@@ -53,10 +53,6 @@ session_start();
 
 	error_reporting(E_ERROR | E_WARNING | E_PARSE);
 
-	// Simple test script to test loading pokemon from files and 
-	// the getJSON() function
-	// croftd: modified to loop through and test the battle function
-	// 
 	function __autoload($class_name)
 	{
 		require_once $class_name . '.php';
@@ -65,33 +61,25 @@ session_start();
 	$world = World::getInstance();
 	$world->load(); // load the wild and trainer pokemon
 	$json = $world->getJSON();
-	//echo $json;
 
 	echo "<div class='header'><h1> PHPMon </h1></div>";
-	//require_once "map.php";
 	$trainer = $world->getTrainer();
 
-	//$world->battle();
-	//$world->battle();
 	require_once("map.php");
+
 	echo "<hr>";
-		echo "<div class='battle-logs'>";	
+	echo "<div class='battle-logs'>";	
 	echo "<div id='battlelog' id='BattleHeader'><h1 class='header'> Battle Logs </h1></div>";
 	for ($i; $i < 10; $i++) {
-
-
-
 
 		$world->battle();
 
 		echo $world->getMessage();
 		$world->clearMessage();
+
 		echo $trainer->printAll();
 
 		echo $world->getWildPokemon();
 		echo "<hr>";
-
 	}
 		echo "</div>";
-
-	//echo "Test";
