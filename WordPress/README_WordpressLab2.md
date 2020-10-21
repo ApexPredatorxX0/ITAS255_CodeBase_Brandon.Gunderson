@@ -63,32 +63,32 @@ See the plugins/map-widget folder and look for ITASMapWidget.php. The start of t
 //
 class ITASMapWidget extends WP_Widget {
 
-	// class constructor
-	public function __construct() {
-		$widget_ops = array(
-				'classname' => 'ITASMapWidget',
-				'description' => 'A plugin for a google map',
-					);
-		parent::__construct( 'ITASMapWidget', 'ITAS Map Widget', $widget_ops );
+  // class constructor
+  public function __construct() {
+    $widget_ops = array(
+        'classname' => 'ITASMapWidget',
+        'description' => 'A plugin for a google map',
+      );
+    parent::__construct( 'ITASMapWidget', 'ITAS Map Widget', $widget_ops );
 
-	}
+  }
 
-	// output the widget content on the front-end
-	public function widget( $args, $instance ) {
-		echo "Hello ITAS Map Widget!";
+  // output the widget content on the front-end
+  public function widget( $args, $instance ) {
+    echo "Hello ITAS Map Widget!";
 
         // TODO - either echo out or turn php off and insert the Google Map code from lab 1
         // After you've output the JavaScript and html divs etc. for the Google Map, turn php back on
-	}
+  }
 
-	// output the option form field in admin Widgets screen
-	public function form( $instance ) {
+  // output the option form field in admin Widgets screen
+  public function form( $instance ) {
 
         // TODO - this is for the widget admin interface, we will be adding support for options later
-	}
+  }
 
-	// save options
-	public function update( $new_instance, $old_instance ) {
+  // save options
+  public function update( $new_instance, $old_instance ) {
 
         // TODO - this allows the admin options to update
         // see:
@@ -101,11 +101,11 @@ After pulling the map-widget from the github repo and copying into your plugins 
 
 For reference, here is the data that is stored in the WP_Post class:
 
-https://codex.wordpress.org/Class_Reference/WP_Post
+<https://codex.wordpress.org/Class_Reference/WP_Post>
 
 The custom fields that we added were 'meta' fields, so you need to use the get_post_meta function, see the docs at:
 
-https://developer.wordpress.org/reference/functions/get_post_meta/
+<https://developer.wordpress.org/reference/functions/get_post_meta/>
 
 Here is some sample code to get all the posts, return them in ascending order and retrieve some info for each post and log this to the console with JavaScript - be careful where you insert this. It has to be within the JavaScript initMap function if we want to access any Google Maps variables!
 
@@ -122,20 +122,20 @@ function initMap() {
 
     // now turn PHP back on to get a list of all the posts!
     // note PHP is running within the initMap JavaScript function
-	<?php
+  <?php
         $post_list = get_posts( array(
-   		 	'orderby'    => 'menu_order',
-    		'sort_order' => 'asc'
-		) );
+        'orderby'    => 'menu_order',
+        'sort_order' => 'asc'
+    ) );
 
-		$posts = array();
+    $posts = array();
 
-		foreach ( $post_list as $post ) {
+    foreach ( $post_list as $post ) {
 
             // grab the post id and title
-			      $print = "ID: " . $post->ID . " Title: " . $post->post_title;
+            $print = "ID: " . $post->ID . " Title: " . $post->post_title;
 
-			      // we have to retrieve the custom field as 'meta' data
+            // we have to retrieve the custom field as 'meta' data
             $print .= " Lat: " . get_post_meta($post->ID, 'lat', true);
 
             $lat = get_post_meta($post->ID, 'lat', true);
@@ -144,15 +144,15 @@ function initMap() {
             echo "<script>";
             // the n is the newline character to format how the JavaScript looks when we 'View Source'
 
-			      echo "\nconsole.log('Post info: $print')";
+            echo "\nconsole.log('Post info: $print')";
             echo "\nvar myLatlng = new google.maps.LatLng($lat, $long);";
 
             // you'll need to also Create the marker
             // Add the marker to the google map variable with the setMap function
 
-			      echo "</script>";
+            echo "</script>";
 
-		}
+    }
 ```
 
 If this part is completed properly and you've added lat and long to each post (with values) you should have Google Map markers showing up on the map-widget (If the map widget is enabled as a plugin).
@@ -189,16 +189,16 @@ Something like:
 
 ```php
 public function widget( $args, $instance ) {
-	echo "Houses SOLD";
+  echo "Houses SOLD";
 
     // haven't tested this.. but ordering by date will be something like:
     $post_list = get_posts( array(
-   		 	'orderby'    => 'post_date',
-    		'sort_order' => 'desc'
-		) );
+        'orderby'    => 'post_date',
+        'sort_order' => 'desc'
+    ) );
 
     $count = 0;
-	foreach ( $post_list as $post ) {
+  foreach ( $post_list as $post ) {
 
         // now for each post - maybe echo out some html with the title and price sold,
         // and echo out an anchor tag (href) to the 'permalink' showing the house details.
@@ -211,7 +211,7 @@ public function widget( $args, $instance ) {
 ```
 
 Additional Reference:
-https://www.smashingmagazine.com/2015/04/building-custom-wordpress-archive-page/
+<https://www.smashingmagazine.com/2015/04/building-custom-wordpress-archive-page/>
 
 ## Part 6 - Custom Plugin or Widget
 
@@ -240,11 +240,11 @@ Another idea might be to add a custom filter for comments and or post data to ch
 
 Looking at the Wordpress Codex, there appears to be a similar action hook for comments:
 
-https://developer.wordpress.org/reference/hooks/comment_post/
+<https://developer.wordpress.org/reference/hooks/comment_post/>
 
 Another idea might be to create a custom REST API that could be called from JavaScript to dynamically update something on your site:
 
-https://developer.wordpress.org/rest-api/extending-the-rest-api/adding-custom-endpoints/
+<https://developer.wordpress.org/rest-api/extending-the-rest-api/adding-custom-endpoints/>
 
 ## Part 7 - Other Site Customizations
 
