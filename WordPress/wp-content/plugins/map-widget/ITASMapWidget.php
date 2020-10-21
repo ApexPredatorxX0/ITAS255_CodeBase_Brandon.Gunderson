@@ -73,7 +73,7 @@ class ITASMapWidget extends WP_Widget {
 
 <!-- NOTE this google map is using an ITAS Google Map key! Do not use for any of your private applications hosted live anywhere-->
 <script async defer
-        src="https://maps.googleapis.com/maps/api/js?key=YOURKEY&callback=initMap">
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAGSxLOCh-pWE4dUZeMw4yvpgAa0fqLBjg&callback=initMap">
 </script>
 
 

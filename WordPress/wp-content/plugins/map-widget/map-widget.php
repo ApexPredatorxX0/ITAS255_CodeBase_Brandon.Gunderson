@@ -3,7 +3,7 @@
  * Plugin Name: ITAS Map Widget
  * Description: Example plugin to add a widget
  * Version:     0.1
- * Authoer:     croftd
+ * Author:     croftd
  */
 
 // security measure to prevent people from running this script directly
