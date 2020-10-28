@@ -15,6 +15,14 @@ Create 2 or more pages - these can be used to create menus. You might have an ab
 Create a menu that shows up at the top of your site, or sidebar, bottom (you can choose based on your theme)
 Familiarize yourself with basic Wordpress functionality - how to add/edit posts, setup categories, change the theme etc.!
 
+Since we will be writing custom PHP for plugins and potentially breaking code, you should enable DEBUG mode in wp-config.php:
+
+```php
+define( 'WP_DEBUG', true );
+```
+
+This will show you which php file and line number if errors occur.
+
 ## Part 2 - Custom Fields, including lat and long
 
 We will use the 'Advanced Custom Fields' plugin to allow each post to include a latitude and longitude. Note you don't necessarily need the custom fields plugin - you can still add custom fields when you edit a post somewhere in the menus - however I've found the Advanced Custom Fields plugin has better functionality.
@@ -62,33 +70,32 @@ See the plugins/map-widget folder and look for ITASMapWidget.php. The start of t
 // croftd - Widget should provide basic CRUD functionality
 //
 class ITASMapWidget extends WP_Widget {
+    // class constructor
+    public function __construct() {
+        $widget_ops = array(
+                'classname' => 'ITASMapWidget',
+                'description' => 'A plugin for a google map',
+                    );
+        parent::__construct( 'ITASMapWidget', 'ITAS Map Widget', $widget_ops );
 
-  // class constructor
-  public function __construct() {
-    $widget_ops = array(
-        'classname' => 'ITASMapWidget',
-        'description' => 'A plugin for a google map',
-      );
-    parent::__construct( 'ITASMapWidget', 'ITAS Map Widget', $widget_ops );
+    }
 
-  }
-
-  // output the widget content on the front-end
-  public function widget( $args, $instance ) {
-    echo "Hello ITAS Map Widget!";
+    // output the widget content on the front-end
+    public function widget( $args, $instance ) {
+        echo "Hello ITAS Map Widget!";
 
         // TODO - either echo out or turn php off and insert the Google Map code from lab 1
         // After you've output the JavaScript and html divs etc. for the Google Map, turn php back on
-  }
+    }
 
-  // output the option form field in admin Widgets screen
-  public function form( $instance ) {
+    // output the option form field in admin Widgets screen
+    public function form( $instance ) {
 
         // TODO - this is for the widget admin interface, we will be adding support for options later
-  }
+    }
 
-  // save options
-  public function update( $new_instance, $old_instance ) {
+    // save options
+    public function update( $new_instance, $old_instance ) {
 
         // TODO - this allows the admin options to update
         // see:
@@ -122,20 +129,20 @@ function initMap() {
 
     // now turn PHP back on to get a list of all the posts!
     // note PHP is running within the initMap JavaScript function
-  <?php
+    <?php
         $post_list = get_posts( array(
-        'orderby'    => 'menu_order',
-        'sort_order' => 'asc'
-    ) );
+            'orderby'    => 'menu_order',
+            'sort_order' => 'asc'
+        ) );
 
-    $posts = array();
+        $posts = array();
 
-    foreach ( $post_list as $post ) {
+        foreach ( $post_list as $post ) {
 
             // grab the post id and title
-            $print = "ID: " . $post->ID . " Title: " . $post->post_title;
+                  $print = "ID: " . $post->ID . " Title: " . $post->post_title;
 
-            // we have to retrieve the custom field as 'meta' data
+                  // we have to retrieve the custom field as 'meta' data
             $print .= " Lat: " . get_post_meta($post->ID, 'lat', true);
 
             $lat = get_post_meta($post->ID, 'lat', true);
@@ -144,18 +151,32 @@ function initMap() {
             echo "<script>";
             // the n is the newline character to format how the JavaScript looks when we 'View Source'
 
-            echo "\nconsole.log('Post info: $print')";
+                  echo "\nconsole.log('Post info: $print')";
             echo "\nvar myLatlng = new google.maps.LatLng($lat, $long);";
 
             // you'll need to also Create the marker
             // Add the marker to the google map variable with the setMap function
 
-            echo "</script>";
+                  echo "</script>";
 
-    }
+        }
 ```
 
-If this part is completed properly and you've added lat and long to each post (with values) you should have Google Map markers showing up on the map-widget (If the map widget is enabled as a plugin).
+If this part is completed properly and you've added lat and long to each post (with values) you should have Google Map markers showing up on the map-widget If the map widget is enabled as a plugin).
+
+Note: by default, get_posts LIMITS the number of posts returned to 5. You can customize this behaviour with an extra key-value pair:
+
+There is a limit by default of 5 on how many get_posts there is being requested. Here is a line to add to the \$post_list in ITASMapWidget so all your posts markers show up on the map instead of just 5.
+
+```php
+    $post_list = get_posts( array(
+                'orderby'    => 'menu_order',
+            'sort_order' => 'asc',
+            'numberposts' => -1 // add this line
+        ) );
+```
+
+<https://developer.wordpress.org/reference/functions/get_posts/>
 
 To complete Part 3 - try adding one other piece of information to the Google Map marker - maybe the price or the address when you however over the marker?
 
@@ -189,16 +210,16 @@ Something like:
 
 ```php
 public function widget( $args, $instance ) {
-  echo "Houses SOLD";
+    echo "Houses SOLD";
 
     // haven't tested this.. but ordering by date will be something like:
     $post_list = get_posts( array(
-        'orderby'    => 'post_date',
-        'sort_order' => 'desc'
-    ) );
+            'orderby'    => 'post_date',
+            'sort_order' => 'desc'
+        ) );
 
     $count = 0;
-  foreach ( $post_list as $post ) {
+    foreach ( $post_list as $post ) {
 
         // now for each post - maybe echo out some html with the title and price sold,
         // and echo out an anchor tag (href) to the 'permalink' showing the house details.
@@ -254,9 +275,11 @@ Modify your theme, images, menu etc. to make your site more useful/realistic as 
 
 Your Wordpress lab needs to be pushed to github.com (USE the same repo as for lab1, just add a new folder lab2_wordpress, git add etc.) and share with me to be marked!! Please provide a 3-5 minute video demonstration of your site and customizations.
 
+To SUBMIT - please post a link to your github and a link to your video demo/screencast as 'on-line text' or the comment when submitting the assignment on portal.
+
 Labs that are not on github and have me added as a collaborate will not be marked!
 
-2 marks - working Docker setup and basic Wordpress config
+2 marks - working Docker setup and basic Wordpress config. Screencast and github link on portal.
 2 marks - Part 2 - Advanced Custom Fields plugin configured and sample data for posts including lat and long etc.
 3 marks - Part 3 custom Google map widget that shows Google map markers for each of the houses including one additional piece of info from a custom field (e.g. each marker might show the address of the house when you hover over it). NOTE most of the code for the map widget is in the class github repository to show you how Widgets work!
 3 marks - Part 4 - house images show up as a Gallery with responsive scroller
