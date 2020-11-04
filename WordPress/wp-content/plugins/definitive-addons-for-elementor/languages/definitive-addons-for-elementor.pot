@@ -1,0 +1,2757 @@
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: definitive-addons-for-elementor\n"
+"POT-Creation-Date: 2020-10-05 20:56+0600\n"
+"PO-Revision-Date: 2020-03-12 14:48+0600\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.2.3\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-KeywordsList: __;_e;_n;_x;_ex;_nx;esc_attr__;esc_attr_e;esc_attr_x;"
+"esc_html__;esc_html_e;esc_html_x;_n_noop;_nx_noop;__ngettext_noop;"
+"translate_nooped\n"
+"X-Poedit-SearchPath-0: .\n"
+
+#: definitive_adons_elementor.php:206
+#, php-format
+msgid "\"%1$s\" requires \"%2$s\" to be installed and activated."
+msgstr ""
+
+#: definitive_adons_elementor.php:207 definitive_adons_elementor.php:231
+#: definitive_adons_elementor.php:256
+msgid "Definitive Addon for Elementor"
+msgstr ""
+
+#: definitive_adons_elementor.php:208 definitive_adons_elementor.php:232
+msgid "Elementor"
+msgstr ""
+
+#: definitive_adons_elementor.php:230 definitive_adons_elementor.php:255
+#, php-format
+msgid "\"%1$s\" requires \"%2$s\" version %3$s or greater."
+msgstr ""
+
+#: definitive_adons_elementor.php:257
+msgid "PHP"
+msgstr ""
+
+#: definitive_adons_elementor.php:270
+msgid "Definitive Addons"
+msgstr ""
+
+#: inc/Elements/CTA.php:31
+msgid "DA: Call to Action"
+msgstr ""
+
+#: inc/Elements/CTA.php:69
+msgid "Call to Action"
+msgstr ""
+
+#: inc/Elements/CTA.php:79 inc/Elements/Creative_Button.php:72
+#: inc/Elements/Feature_list.php:69 inc/Elements/Icon_Box.php:79
+msgid "Icon"
+msgstr ""
+
+#: inc/Elements/CTA.php:95
+msgid "Call to Action Title"
+msgstr ""
+
+#: inc/Elements/CTA.php:97
+msgid "Definitive Addons for Elementor."
+msgstr ""
+
+#: inc/Elements/CTA.php:104 inc/Elements/Contact_form_7.php:144
+#: inc/Elements/Flip_Box.php:74 inc/Elements/Icon_Box.php:115
+#: inc/Elements/Image_Overlay.php:101 inc/Elements/Ninja_Forms.php:157
+#: inc/Elements/Pricing_Table.php:77 inc/Elements/Products.php:71
+#: inc/Elements/Teaser_Box.php:84 inc/Elements/Testimonial.php:246
+#: inc/Elements/Testimonial_Slider.php:347 inc/Elements/WpForm.php:144
+#: inc/Elements/heading-with-separator.php:84
+msgid "Title HTML Tag"
+msgstr ""
+
+#: inc/Elements/CTA.php:109 inc/Elements/Contact_form_7.php:149
+#: inc/Elements/Flip_Box.php:79 inc/Elements/Icon_Box.php:120
+#: inc/Elements/Image_Overlay.php:106 inc/Elements/Ninja_Forms.php:162
+#: inc/Elements/Pricing_Table.php:82 inc/Elements/Products.php:75
+#: inc/Elements/Subscription.php:87 inc/Elements/Teaser_Box.php:89
+#: inc/Elements/Testimonial.php:251 inc/Elements/Testimonial_Slider.php:352
+#: inc/Elements/WpForm.php:149 inc/Elements/heading-with-separator.php:88
+msgid "H1"
+msgstr ""
+
+#: inc/Elements/CTA.php:113 inc/Elements/Contact_form_7.php:150
+#: inc/Elements/Flip_Box.php:83 inc/Elements/Icon_Box.php:124
+#: inc/Elements/Image_Overlay.php:110 inc/Elements/Ninja_Forms.php:163
+#: inc/Elements/Pricing_Table.php:86 inc/Elements/Products.php:76
+#: inc/Elements/Subscription.php:88 inc/Elements/Teaser_Box.php:93
+#: inc/Elements/Testimonial.php:255 inc/Elements/Testimonial_Slider.php:356
+#: inc/Elements/WpForm.php:150 inc/Elements/heading-with-separator.php:89
+msgid "H2"
+msgstr ""
+
+#: inc/Elements/CTA.php:117 inc/Elements/Contact_form_7.php:151
+#: inc/Elements/Flip_Box.php:87 inc/Elements/Icon_Box.php:128
+#: inc/Elements/Image_Overlay.php:114 inc/Elements/Ninja_Forms.php:164
+#: inc/Elements/Pricing_Table.php:90 inc/Elements/Products.php:77
+#: inc/Elements/Subscription.php:89 inc/Elements/Teaser_Box.php:97
+#: inc/Elements/Testimonial.php:259 inc/Elements/Testimonial_Slider.php:360
+#: inc/Elements/WpForm.php:151 inc/Elements/heading-with-separator.php:90
+msgid "H3"
+msgstr ""
+
+#: inc/Elements/CTA.php:121 inc/Elements/Contact_form_7.php:152
+#: inc/Elements/Flip_Box.php:91 inc/Elements/Icon_Box.php:132
+#: inc/Elements/Image_Overlay.php:118 inc/Elements/Ninja_Forms.php:165
+#: inc/Elements/Pricing_Table.php:94 inc/Elements/Products.php:78
+#: inc/Elements/Subscription.php:90 inc/Elements/Teaser_Box.php:101
+#: inc/Elements/Testimonial.php:263 inc/Elements/Testimonial_Slider.php:364
+#: inc/Elements/WpForm.php:152 inc/Elements/heading-with-separator.php:91
+msgid "H4"
+msgstr ""
+
+#: inc/Elements/CTA.php:125 inc/Elements/Contact_form_7.php:153
+#: inc/Elements/Flip_Box.php:95 inc/Elements/Icon_Box.php:136
+#: inc/Elements/Image_Overlay.php:122 inc/Elements/Ninja_Forms.php:166
+#: inc/Elements/Pricing_Table.php:98 inc/Elements/Products.php:79
+#: inc/Elements/Subscription.php:91 inc/Elements/Teaser_Box.php:105
+#: inc/Elements/Testimonial.php:267 inc/Elements/Testimonial_Slider.php:368
+#: inc/Elements/WpForm.php:153 inc/Elements/heading-with-separator.php:92
+msgid "H5"
+msgstr ""
+
+#: inc/Elements/CTA.php:129 inc/Elements/Contact_form_7.php:154
+#: inc/Elements/Flip_Box.php:99 inc/Elements/Icon_Box.php:140
+#: inc/Elements/Image_Overlay.php:126 inc/Elements/Ninja_Forms.php:167
+#: inc/Elements/Pricing_Table.php:102 inc/Elements/Products.php:80
+#: inc/Elements/Subscription.php:92 inc/Elements/Teaser_Box.php:109
+#: inc/Elements/Testimonial.php:271 inc/Elements/Testimonial_Slider.php:372
+#: inc/Elements/WpForm.php:154 inc/Elements/heading-with-separator.php:93
+msgid "H6"
+msgstr ""
+
+#: inc/Elements/CTA.php:143
+msgid "Call to Action Description"
+msgstr ""
+
+#: inc/Elements/CTA.php:145
+msgid ""
+"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo "
+"ligula eget dolor. Aenean massa."
+msgstr ""
+
+#: inc/Elements/CTA.php:152 inc/Elements/CTA.php:154
+#: inc/Elements/Creative_Button.php:89 inc/Elements/Creative_Button.php:90
+#: inc/Elements/Pricing_Table.php:246 inc/Elements/Pricing_Table.php:248
+#: inc/Elements/Slider.php:117 inc/Elements/Slider.php:118
+#: inc/Elements/Teaser_Box.php:130
+msgid "Button Text"
+msgstr ""
+
+#: inc/Elements/CTA.php:160 inc/Elements/Creative_Button.php:97
+#: inc/Elements/Pricing_Table.php:254 inc/Elements/Teaser_Box.php:140
+msgid "Button Link"
+msgstr ""
+
+#: inc/Elements/CTA.php:173 inc/Elements/Creative_Button.php:308
+#: inc/Elements/Pricing_Table.php:267 inc/Elements/Slider.php:124
+msgid "Button Icon"
+msgstr ""
+
+#: inc/Elements/CTA.php:193
+msgid "Call to Action Style"
+msgstr ""
+
+#: inc/Elements/CTA.php:201
+msgid "CTA Style"
+msgstr ""
+
+#: inc/Elements/CTA.php:207
+msgid "Button Left - Icon Right"
+msgstr ""
+
+#: inc/Elements/CTA.php:212
+msgid "Button Right - Icon Left"
+msgstr ""
+
+#: inc/Elements/CTA.php:226 inc/Elements/Icon_Box.php:222
+msgid "Icon Style"
+msgstr ""
+
+#: inc/Elements/CTA.php:234 inc/Elements/Creative_Button.php:316
+#: inc/Elements/Slider.php:540
+msgid "Icon Size"
+msgstr ""
+
+#: inc/Elements/CTA.php:255 inc/Elements/Counter.php:197
+#: inc/Elements/Feature_list.php:187 inc/Elements/Icon_Box.php:251
+#: inc/Elements/Staff_Member.php:494
+msgid "Icon Height"
+msgstr ""
+
+#: inc/Elements/CTA.php:276 inc/Elements/Counter.php:218
+#: inc/Elements/Feature_list.php:208 inc/Elements/Icon_Box.php:272
+#: inc/Elements/Staff_Member.php:516
+msgid "Icon Width"
+msgstr ""
+
+#: inc/Elements/CTA.php:298 inc/Elements/Category_List.php:236
+#: inc/Elements/Counter.php:237 inc/Elements/Creative_Button.php:338
+#: inc/Elements/Feature_list.php:229 inc/Elements/Icon_Box.php:303
+#: inc/Elements/Icon_List.php:236 inc/Elements/Pricing_Table.php:525
+#: inc/Elements/Staff_Member.php:537
+msgid "Icon Color"
+msgstr ""
+
+#: inc/Elements/CTA.php:309 inc/Elements/Counter.php:251
+msgid "Icon Background Color"
+msgstr ""
+
+#: inc/Elements/CTA.php:321 inc/Elements/Category_List.php:248
+#: inc/Elements/Counter.php:264 inc/Elements/Creative_Button.php:350
+#: inc/Elements/Feature_list.php:241 inc/Elements/Icon_Box.php:315
+#: inc/Elements/Icon_List.php:248 inc/Elements/Pricing_Table.php:537
+#: inc/Elements/Staff_Member.php:549
+msgid "Icon Hover Color"
+msgstr ""
+
+#: inc/Elements/CTA.php:332 inc/Elements/Counter.php:275
+#: inc/Elements/Icon_Box.php:326
+msgid "Icon Hover Background Color"
+msgstr ""
+
+#: inc/Elements/CTA.php:354 inc/Elements/Counter.php:294
+#: inc/Elements/Feature_list.php:284 inc/Elements/Icon_Box.php:348
+#: inc/Elements/Staff_Member.php:592
+msgid "Icon Border Radius"
+msgstr ""
+
+#: inc/Elements/CTA.php:366 inc/Elements/Creative_Button.php:373
+#: inc/Elements/Creative_Button.php:390 inc/Elements/Icon_List.php:300
+#: inc/Elements/Icon_List.php:315 inc/Elements/Pricing_Table.php:573
+#: inc/Elements/Pricing_Table.php:588
+msgid "Space between Icon & Text"
+msgstr ""
+
+#: inc/Elements/CTA.php:388
+msgid "CTA Title"
+msgstr ""
+
+#: inc/Elements/CTA.php:397 inc/Elements/Contact_form_7.php:290
+#: inc/Elements/Feature_list.php:358 inc/Elements/Icon_Box.php:390
+#: inc/Elements/Ninja_Forms.php:303 inc/Elements/Slider.php:348
+#: inc/Elements/WpForm.php:290 inc/Elements/heading-with-separator.php:156
+msgid "Title Bottom Spacing"
+msgstr ""
+
+#: inc/Elements/CTA.php:409 inc/Elements/Contact_form_7.php:305
+#: inc/Elements/Feature_list.php:370 inc/Elements/Flip_Box.php:251
+#: inc/Elements/Icon_Box.php:402 inc/Elements/Image_Overlay.php:236
+#: inc/Elements/Ninja_Forms.php:318 inc/Elements/Popular_Post.php:89
+#: inc/Elements/Post_Carousel.php:232 inc/Elements/Post_Grid.php:291
+#: inc/Elements/Products.php:231 inc/Elements/Promo-box.php:202
+#: inc/Elements/Slider.php:327 inc/Elements/Teaser_Box.php:258
+#: inc/Elements/WpForm.php:305 inc/Elements/heading-with-separator.php:168
+msgid "Title Color"
+msgstr ""
+
+#: inc/Elements/CTA.php:431
+msgid "CTA Description"
+msgstr ""
+
+#: inc/Elements/CTA.php:441 inc/Elements/Contact_form_7.php:351
+#: inc/Elements/Feature_list.php:414 inc/Elements/Icon_Box.php:448
+#: inc/Elements/Ninja_Forms.php:364 inc/Elements/Slider.php:363
+#: inc/Elements/Teaser_Box.php:312 inc/Elements/WpForm.php:351
+msgid "Description Color"
+msgstr ""
+
+#: inc/Elements/CTA.php:464 inc/Elements/Pricing_Table.php:680
+#: inc/Elements/Slider.php:475
+msgid "Button"
+msgstr ""
+
+#: inc/Elements/CTA.php:472
+msgid "Space between Button & Text"
+msgstr ""
+
+#: inc/Elements/CTA.php:488 inc/Elements/Creative_Button.php:187
+#: inc/Elements/Pricing_Table.php:719
+msgid "Button Width"
+msgstr ""
+
+#: inc/Elements/CTA.php:508 inc/Elements/Pricing_Table.php:739
+#: inc/Elements/Slider.php:495 inc/Elements/Subscription.php:168
+msgid "Button Text Color"
+msgstr ""
+
+#: inc/Elements/CTA.php:519 inc/Elements/Contact_form_7.php:727
+#: inc/Elements/Creative_Button.php:209 inc/Elements/Ninja_Forms.php:587
+#: inc/Elements/Post_Grid.php:476 inc/Elements/Pricing_Table.php:750
+#: inc/Elements/Slider.php:506 inc/Elements/Teaser_Box.php:436
+#: inc/Elements/WpForm.php:626
+msgid "Button Background Color"
+msgstr ""
+
+#: inc/Elements/CTA.php:530 inc/Elements/Contact_form_7.php:737
+#: inc/Elements/Ninja_Forms.php:597 inc/Elements/Post_Grid.php:486
+#: inc/Elements/Pricing_Table.php:761 inc/Elements/Slider.php:517
+#: inc/Elements/Subscription.php:178 inc/Elements/Teaser_Box.php:447
+#: inc/Elements/WpForm.php:636
+msgid "Button Hover Color"
+msgstr ""
+
+#: inc/Elements/CTA.php:541 inc/Elements/Contact_form_7.php:747
+#: inc/Elements/Creative_Button.php:221 inc/Elements/Ninja_Forms.php:607
+#: inc/Elements/Post_Grid.php:496 inc/Elements/Pricing_Table.php:772
+#: inc/Elements/Slider.php:528 inc/Elements/Subscription.php:200
+#: inc/Elements/Teaser_Box.php:458 inc/Elements/WpForm.php:646
+msgid "Button Hover Background Color"
+msgstr ""
+
+#: inc/Elements/CTA.php:553 inc/Elements/Pricing_Table.php:784
+msgid "Button Icon Size"
+msgstr ""
+
+#: inc/Elements/CTA.php:591 inc/Elements/Contact_form_7.php:786
+#: inc/Elements/Creative_Button.php:283 inc/Elements/Ninja_Forms.php:646
+#: inc/Elements/Pricing_Table.php:822 inc/Elements/Slider.php:578
+#: inc/Elements/Subscription.php:210 inc/Elements/Teaser_Box.php:498
+#: inc/Elements/WpForm.php:685
+msgid "Button Border Radius"
+msgstr ""
+
+#: inc/Elements/CTA.php:606
+msgid "CTA Content"
+msgstr ""
+
+#: inc/Elements/CTA.php:614
+msgid "CTA Padding"
+msgstr ""
+
+#: inc/Elements/CTA.php:627
+msgid "CTA Container Background Color"
+msgstr ""
+
+#: inc/Elements/Category_Box.php:32
+msgid "DA: Product Category Box"
+msgstr ""
+
+#: inc/Elements/Category_Box.php:66
+msgid "Category Box"
+msgstr ""
+
+#: inc/Elements/Category_Box.php:76 inc/Elements/Category_List.php:117
+msgid "Select Product Category"
+msgstr ""
+
+#: inc/Elements/Category_Box.php:93
+msgid "Overlay Style"
+msgstr ""
+
+#: inc/Elements/Category_Box.php:101 inc/Elements/Creative_Button.php:232
+#: inc/Elements/Flip_Box.php:340 inc/Elements/Icon_List.php:343
+#: inc/Elements/Pricing_Table.php:634 inc/Elements/Staff_Member.php:399
+#: inc/Elements/Staff_Member.php:444 inc/Elements/Subscription.php:250
+#: inc/Elements/Testimonial.php:295 inc/Elements/Testimonial.php:338
+#: inc/Elements/Testimonial.php:381 inc/Elements/Testimonial_Slider.php:396
+#: inc/Elements/Testimonial_Slider.php:439
+#: inc/Elements/Testimonial_Slider.php:482
+msgid "Text Color"
+msgstr ""
+
+#: inc/Elements/Category_Box.php:179 inc/Elements/Products.php:46
+#: inc/Elements/Products.php:55
+msgid "Products"
+msgstr ""
+
+#: inc/Elements/Category_List.php:32
+msgid "DA: Category List"
+msgstr ""
+
+#: inc/Elements/Category_List.php:65
+msgid "Category List"
+msgstr ""
+
+#: inc/Elements/Category_List.php:77 inc/Elements/Category_List.php:205
+msgid "Category Icon"
+msgstr ""
+
+#: inc/Elements/Category_List.php:89
+msgid "Category Type"
+msgstr ""
+
+#: inc/Elements/Category_List.php:94
+msgid "Post"
+msgstr ""
+
+#: inc/Elements/Category_List.php:95
+msgid "Product"
+msgstr ""
+
+#: inc/Elements/Category_List.php:104
+msgid "Select Post Category"
+msgstr ""
+
+#: inc/Elements/Category_List.php:149
+msgid "Category Link"
+msgstr ""
+
+#: inc/Elements/Category_List.php:158
+msgid "Item Bottom Spacing"
+msgstr ""
+
+#: inc/Elements/Category_List.php:173
+msgid "Category Link Color"
+msgstr ""
+
+#: inc/Elements/Category_List.php:183
+msgid "Category Link Hover Color"
+msgstr ""
+
+#: inc/Elements/Category_List.php:213 inc/Elements/Counter.php:176
+#: inc/Elements/Feature_list.php:166 inc/Elements/Icon_Box.php:230
+#: inc/Elements/Icon_List.php:214 inc/Elements/Pricing_Table.php:503
+#: inc/Elements/Staff_Member.php:473
+msgid "Size"
+msgstr ""
+
+#: inc/Elements/Category_List.php:259 inc/Elements/Staff_Member.php:604
+msgid "Icon Right Spacing"
+msgstr ""
+
+#: inc/Elements/Category_List.php:275
+msgid "Category Inner Container"
+msgstr ""
+
+#: inc/Elements/Category_List.php:283
+msgid "Inner Container Padding"
+msgstr ""
+
+#: inc/Elements/Category_List.php:314
+msgid "Inner Container Border Radius"
+msgstr ""
+
+#: inc/Elements/Category_List.php:328
+msgid "Category Container"
+msgstr ""
+
+#: inc/Elements/Category_List.php:336 inc/Elements/Contact_form_7.php:226
+#: inc/Elements/Ninja_Forms.php:239 inc/Elements/Teaser_Box.php:377
+#: inc/Elements/Testimonial.php:484 inc/Elements/WpForm.php:226
+msgid "Container Padding"
+msgstr ""
+
+#: inc/Elements/Category_List.php:367 inc/Elements/Contact_form_7.php:270
+#: inc/Elements/Ninja_Forms.php:283 inc/Elements/Post_Grid.php:552
+#: inc/Elements/WpForm.php:270
+msgid "Container Border Radius"
+msgstr ""
+
+#: inc/Elements/Contact_form_7.php:33
+msgid "DA: Contact Form 7"
+msgstr ""
+
+#: inc/Elements/Contact_form_7.php:68 inc/Elements/Ninja_Forms.php:68
+#: inc/Elements/WpForm.php:68
+msgid "Reminder Message!"
+msgstr ""
+
+#: inc/Elements/Contact_form_7.php:76
+msgid ""
+"Contact Form 7 is not installed & activated. Please install and activate it."
+msgstr ""
+
+#: inc/Elements/Contact_form_7.php:87
+msgid "Contact Form 7"
+msgstr ""
+
+#: inc/Elements/Contact_form_7.php:98 inc/Elements/Ninja_Forms.php:98
+#: inc/Elements/WpForm.php:98
+msgid "Select Form"
+msgstr ""
+
+#: inc/Elements/Contact_form_7.php:118 inc/Elements/Ninja_Forms.php:118
+#: inc/Elements/WpForm.php:118
+msgid "Show/Hide Title"
+msgstr ""
+
+#: inc/Elements/Contact_form_7.php:121 inc/Elements/Contact_form_7.php:166
+#: inc/Elements/Image_Overlay.php:177 inc/Elements/Ninja_Forms.php:121
+#: inc/Elements/Ninja_Forms.php:134 inc/Elements/Ninja_Forms.php:179
+#: inc/Elements/Post_Carousel.php:152 inc/Elements/Post_Carousel.php:182
+#: inc/Elements/Post_Carousel.php:196 inc/Elements/Post_Grid.php:193
+#: inc/Elements/Post_Grid.php:206 inc/Elements/Products.php:143
+#: inc/Elements/Promo-box.php:119 inc/Elements/Slider.php:211
+#: inc/Elements/Slider.php:241 inc/Elements/Slider.php:289
+#: inc/Elements/Staff_Member.php:158 inc/Elements/Testimonial.php:154
+#: inc/Elements/Testimonial_Slider.php:189
+#: inc/Elements/Testimonial_Slider.php:219 inc/Elements/WpForm.php:121
+#: inc/Elements/WpForm.php:166 inc/Elements/heading-with-separator.php:104
+msgid "Yes"
+msgstr ""
+
+#: inc/Elements/Contact_form_7.php:122 inc/Elements/Contact_form_7.php:167
+#: inc/Elements/Image_Overlay.php:178 inc/Elements/Ninja_Forms.php:122
+#: inc/Elements/Ninja_Forms.php:135 inc/Elements/Ninja_Forms.php:180
+#: inc/Elements/Post_Carousel.php:153 inc/Elements/Post_Carousel.php:183
+#: inc/Elements/Post_Carousel.php:197 inc/Elements/Post_Grid.php:194
+#: inc/Elements/Post_Grid.php:207 inc/Elements/Products.php:144
+#: inc/Elements/Promo-box.php:120 inc/Elements/Slider.php:212
+#: inc/Elements/Slider.php:242 inc/Elements/Slider.php:290
+#: inc/Elements/Staff_Member.php:159 inc/Elements/Testimonial.php:155
+#: inc/Elements/Testimonial_Slider.php:190
+#: inc/Elements/Testimonial_Slider.php:220 inc/Elements/WpForm.php:122
+#: inc/Elements/WpForm.php:167 inc/Elements/heading-with-separator.php:105
+msgid "No"
+msgstr ""
+
+#: inc/Elements/Contact_form_7.php:133 inc/Elements/Ninja_Forms.php:146
+#: inc/Elements/WpForm.php:133
+msgid "Title Text"
+msgstr ""
+
+#: inc/Elements/Contact_form_7.php:137
+msgid "I am Contact Form 7 Title."
+msgstr ""
+
+#: inc/Elements/Contact_form_7.php:155 inc/Elements/Ninja_Forms.php:168
+#: inc/Elements/Products.php:81 inc/Elements/Subscription.php:93
+#: inc/Elements/WpForm.php:155 inc/Elements/heading-with-separator.php:94
+msgid "Span"
+msgstr ""
+
+#: inc/Elements/Contact_form_7.php:163 inc/Elements/Ninja_Forms.php:176
+#: inc/Elements/WpForm.php:163
+msgid "Show/Hide Description"
+msgstr ""
+
+#: inc/Elements/Contact_form_7.php:178 inc/Elements/Ninja_Forms.php:191
+#: inc/Elements/WpForm.php:178
+msgid "Description Text"
+msgstr ""
+
+#: inc/Elements/Contact_form_7.php:182 inc/Elements/Ninja_Forms.php:195
+#: inc/Elements/WpForm.php:182
+msgid ""
+"Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo "
+"ligula eget ."
+msgstr ""
+
+#: inc/Elements/Contact_form_7.php:188 inc/Elements/Ninja_Forms.php:201
+#: inc/Elements/WpForm.php:188
+msgid "Title Align"
+msgstr ""
+
+#: inc/Elements/Contact_form_7.php:194 inc/Elements/Counter.php:119
+#: inc/Elements/Creative_Button.php:117 inc/Elements/Creative_Button.php:144
+#: inc/Elements/Feature_list.php:133 inc/Elements/Icon_Box.php:186
+#: inc/Elements/Icon_List.php:140 inc/Elements/Icon_List.php:167
+#: inc/Elements/Ninja_Forms.php:207 inc/Elements/Post_Grid.php:110
+#: inc/Elements/Post_Grid.php:426 inc/Elements/Pricing_Table.php:202
+#: inc/Elements/Pricing_Table.php:229 inc/Elements/Staff_Member.php:243
+#: inc/Elements/Subscription.php:117 inc/Elements/Teaser_Box.php:160
+#: inc/Elements/Testimonial.php:127 inc/Elements/Testimonial_Slider.php:248
+#: inc/Elements/Type.php:102 inc/Elements/Wording.php:150
+#: inc/Elements/WpForm.php:194 inc/Elements/heading-with-separator.php:120
+msgid "Left"
+msgstr ""
+
+#: inc/Elements/Contact_form_7.php:198 inc/Elements/Counter.php:123
+#: inc/Elements/Creative_Button.php:121 inc/Elements/Feature_list.php:137
+#: inc/Elements/Icon_Box.php:190 inc/Elements/Icon_List.php:144
+#: inc/Elements/Ninja_Forms.php:211 inc/Elements/Post_Grid.php:114
+#: inc/Elements/Post_Grid.php:430 inc/Elements/Pricing_Table.php:206
+#: inc/Elements/Staff_Member.php:247 inc/Elements/Subscription.php:121
+#: inc/Elements/Teaser_Box.php:164 inc/Elements/Testimonial.php:131
+#: inc/Elements/Testimonial_Slider.php:252 inc/Elements/Type.php:106
+#: inc/Elements/Wording.php:154 inc/Elements/WpForm.php:198
+#: inc/Elements/heading-with-separator.php:124
+msgid "Center"
+msgstr ""
+
+#: inc/Elements/Contact_form_7.php:202 inc/Elements/Counter.php:127
+#: inc/Elements/Creative_Button.php:125 inc/Elements/Creative_Button.php:149
+#: inc/Elements/Feature_list.php:141 inc/Elements/Icon_Box.php:194
+#: inc/Elements/Icon_List.php:148 inc/Elements/Icon_List.php:172
+#: inc/Elements/Ninja_Forms.php:215 inc/Elements/Post_Grid.php:118
+#: inc/Elements/Post_Grid.php:434 inc/Elements/Pricing_Table.php:210
+#: inc/Elements/Pricing_Table.php:234 inc/Elements/Staff_Member.php:251
+#: inc/Elements/Subscription.php:125 inc/Elements/Teaser_Box.php:168
+#: inc/Elements/Testimonial.php:135 inc/Elements/Testimonial.php:139
+#: inc/Elements/Testimonial_Slider.php:256 inc/Elements/Type.php:110
+#: inc/Elements/Wording.php:158 inc/Elements/WpForm.php:202
+#: inc/Elements/heading-with-separator.php:128
+msgid "Right"
+msgstr ""
+
+#: inc/Elements/Contact_form_7.php:218 inc/Elements/Ninja_Forms.php:231
+#: inc/Elements/WpForm.php:218
+msgid "Form Container"
+msgstr ""
+
+#: inc/Elements/Contact_form_7.php:237 inc/Elements/Ninja_Forms.php:250
+#: inc/Elements/WpForm.php:237
+msgid "Container Margin"
+msgstr ""
+
+#: inc/Elements/Contact_form_7.php:249 inc/Elements/Ninja_Forms.php:262
+#: inc/Elements/WpForm.php:249
+msgid "Container Background Color"
+msgstr ""
+
+#: inc/Elements/Contact_form_7.php:283 inc/Elements/Ninja_Forms.php:296
+#: inc/Elements/WpForm.php:283
+msgid "Form Title"
+msgstr ""
+
+#: inc/Elements/Contact_form_7.php:329 inc/Elements/Ninja_Forms.php:342
+#: inc/Elements/WpForm.php:329
+msgid "Form Description"
+msgstr ""
+
+#: inc/Elements/Contact_form_7.php:336 inc/Elements/Feature_list.php:402
+#: inc/Elements/Icon_Box.php:432 inc/Elements/Ninja_Forms.php:349
+#: inc/Elements/Slider.php:384 inc/Elements/WpForm.php:336
+msgid "Description Bottom Spacing"
+msgstr ""
+
+#: inc/Elements/Contact_form_7.php:375 inc/Elements/Ninja_Forms.php:388
+#: inc/Elements/WpForm.php:375
+msgid "Form Label"
+msgstr ""
+
+#: inc/Elements/Contact_form_7.php:382 inc/Elements/Ninja_Forms.php:395
+#: inc/Elements/WpForm.php:382
+msgid "Label Bottom Spacing"
+msgstr ""
+
+#: inc/Elements/Contact_form_7.php:394 inc/Elements/Ninja_Forms.php:407
+#: inc/Elements/WpForm.php:394
+msgid "Label Color"
+msgstr ""
+
+#: inc/Elements/Contact_form_7.php:418
+msgid "Text Input"
+msgstr ""
+
+#: inc/Elements/Contact_form_7.php:425
+msgid "Text Input Bottom Spacing"
+msgstr ""
+
+#: inc/Elements/Contact_form_7.php:436 inc/Elements/Ninja_Forms.php:449
+#: inc/Elements/WpForm.php:436
+msgid "Text Input Width"
+msgstr ""
+
+#: inc/Elements/Contact_form_7.php:448
+msgid "Text Input Color"
+msgstr ""
+
+#: inc/Elements/Contact_form_7.php:459
+msgid "Text Input Background Color"
+msgstr ""
+
+#: inc/Elements/Contact_form_7.php:470
+msgid "Text Input Focus Color"
+msgstr ""
+
+#: inc/Elements/Contact_form_7.php:490 inc/Elements/Ninja_Forms.php:503
+#: inc/Elements/WpForm.php:490
+msgid "Text Input Padding"
+msgstr ""
+
+#: inc/Elements/Contact_form_7.php:510
+msgid "Text Input Border Radius"
+msgstr ""
+
+#: inc/Elements/Contact_form_7.php:524
+msgid "Text Area Input"
+msgstr ""
+
+#: inc/Elements/Contact_form_7.php:531
+msgid "Text Area Bottom Spacing"
+msgstr ""
+
+#: inc/Elements/Contact_form_7.php:543
+msgid "Text Area Color"
+msgstr ""
+
+#: inc/Elements/Contact_form_7.php:554
+msgid "Text Area Background Color"
+msgstr ""
+
+#: inc/Elements/Contact_form_7.php:564
+msgid "Text Area Focus Color"
+msgstr ""
+
+#: inc/Elements/Contact_form_7.php:584
+msgid "Text Area Padding"
+msgstr ""
+
+#: inc/Elements/Contact_form_7.php:604
+msgid "Text Area Border Radius"
+msgstr ""
+
+#: inc/Elements/Contact_form_7.php:619
+msgid "Checkbox and Radio Button"
+msgstr ""
+
+#: inc/Elements/Contact_form_7.php:627
+msgid "Checkbox Layout"
+msgstr ""
+
+#: inc/Elements/Contact_form_7.php:631 inc/Elements/Contact_form_7.php:647
+#: inc/Elements/Icon_List.php:188 inc/Elements/Skillbar.php:108
+#: inc/Elements/Subscription.php:142 inc/Elements/Wording.php:117
+msgid "Inline"
+msgstr ""
+
+#: inc/Elements/Contact_form_7.php:632 inc/Elements/Contact_form_7.php:648
+#: inc/Elements/Icon_List.php:189 inc/Elements/Skillbar.php:109
+#: inc/Elements/Subscription.php:143 inc/Elements/Wording.php:118
+msgid "Block"
+msgstr ""
+
+#: inc/Elements/Contact_form_7.php:643
+msgid "Radio Button Layout"
+msgstr ""
+
+#: inc/Elements/Contact_form_7.php:661
+msgid "Checkbox/Radio Button Size"
+msgstr ""
+
+#: inc/Elements/Contact_form_7.php:697 inc/Elements/Ninja_Forms.php:557
+#: inc/Elements/WpForm.php:596
+msgid "Form Button"
+msgstr ""
+
+#: inc/Elements/Contact_form_7.php:704 inc/Elements/Ninja_Forms.php:564
+#: inc/Elements/Pricing_Table.php:703 inc/Elements/Teaser_Box.php:409
+#: inc/Elements/WpForm.php:603
+msgid "Button Bottom Spacing"
+msgstr ""
+
+#: inc/Elements/Contact_form_7.php:716 inc/Elements/Ninja_Forms.php:576
+#: inc/Elements/Post_Grid.php:466 inc/Elements/Teaser_Box.php:424
+#: inc/Elements/WpForm.php:615
+msgid "Button Color"
+msgstr ""
+
+#: inc/Elements/Contact_form_7.php:766 inc/Elements/Creative_Button.php:263
+#: inc/Elements/Ninja_Forms.php:626 inc/Elements/Teaser_Box.php:478
+#: inc/Elements/WpForm.php:665
+msgid "Button Padding"
+msgstr ""
+
+#: inc/Elements/Counter.php:28
+msgid "DA: Counter"
+msgstr ""
+
+#: inc/Elements/Counter.php:61
+msgid "Counter"
+msgstr ""
+
+#: inc/Elements/Counter.php:85
+msgid "Counter text"
+msgstr ""
+
+#: inc/Elements/Counter.php:86
+msgid "Projects"
+msgstr ""
+
+#: inc/Elements/Counter.php:95
+msgid "Start Value"
+msgstr ""
+
+#: inc/Elements/Counter.php:105
+msgid "Ending Value"
+msgstr ""
+
+#: inc/Elements/Counter.php:113 inc/Elements/Feature_list.php:127
+#: inc/Elements/Icon_Box.php:180 inc/Elements/Staff_Member.php:237
+#: inc/Elements/Subscription.php:111 inc/Elements/Teaser_Box.php:154
+#: inc/Elements/Type.php:96 inc/Elements/Wording.php:144
+#: inc/Elements/heading-with-separator.php:114
+msgid "Set Alignment"
+msgstr ""
+
+#: inc/Elements/Counter.php:144
+msgid "Counter Item Style"
+msgstr ""
+
+#: inc/Elements/Counter.php:151 inc/Elements/Icon_Box.php:205
+#: inc/Elements/Staff_Member.php:263 inc/Elements/Testimonial.php:174
+#: inc/Elements/Testimonial_Slider.php:273
+msgid "Background Shadow Style"
+msgstr ""
+
+#: inc/Elements/Counter.php:155 inc/Elements/Icon_Box.php:209
+#: inc/Elements/Staff_Member.php:267 inc/Elements/Testimonial.php:178
+#: inc/Elements/Testimonial_Slider.php:277 inc/Reuses/Reuse.php:299
+msgid "None"
+msgstr ""
+
+#: inc/Elements/Counter.php:156 inc/Elements/Icon_Box.php:210
+#: inc/Elements/Staff_Member.php:268 inc/Elements/Testimonial.php:179
+#: inc/Elements/Testimonial_Slider.php:278
+msgid "Style1"
+msgstr ""
+
+#: inc/Elements/Counter.php:157 inc/Elements/Icon_Box.php:211
+#: inc/Elements/Staff_Member.php:269 inc/Elements/Testimonial.php:180
+#: inc/Elements/Testimonial_Slider.php:279
+msgid "Style2"
+msgstr ""
+
+#: inc/Elements/Counter.php:158 inc/Elements/Icon_Box.php:212
+#: inc/Elements/Staff_Member.php:270 inc/Elements/Testimonial.php:181
+#: inc/Elements/Testimonial_Slider.php:280
+msgid "Style3"
+msgstr ""
+
+#: inc/Elements/Counter.php:168
+msgid "Counter Icon"
+msgstr ""
+
+#: inc/Elements/Counter.php:307 inc/Elements/Feature_list.php:296
+#: inc/Elements/Icon_Box.php:360 inc/Elements/Staff_Member.php:617
+msgid "Icon Bottom Spacing"
+msgstr ""
+
+#: inc/Elements/Counter.php:329
+msgid "Counter Value"
+msgstr ""
+
+#: inc/Elements/Counter.php:338
+msgid "Value Color"
+msgstr ""
+
+#: inc/Elements/Counter.php:358
+msgid "Counter Value & Text Bottom Spacing"
+msgstr ""
+
+#: inc/Elements/Counter.php:374
+msgid "Counter Text"
+msgstr ""
+
+#: inc/Elements/Counter.php:382
+msgid "Counter Text Color"
+msgstr ""
+
+#: inc/Elements/Counter.php:393
+msgid "Text Left Spacing"
+msgstr ""
+
+#: inc/Elements/Counter.php:415
+msgid "Counter Content"
+msgstr ""
+
+#: inc/Elements/Counter.php:423 inc/Elements/Feature_list.php:324
+#: inc/Elements/Icon_Box.php:478 inc/Elements/Image_Overlay.php:210
+#: inc/Elements/Post_Grid.php:521 inc/Elements/Promo-box.php:176
+#: inc/Elements/Staff_Member.php:645 inc/Elements/Teaser_Box.php:344
+#: inc/Elements/Testimonial_Slider.php:585
+msgid "Content Padding"
+msgstr ""
+
+#: inc/Elements/Counter.php:455 inc/Elements/Icon_Box.php:511
+msgid "Content Border Radius"
+msgstr ""
+
+#: inc/Elements/Creative_Button.php:30
+msgid "DA: Creative Button"
+msgstr ""
+
+#: inc/Elements/Creative_Button.php:61
+msgid "Creative Button"
+msgstr ""
+
+#: inc/Elements/Creative_Button.php:111
+msgid "Button Align"
+msgstr ""
+
+#: inc/Elements/Creative_Button.php:138 inc/Elements/Icon_List.php:161
+#: inc/Elements/Pricing_Table.php:223
+msgid "Icon Position"
+msgstr ""
+
+#: inc/Elements/Creative_Button.php:161
+msgid "Button Hover Animation"
+msgstr ""
+
+#: inc/Elements/Creative_Button.php:179
+msgid "Button & Text"
+msgstr ""
+
+#: inc/Elements/Creative_Button.php:243 inc/Elements/Icon_List.php:353
+#: inc/Elements/Pricing_Table.php:656
+msgid "Text Hover Color"
+msgstr ""
+
+#: inc/Elements/Creative_Button.php:295
+msgid "Border Hover Color"
+msgstr ""
+
+#: inc/Elements/Creative_Button.php:364
+msgid "Button/Icon Spacing"
+msgstr ""
+
+#: inc/Elements/Creative_Button.php:374
+msgid "You may need to chane button width"
+msgstr ""
+
+#: inc/Elements/Creative_Button.php:409
+msgid "Button Shadow"
+msgstr ""
+
+#: inc/Elements/Feature_list.php:28
+msgid "DA: Feature List"
+msgstr ""
+
+#: inc/Elements/Feature_list.php:59
+msgid "Feature List"
+msgstr ""
+
+#: inc/Elements/Feature_list.php:85 inc/Elements/Post_Carousel.php:100
+#: inc/Elements/Post_Grid.php:179 inc/Elements/Slider.php:97
+msgid "Title"
+msgstr ""
+
+#: inc/Elements/Feature_list.php:86
+msgid "I am feature title"
+msgstr ""
+
+#: inc/Elements/Feature_list.php:95
+msgid "Feature Description"
+msgstr ""
+
+#: inc/Elements/Feature_list.php:96
+msgid ""
+"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod "
+"tempor incididunt"
+msgstr ""
+
+#: inc/Elements/Feature_list.php:104
+msgid "Feature Item"
+msgstr ""
+
+#: inc/Elements/Feature_list.php:158
+msgid "Feature Icon"
+msgstr ""
+
+#: inc/Elements/Feature_list.php:263 inc/Elements/Post_Carousel.php:365
+#: inc/Elements/Products.php:300 inc/Elements/Slider.php:442
+#: inc/Elements/Staff_Member.php:571 inc/Elements/Testimonial_Slider.php:654
+msgid "Hover Background Color"
+msgstr ""
+
+#: inc/Elements/Feature_list.php:316
+msgid "Feature List Content"
+msgstr ""
+
+#: inc/Elements/Feature_list.php:349
+msgid "Feature List Title"
+msgstr ""
+
+#: inc/Elements/Feature_list.php:392
+msgid "Feature List Description"
+msgstr ""
+
+#: inc/Elements/Flip_Box.php:26
+msgid "DA: Flip Box"
+msgstr ""
+
+#: inc/Elements/Flip_Box.php:44
+msgid "Flip Box"
+msgstr ""
+
+#: inc/Elements/Flip_Box.php:52 inc/Elements/Teaser_Box.php:52
+msgid "Upload Image"
+msgstr ""
+
+#: inc/Elements/Flip_Box.php:66 inc/Elements/Flip_Box.php:227
+msgid "Flip Box Title"
+msgstr ""
+
+#: inc/Elements/Flip_Box.php:68 inc/Elements/Staff_Member.php:117
+#: inc/Elements/Teaser_Box.php:78 inc/Elements/Testimonial.php:95
+#: inc/Elements/Testimonial_Slider.php:87
+msgid "John Doe"
+msgstr ""
+
+#: inc/Elements/Flip_Box.php:111 inc/Elements/Slider.php:107
+msgid "Sub Title"
+msgstr ""
+
+#: inc/Elements/Flip_Box.php:113
+msgid "Add subtitle or leave it blank."
+msgstr ""
+
+#: inc/Elements/Flip_Box.php:120 inc/Elements/Flip_Box.php:329
+msgid "Flip Box Text"
+msgstr ""
+
+#: inc/Elements/Flip_Box.php:122
+msgid "Add flip-box text here or leave it blank."
+msgstr ""
+
+#: inc/Elements/Flip_Box.php:135
+msgid "Flip Box Size"
+msgstr ""
+
+#: inc/Elements/Flip_Box.php:143
+msgid "Flip Box Width"
+msgstr ""
+
+#: inc/Elements/Flip_Box.php:164
+msgid "Flip Box Height"
+msgstr ""
+
+#: inc/Elements/Flip_Box.php:184
+msgid "Flip Box Image Width"
+msgstr ""
+
+#: inc/Elements/Flip_Box.php:205
+msgid "Flip Box Image Height"
+msgstr ""
+
+#: inc/Elements/Flip_Box.php:236 inc/Elements/Flip_Box.php:293
+#: inc/Elements/Popular_Post.php:77 inc/Elements/Post_Carousel.php:220
+#: inc/Elements/Post_Carousel.php:274 inc/Elements/Post_Grid.php:279
+#: inc/Elements/Post_Grid.php:333 inc/Elements/Products.php:219
+#: inc/Elements/Slider.php:483 inc/Elements/Teaser_Box.php:243
+#: inc/Elements/Teaser_Box.php:300 inc/Elements/Testimonial.php:219
+#: inc/Elements/Testimonial.php:283 inc/Elements/Testimonial_Slider.php:320
+#: inc/Elements/Testimonial_Slider.php:384
+msgid "Bottom Spacing"
+msgstr ""
+
+#: inc/Elements/Flip_Box.php:262 inc/Elements/Popular_Post.php:100
+#: inc/Elements/Post_Carousel.php:244 inc/Elements/Post_Grid.php:302
+#: inc/Elements/Teaser_Box.php:269 inc/Elements/heading-with-separator.php:189
+msgid "Title Hover Color"
+msgstr ""
+
+#: inc/Elements/Flip_Box.php:284
+msgid "Flip Box Subtitle"
+msgstr ""
+
+#: inc/Elements/Flip_Box.php:305
+msgid "Subtitle Color"
+msgstr ""
+
+#: inc/Elements/Flip_Box.php:364
+msgid "Flip Box Content"
+msgstr ""
+
+#: inc/Elements/Flip_Box.php:404
+msgid "Avatar"
+msgstr ""
+
+#: inc/Elements/Icon_Box.php:31
+msgid "DA: Icon Box"
+msgstr ""
+
+#: inc/Elements/Icon_Box.php:69
+msgid "Icon Box"
+msgstr ""
+
+#: inc/Elements/Icon_Box.php:92
+msgid "Icon Link"
+msgstr ""
+
+#: inc/Elements/Icon_Box.php:106 inc/Elements/Icon_Box.php:381
+msgid "Icon Box Title"
+msgstr ""
+
+#: inc/Elements/Icon_Box.php:108
+msgid "I am Icon Title."
+msgstr ""
+
+#: inc/Elements/Icon_Box.php:154
+msgid "Icon Box Text"
+msgstr ""
+
+#: inc/Elements/Icon_Box.php:156
+msgid "Add Icon text here or leave it blank."
+msgstr ""
+
+#: inc/Elements/Icon_Box.php:172
+msgid "Icon_Box Item Style"
+msgstr ""
+
+#: inc/Elements/Icon_Box.php:424
+msgid "Icon Box Description"
+msgstr ""
+
+#: inc/Elements/Icon_Box.php:470
+msgid "Icon Box Content"
+msgstr ""
+
+#: inc/Elements/Icon_List.php:28
+msgid "DA: Icon List"
+msgstr ""
+
+#: inc/Elements/Icon_List.php:59
+msgid "icon List"
+msgstr ""
+
+#: inc/Elements/Icon_List.php:73 inc/Elements/Icon_List.php:206
+#: inc/Elements/Pricing_Table.php:145 inc/Elements/Pricing_Table.php:495
+msgid "List Icon"
+msgstr ""
+
+#: inc/Elements/Icon_List.php:90
+msgid "List Text"
+msgstr ""
+
+#: inc/Elements/Icon_List.php:91
+msgid "Icon List #1"
+msgstr ""
+
+#: inc/Elements/Icon_List.php:98
+msgid "Icon List Link"
+msgstr ""
+
+#: inc/Elements/Icon_List.php:111
+msgid "Icon List Item"
+msgstr ""
+
+#: inc/Elements/Icon_List.php:134
+msgid "Icon List Align"
+msgstr ""
+
+#: inc/Elements/Icon_List.php:184
+msgid "Icon List Layout"
+msgstr ""
+
+#: inc/Elements/Icon_List.php:262
+msgid "Icon List Spacing"
+msgstr ""
+
+#: inc/Elements/Icon_List.php:270
+msgid "Icon List Bottom Spacing"
+msgstr ""
+
+#: inc/Elements/Icon_List.php:285
+msgid "Icon List Right Spacing"
+msgstr ""
+
+#: inc/Elements/Icon_List.php:334
+msgid "Icon List Text"
+msgstr ""
+
+#: inc/Elements/Icon_List.php:375
+msgid "Icon List Content"
+msgstr ""
+
+#: inc/Elements/Image_Overlay.php:28
+msgid "DA: Image Overlay"
+msgstr ""
+
+#: inc/Elements/Image_Overlay.php:58
+msgid "Image Overlay"
+msgstr ""
+
+#: inc/Elements/Image_Overlay.php:67 inc/Elements/Post_Grid.php:221
+#: inc/Elements/Promo-box.php:75 inc/Elements/Slider.php:72
+#: inc/Elements/Staff_Member.php:78 inc/Elements/Teaser_Box.php:183
+#: inc/Elements/Testimonial.php:70 inc/Elements/Testimonial_Slider.php:72
+msgid "Image"
+msgstr ""
+
+#: inc/Elements/Image_Overlay.php:93
+msgid "Overlay Title"
+msgstr ""
+
+#: inc/Elements/Image_Overlay.php:94
+msgid "I am Overlay Title"
+msgstr ""
+
+#: inc/Elements/Image_Overlay.php:138 inc/Elements/Slider.php:82
+msgid "Link"
+msgstr ""
+
+#: inc/Elements/Image_Overlay.php:153
+msgid "Overlay Subtitle"
+msgstr ""
+
+#: inc/Elements/Image_Overlay.php:154
+msgid "I am Overlay Subtitle"
+msgstr ""
+
+#: inc/Elements/Image_Overlay.php:166
+msgid "Image Overlay Style"
+msgstr ""
+
+#: inc/Elements/Image_Overlay.php:174 inc/Elements/Slider.php:286
+msgid "Show/Hide Overlay"
+msgstr ""
+
+#: inc/Elements/Image_Overlay.php:195 inc/Elements/Promo-box.php:152
+msgid "Overlay Border Radius"
+msgstr ""
+
+#: inc/Elements/Image_Overlay.php:257
+msgid "Sub Title Color"
+msgstr ""
+
+#: inc/Elements/Ninja_Forms.php:33
+msgid "DA: Ninja Forms"
+msgstr ""
+
+#: inc/Elements/Ninja_Forms.php:76
+msgid ""
+"Ninja Forms is not installed & activated. Please install and activate it."
+msgstr ""
+
+#: inc/Elements/Ninja_Forms.php:87
+msgid "NinjaForms"
+msgstr ""
+
+#: inc/Elements/Ninja_Forms.php:131
+msgid "Show/Hide Default Title"
+msgstr ""
+
+#: inc/Elements/Ninja_Forms.php:150
+msgid "I am NinjaForms Title."
+msgstr ""
+
+#: inc/Elements/Ninja_Forms.php:431 inc/Elements/WpForm.php:418
+msgid "Text & Textarea Input"
+msgstr ""
+
+#: inc/Elements/Ninja_Forms.php:438 inc/Elements/WpForm.php:425
+msgid "Text/Textarea Input Bottom Spacing"
+msgstr ""
+
+#: inc/Elements/Ninja_Forms.php:463 inc/Elements/WpForm.php:450
+msgid "Text/Textarea Input Color"
+msgstr ""
+
+#: inc/Elements/Ninja_Forms.php:476 inc/Elements/WpForm.php:463
+msgid "Text/Textarea Input Background Color"
+msgstr ""
+
+#: inc/Elements/Ninja_Forms.php:516 inc/Elements/WpForm.php:503
+msgid "Textarea Input Padding"
+msgstr ""
+
+#: inc/Elements/Ninja_Forms.php:539 inc/Elements/WpForm.php:526
+msgid "Text/Textarea Input Border Radius"
+msgstr ""
+
+#: inc/Elements/Popular_Post.php:26
+msgid "DA: Popular Post"
+msgstr ""
+
+#: inc/Elements/Popular_Post.php:44
+msgid "Popular Post"
+msgstr ""
+
+#: inc/Elements/Popular_Post.php:52 inc/Elements/Post_Carousel.php:61
+#: inc/Elements/Post_Grid.php:130
+msgid "Post Categories"
+msgstr ""
+
+#: inc/Elements/Popular_Post.php:68 inc/Elements/Post_Carousel.php:211
+#: inc/Elements/Post_Grid.php:270
+msgid "Blog Post Title"
+msgstr ""
+
+#: inc/Elements/Post_Carousel.php:26
+msgid "DA: Post Carousel"
+msgstr ""
+
+#: inc/Elements/Post_Carousel.php:43
+msgid "Post Carousel"
+msgstr ""
+
+#: inc/Elements/Post_Carousel.php:51 inc/Elements/Post_Grid.php:54
+msgid "Number of Post"
+msgstr ""
+
+#: inc/Elements/Post_Carousel.php:74 inc/Elements/Post_Grid.php:153
+msgid "Post Order"
+msgstr ""
+
+#: inc/Elements/Post_Carousel.php:79 inc/Elements/Post_Grid.php:158
+#: inc/Elements/Products.php:128
+msgid "ASC"
+msgstr ""
+
+#: inc/Elements/Post_Carousel.php:81 inc/Elements/Post_Grid.php:160
+#: inc/Elements/Products.php:130
+msgid "DESC"
+msgstr ""
+
+#: inc/Elements/Post_Carousel.php:93 inc/Elements/Post_Grid.php:172
+msgid "Post Order By"
+msgstr ""
+
+#: inc/Elements/Post_Carousel.php:98 inc/Elements/Post_Grid.php:177
+#: inc/Elements/Products.php:109
+msgid "Date"
+msgstr ""
+
+#: inc/Elements/Post_Carousel.php:114
+msgid "Slider Settings"
+msgstr ""
+
+#: inc/Elements/Post_Carousel.php:122 inc/Elements/Products.php:184
+#: inc/Elements/Testimonial_Slider.php:158
+msgid "No of Slide per Page"
+msgstr ""
+
+#: inc/Elements/Post_Carousel.php:128
+msgid "Default:3"
+msgstr ""
+
+#: inc/Elements/Post_Carousel.php:135 inc/Elements/Slider.php:194
+#: inc/Elements/Testimonial_Slider.php:172
+msgid "Animation Speed"
+msgstr ""
+
+#: inc/Elements/Post_Carousel.php:141 inc/Elements/Slider.php:200
+#: inc/Elements/Testimonial_Slider.php:178
+msgid "Value in milliseconds. Default:300"
+msgstr ""
+
+#: inc/Elements/Post_Carousel.php:149 inc/Elements/Slider.php:208
+#: inc/Elements/Testimonial_Slider.php:186
+msgid "Slider Autoplay?"
+msgstr ""
+
+#: inc/Elements/Post_Carousel.php:162 inc/Elements/Slider.php:221
+#: inc/Elements/Testimonial_Slider.php:199
+msgid "Autoplay Speed"
+msgstr ""
+
+#: inc/Elements/Post_Carousel.php:171 inc/Elements/Slider.php:230
+#: inc/Elements/Testimonial_Slider.php:208
+msgid "Value in milliseconds. Default:3000"
+msgstr ""
+
+#: inc/Elements/Post_Carousel.php:180 inc/Elements/Slider.php:239
+#: inc/Elements/Testimonial_Slider.php:217
+msgid "Infinite Loop?"
+msgstr ""
+
+#: inc/Elements/Post_Carousel.php:193
+msgid "Show/Hide Navigation"
+msgstr ""
+
+#: inc/Elements/Post_Carousel.php:266 inc/Elements/Post_Grid.php:324
+msgid "Blog Post Meta"
+msgstr ""
+
+#: inc/Elements/Post_Carousel.php:289 inc/Elements/Post_Grid.php:345
+msgid "Meta Color"
+msgstr ""
+
+#: inc/Elements/Post_Carousel.php:300 inc/Elements/Post_Grid.php:356
+msgid "Meta Hover Color"
+msgstr ""
+
+#: inc/Elements/Post_Carousel.php:322 inc/Elements/Products.php:257
+#: inc/Elements/Slider.php:398 inc/Elements/Testimonial_Slider.php:610
+msgid "Navigation"
+msgstr ""
+
+#: inc/Elements/Post_Carousel.php:331 inc/Elements/Products.php:266
+#: inc/Elements/Slider.php:407 inc/Elements/Testimonial_Slider.php:619
+msgid "Arrow Color"
+msgstr ""
+
+#: inc/Elements/Post_Carousel.php:343 inc/Elements/Products.php:278
+#: inc/Elements/Slider.php:419 inc/Elements/Testimonial_Slider.php:642
+msgid "Arrow Background Color"
+msgstr ""
+
+#: inc/Elements/Post_Carousel.php:354 inc/Elements/Products.php:289
+#: inc/Elements/Slider.php:431 inc/Elements/Testimonial_Slider.php:631
+msgid "Hover Color"
+msgstr ""
+
+#: inc/Elements/Post_Carousel.php:386 inc/Elements/Teaser_Box.php:201
+#: inc/Elements/Testimonial.php:208 inc/Elements/Testimonial_Slider.php:307
+msgid "Border Radius"
+msgstr ""
+
+#: inc/Elements/Post_Grid.php:28
+msgid "DA: Post Grid"
+msgstr ""
+
+#: inc/Elements/Post_Grid.php:46
+msgid "Post Grid"
+msgstr ""
+
+#: inc/Elements/Post_Grid.php:65
+msgid "Column Number & Layout"
+msgstr ""
+
+#: inc/Elements/Post_Grid.php:71
+msgid "One"
+msgstr ""
+
+#: inc/Elements/Post_Grid.php:72
+msgid "One - Inline"
+msgstr ""
+
+#: inc/Elements/Post_Grid.php:73
+msgid "Two"
+msgstr ""
+
+#: inc/Elements/Post_Grid.php:74
+msgid "Two - First Post Full Width"
+msgstr ""
+
+#: inc/Elements/Post_Grid.php:75 inc/Elements/Products.php:191
+msgid "Three"
+msgstr ""
+
+#: inc/Elements/Post_Grid.php:76
+msgid "Three - First Post Full Width"
+msgstr ""
+
+#: inc/Elements/Post_Grid.php:86
+msgid "Blog Background Shadow"
+msgstr ""
+
+#: inc/Elements/Post_Grid.php:91
+msgid "White Shadow"
+msgstr ""
+
+#: inc/Elements/Post_Grid.php:93
+msgid "Simple"
+msgstr ""
+
+#: inc/Elements/Post_Grid.php:104
+msgid "Header Align"
+msgstr ""
+
+#: inc/Elements/Post_Grid.php:140
+msgid "Exclude Categories"
+msgstr ""
+
+#: inc/Elements/Post_Grid.php:190
+msgid "Enable Excerpt?"
+msgstr ""
+
+#: inc/Elements/Post_Grid.php:203
+msgid "Show/Hide Date on Meta?"
+msgstr ""
+
+#: inc/Elements/Post_Grid.php:229 inc/Elements/Staff_Member.php:312
+#: inc/Elements/Teaser_Box.php:213
+msgid "Image Bottom Spacing"
+msgstr ""
+
+#: inc/Elements/Post_Grid.php:253 inc/Elements/Staff_Member.php:300
+msgid "Image Border Radius"
+msgstr ""
+
+#: inc/Elements/Post_Grid.php:379
+msgid "Blog Post Text"
+msgstr ""
+
+#: inc/Elements/Post_Grid.php:388
+msgid "Content Bottom Spacing"
+msgstr ""
+
+#: inc/Elements/Post_Grid.php:400
+msgid "Content Color"
+msgstr ""
+
+#: inc/Elements/Post_Grid.php:420
+msgid "Text Align"
+msgstr ""
+
+#: inc/Elements/Post_Grid.php:438
+msgid "Justify"
+msgstr ""
+
+#: inc/Elements/Post_Grid.php:456
+msgid "Blog Read More Button"
+msgstr ""
+
+#: inc/Elements/Post_Grid.php:513
+msgid "Blog Post Content"
+msgstr ""
+
+#: inc/Elements/Post_Grid.php:741
+#, php-format
+msgid "Continue reading%s"
+msgstr ""
+
+#: inc/Elements/Post_Grid.php:751
+msgid ", "
+msgstr ""
+
+#: inc/Elements/Post_Grid.php:753
+#, php-format
+msgid "Tagged %1$s"
+msgstr ""
+
+#: inc/Elements/Post_Grid.php:775
+msgid "Posts navigation"
+msgstr ""
+
+#: inc/Elements/Post_Grid.php:779
+msgid "&larr; Previous"
+msgstr ""
+
+#: inc/Elements/Post_Grid.php:780
+msgid "Next &rarr;"
+msgstr ""
+
+#: inc/Elements/Pricing_Table.php:28
+msgid "DA: Pricing Table"
+msgstr ""
+
+#: inc/Elements/Pricing_Table.php:59
+msgid "Pricing Table"
+msgstr ""
+
+#: inc/Elements/Pricing_Table.php:69
+msgid "Pricing Table Title"
+msgstr ""
+
+#: inc/Elements/Pricing_Table.php:70 inc/Elements/Pricing_Table.php:341
+msgid "Table Title"
+msgstr ""
+
+#: inc/Elements/Pricing_Table.php:116
+msgid "Offer Price"
+msgstr ""
+
+#: inc/Elements/Pricing_Table.php:117
+msgid "$29"
+msgstr ""
+
+#: inc/Elements/Pricing_Table.php:125
+msgid "Pricing Separator"
+msgstr ""
+
+#: inc/Elements/Pricing_Table.php:126
+msgid "/"
+msgstr ""
+
+#: inc/Elements/Pricing_Table.php:135
+msgid "Pricing Offer Text"
+msgstr ""
+
+#: inc/Elements/Pricing_Table.php:136
+msgid "month"
+msgstr ""
+
+#: inc/Elements/Pricing_Table.php:162
+msgid "Pricing List Text"
+msgstr ""
+
+#: inc/Elements/Pricing_Table.php:171
+msgid "Pricing Table Item"
+msgstr ""
+
+#: inc/Elements/Pricing_Table.php:196
+msgid "Pricing Table Align"
+msgstr ""
+
+#: inc/Elements/Pricing_Table.php:289
+msgid "Table Header"
+msgstr ""
+
+#: inc/Elements/Pricing_Table.php:297
+msgid "Table Header Background Color"
+msgstr ""
+
+#: inc/Elements/Pricing_Table.php:309
+msgid "Header Padding"
+msgstr ""
+
+#: inc/Elements/Pricing_Table.php:321
+msgid "Header Bottom Spacing"
+msgstr ""
+
+#: inc/Elements/Pricing_Table.php:349
+msgid "Table Title Color"
+msgstr ""
+
+#: inc/Elements/Pricing_Table.php:360
+msgid "Table Title Separator Color"
+msgstr ""
+
+#: inc/Elements/Pricing_Table.php:371
+msgid "Table Title Background Color"
+msgstr ""
+
+#: inc/Elements/Pricing_Table.php:391
+msgid "Title Padding"
+msgstr ""
+
+#: inc/Elements/Pricing_Table.php:406
+msgid "Table Pricing"
+msgstr ""
+
+#: inc/Elements/Pricing_Table.php:414
+msgid "Table Price Color"
+msgstr ""
+
+#: inc/Elements/Pricing_Table.php:436
+msgid "Price Text Color"
+msgstr ""
+
+#: inc/Elements/Pricing_Table.php:458
+msgid "Table Pricing Background Color"
+msgstr ""
+
+#: inc/Elements/Pricing_Table.php:470
+msgid "Price Container Padding"
+msgstr ""
+
+#: inc/Elements/Pricing_Table.php:481
+msgid "Price Container Bottom Separator Color"
+msgstr ""
+
+#: inc/Elements/Pricing_Table.php:551
+msgid "Table List Spacing"
+msgstr ""
+
+#: inc/Elements/Pricing_Table.php:559
+msgid "Table Item Bottom Spacing"
+msgstr ""
+
+#: inc/Elements/Pricing_Table.php:604
+msgid "Table List Container Bottom Spacing"
+msgstr ""
+
+#: inc/Elements/Pricing_Table.php:625
+msgid "Table List Text"
+msgstr ""
+
+#: inc/Elements/Pricing_Table.php:645
+msgid "List Item Separator Color"
+msgstr ""
+
+#: inc/Elements/Pricing_Table.php:688
+msgid "Space between Button Text & Icon"
+msgstr ""
+
+#: inc/Elements/Pricing_Table.php:839
+msgid "Pricing Table Content"
+msgstr ""
+
+#: inc/Elements/Pricing_Table.php:869
+msgid "Price Table Border Radius"
+msgstr ""
+
+#: inc/Elements/Products.php:29
+msgid "DA: Product Slider"
+msgstr ""
+
+#: inc/Elements/Products.php:53 inc/Elements/Products.php:210
+msgid "Product Section Title"
+msgstr ""
+
+#: inc/Elements/Products.php:62
+msgid "Number of Product"
+msgstr ""
+
+#: inc/Elements/Products.php:89
+msgid "Product Type"
+msgstr ""
+
+#: inc/Elements/Products.php:94
+msgid "All Product"
+msgstr ""
+
+#: inc/Elements/Products.php:95
+msgid "Featured"
+msgstr ""
+
+#: inc/Elements/Products.php:96
+msgid "On Sale"
+msgstr ""
+
+#: inc/Elements/Products.php:104
+msgid "Product Order By"
+msgstr ""
+
+#: inc/Elements/Products.php:110
+msgid "Price"
+msgstr ""
+
+#: inc/Elements/Products.php:111
+msgid "Random"
+msgstr ""
+
+#: inc/Elements/Products.php:112
+msgid "Sales"
+msgstr ""
+
+#: inc/Elements/Products.php:123
+msgid "Product Order"
+msgstr ""
+
+#: inc/Elements/Products.php:140
+msgid "Hide Free Product?"
+msgstr ""
+
+#: inc/Elements/Products.php:153
+msgid "Product Display"
+msgstr ""
+
+#: inc/Elements/Products.php:158
+msgid "Product Grid"
+msgstr ""
+
+#: inc/Elements/Products.php:160
+msgid "Product Slider"
+msgstr ""
+
+#: inc/Elements/Products.php:174 inc/Elements/Slider.php:186
+#: inc/Elements/Testimonial_Slider.php:150
+msgid "Slider Navigation Settings"
+msgstr ""
+
+#: inc/Elements/Products.php:189
+msgid "one"
+msgstr ""
+
+#: inc/Elements/Products.php:192
+msgid "Four"
+msgstr ""
+
+#: inc/Elements/Products.php:193
+msgid "Five"
+msgstr ""
+
+#: inc/Elements/Products.php:196
+msgid "Default:4"
+msgstr ""
+
+#: inc/Elements/Promo-box.php:32
+msgid "DA: Promo Box"
+msgstr ""
+
+#: inc/Elements/Promo-box.php:66
+msgid "Promo Box"
+msgstr ""
+
+#: inc/Elements/Promo-box.php:84
+msgid "Image Link"
+msgstr ""
+
+#: inc/Elements/Promo-box.php:85
+msgid "https://themenextlevel.com/"
+msgstr ""
+
+#: inc/Elements/Promo-box.php:108 inc/Elements/Promo-box.php:109
+msgid "Promo Box Text"
+msgstr ""
+
+#: inc/Elements/Promo-box.php:116
+msgid "Show/Hide Overlay Text"
+msgstr ""
+
+#: inc/Elements/Promo-box.php:134
+msgid "Overlay Border Style"
+msgstr ""
+
+#: inc/Elements/Promo-box.php:168
+msgid "Overlay Text & Background"
+msgstr ""
+
+#: inc/Elements/Skillbar.php:28
+msgid "DA: Skill Bar"
+msgstr ""
+
+#: inc/Elements/Skillbar.php:61 inc/Elements/Skillbar.php:121
+msgid "Skill Bar"
+msgstr ""
+
+#: inc/Elements/Skillbar.php:73
+msgid "Skill text"
+msgstr ""
+
+#: inc/Elements/Skillbar.php:74
+msgid "Web Developer"
+msgstr ""
+
+#: inc/Elements/Skillbar.php:83
+msgid "Skill Value"
+msgstr ""
+
+#: inc/Elements/Skillbar.php:96
+msgid "Skill Item Style"
+msgstr ""
+
+#: inc/Elements/Skillbar.php:104
+msgid "Skillbar Title Style"
+msgstr ""
+
+#: inc/Elements/Skillbar.php:129
+msgid "Bar Height"
+msgstr ""
+
+#: inc/Elements/Skillbar.php:150
+msgid "Skillbar Border Radius"
+msgstr ""
+
+#: inc/Elements/Skillbar.php:163
+msgid "Bar Background Color"
+msgstr ""
+
+#: inc/Elements/Skillbar.php:180
+msgid "Skillbar Text"
+msgstr ""
+
+#: inc/Elements/Skillbar.php:188
+msgid "Skillbar Text Color"
+msgstr ""
+
+#: inc/Elements/Skillbar.php:212
+msgid "Skillbar Percentage"
+msgstr ""
+
+#: inc/Elements/Skillbar.php:221
+msgid "Percentage Color"
+msgstr ""
+
+#: inc/Elements/Skillbar.php:232
+msgid "Percentage Size"
+msgstr ""
+
+#: inc/Elements/Slider.php:29
+msgid "DA: Slider"
+msgstr ""
+
+#: inc/Elements/Slider.php:61
+msgid "Slides"
+msgstr ""
+
+#: inc/Elements/Slider.php:98
+msgid "I am Slide1 Title"
+msgstr ""
+
+#: inc/Elements/Slider.php:108
+msgid "I am Slide1 Sub Title"
+msgstr ""
+
+#: inc/Elements/Slider.php:254
+msgid "Slide Element Style"
+msgstr ""
+
+#: inc/Elements/Slider.php:261
+msgid "Navigation Position"
+msgstr ""
+
+#: inc/Elements/Slider.php:266
+msgid "Top Right Corner"
+msgstr ""
+
+#: inc/Elements/Slider.php:267
+msgid "Bottom Right Corner"
+msgstr ""
+
+#: inc/Elements/Slider.php:268
+msgid "Left Right Middle"
+msgstr ""
+
+#: inc/Elements/Slider.php:278
+msgid "Slide Overlay"
+msgstr ""
+
+#: inc/Elements/Slider.php:299
+msgid "Overlay Padding"
+msgstr ""
+
+#: inc/Elements/Slider.php:311
+msgid "Overlay Background Color"
+msgstr ""
+
+#: inc/Elements/Slider.php:461
+msgid "Navigation Border Radius"
+msgstr ""
+
+#: inc/Elements/Slider.php:594
+msgid "Dots"
+msgstr ""
+
+#: inc/Elements/Slider.php:602
+msgid "Dots Background Color"
+msgstr ""
+
+#: inc/Elements/Slider.php:614
+msgid "Dots Active Background Color"
+msgstr ""
+
+#: inc/Elements/Slider.php:626
+msgid "Dots Border Color"
+msgstr ""
+
+#: inc/Elements/Staff_Member.php:32
+msgid "DA: Staff Member"
+msgstr ""
+
+#: inc/Elements/Staff_Member.php:67
+msgid "Staff Member"
+msgstr ""
+
+#: inc/Elements/Staff_Member.php:88
+msgid "Image Width"
+msgstr ""
+
+#: inc/Elements/Staff_Member.php:116
+msgid "Name"
+msgstr ""
+
+#: inc/Elements/Staff_Member.php:127
+msgid "Job Position"
+msgstr ""
+
+#: inc/Elements/Staff_Member.php:128
+msgid "Developer"
+msgstr ""
+
+#: inc/Elements/Staff_Member.php:138
+msgid "About Staff Member"
+msgstr ""
+
+#: inc/Elements/Staff_Member.php:139
+msgid ""
+"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod "
+"tempor"
+msgstr ""
+
+#: inc/Elements/Staff_Member.php:147
+msgid "Social Icons"
+msgstr ""
+
+#: inc/Elements/Staff_Member.php:155
+msgid "Social Icons Show/Hide"
+msgstr ""
+
+#: inc/Elements/Staff_Member.php:171 inc/Elements/Staff_Member.php:465
+msgid "Social Icon"
+msgstr ""
+
+#: inc/Elements/Staff_Member.php:185
+msgid "Social Icon Link"
+msgstr ""
+
+#: inc/Elements/Staff_Member.php:230
+msgid "Staff Member Item Style"
+msgstr ""
+
+#: inc/Elements/Staff_Member.php:282
+msgid "Staff Member Image"
+msgstr ""
+
+#: inc/Elements/Staff_Member.php:331
+msgid "Staff Member Name"
+msgstr ""
+
+#: inc/Elements/Staff_Member.php:340
+msgid "Name Bottom Spacing"
+msgstr ""
+
+#: inc/Elements/Staff_Member.php:355
+msgid "Name Color"
+msgstr ""
+
+#: inc/Elements/Staff_Member.php:376
+msgid "Staff Member Job Position"
+msgstr ""
+
+#: inc/Elements/Staff_Member.php:384
+msgid "Job Position Bottom Spacing"
+msgstr ""
+
+#: inc/Elements/Staff_Member.php:423
+msgid "Staff Member Text"
+msgstr ""
+
+#: inc/Elements/Staff_Member.php:432
+msgid "Text Bottom Padding"
+msgstr ""
+
+#: inc/Elements/Staff_Member.php:637
+msgid "Staff Member Content"
+msgstr ""
+
+#: inc/Elements/Subscription.php:32
+msgid "DA: subscription"
+msgstr ""
+
+#: inc/Elements/Subscription.php:65
+msgid "MailChimp Subscription"
+msgstr ""
+
+#: inc/Elements/Subscription.php:75 inc/Elements/Subscription.php:76
+msgid "Subscription text"
+msgstr ""
+
+#: inc/Elements/Subscription.php:82
+msgid "Label Tag"
+msgstr ""
+
+#: inc/Elements/Subscription.php:103
+msgid "Please follow our documentation."
+msgstr ""
+
+#: inc/Elements/Subscription.php:103
+msgid "Visit"
+msgstr ""
+
+#: inc/Elements/Subscription.php:104
+msgid "Insert action form url"
+msgstr ""
+
+#: inc/Elements/Subscription.php:137
+msgid "Subscription Layout"
+msgstr ""
+
+#: inc/Elements/Subscription.php:160
+msgid "Button Style"
+msgstr ""
+
+#: inc/Elements/Subscription.php:226
+msgid "Label Text"
+msgstr ""
+
+#: inc/Elements/Subscription.php:238 inc/Elements/Testimonial.php:369
+#: inc/Elements/Testimonial_Slider.php:470
+msgid "Text Bottom Spacing"
+msgstr ""
+
+#: inc/Elements/Teaser_Box.php:26
+msgid "DA: Teaser Box"
+msgstr ""
+
+#: inc/Elements/Teaser_Box.php:44
+msgid "Teaser Box"
+msgstr ""
+
+#: inc/Elements/Teaser_Box.php:76
+msgid "Teaser Box Title"
+msgstr ""
+
+#: inc/Elements/Teaser_Box.php:121
+msgid "Teaser Text"
+msgstr ""
+
+#: inc/Elements/Teaser_Box.php:123
+msgid "Add Teaser text here or leave it blank."
+msgstr ""
+
+#: inc/Elements/Teaser_Box.php:133 inc/Reuses/Reuse.php:27
+msgid "Read More"
+msgstr ""
+
+#: inc/Elements/Teaser_Box.php:234
+msgid "Image Box Title"
+msgstr ""
+
+#: inc/Elements/Teaser_Box.php:291
+msgid "Image Box Description"
+msgstr ""
+
+#: inc/Elements/Teaser_Box.php:336
+msgid "Image Box Content"
+msgstr ""
+
+#: inc/Elements/Teaser_Box.php:369
+msgid "Image Box Container"
+msgstr ""
+
+#: inc/Elements/Teaser_Box.php:402
+msgid "Image Box Button"
+msgstr ""
+
+#: inc/Elements/Testimonial.php:28
+msgid "DA: Testimonial"
+msgstr ""
+
+#: inc/Elements/Testimonial.php:59
+msgid "Testimonial"
+msgstr ""
+
+#: inc/Elements/Testimonial.php:94 inc/Elements/Testimonial.php:238
+#: inc/Elements/Testimonial_Slider.php:86
+#: inc/Elements/Testimonial_Slider.php:339
+msgid "Reviewer Name"
+msgstr ""
+
+#: inc/Elements/Testimonial.php:103 inc/Elements/Testimonial.php:317
+#: inc/Elements/Testimonial_Slider.php:95
+#: inc/Elements/Testimonial_Slider.php:418
+msgid "Reviewer Organizaiton"
+msgstr ""
+
+#: inc/Elements/Testimonial.php:104 inc/Elements/Testimonial_Slider.php:96
+msgid "Softfirm"
+msgstr ""
+
+#: inc/Elements/Testimonial.php:113 inc/Elements/Testimonial.php:360
+#: inc/Elements/Testimonial_Slider.php:105
+#: inc/Elements/Testimonial_Slider.php:461
+msgid "Reviewer Text"
+msgstr ""
+
+#: inc/Elements/Testimonial.php:114 inc/Elements/Testimonial_Slider.php:106
+msgid ""
+"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod "
+"tempor incididunt."
+msgstr ""
+
+#: inc/Elements/Testimonial.php:121
+msgid "Testimonial Layout"
+msgstr ""
+
+#: inc/Elements/Testimonial.php:151
+msgid "Show/Hide Comma"
+msgstr ""
+
+#: inc/Elements/Testimonial.php:167 inc/Elements/Testimonial_Slider.php:234
+msgid "Testimonial Item Style"
+msgstr ""
+
+#: inc/Elements/Testimonial.php:192 inc/Elements/Testimonial_Slider.php:291
+msgid "Reviewer Image"
+msgstr ""
+
+#: inc/Elements/Testimonial.php:326 inc/Elements/Testimonial_Slider.php:427
+msgid "Left Spacing"
+msgstr ""
+
+#: inc/Elements/Testimonial.php:404 inc/Elements/Testimonial_Slider.php:505
+msgid "Reviewer Quote"
+msgstr ""
+
+#: inc/Elements/Testimonial.php:413 inc/Elements/Testimonial_Slider.php:514
+msgid "Quote Left Spacing"
+msgstr ""
+
+#: inc/Elements/Testimonial.php:428 inc/Elements/Testimonial_Slider.php:529
+msgid "Quote Right Spacing"
+msgstr ""
+
+#: inc/Elements/Testimonial.php:443 inc/Elements/Testimonial_Slider.php:544
+msgid "Quote Color"
+msgstr ""
+
+#: inc/Elements/Testimonial.php:454 inc/Elements/Testimonial_Slider.php:555
+msgid "Quote Size"
+msgstr ""
+
+#: inc/Elements/Testimonial.php:476
+msgid "Testimonial Container"
+msgstr ""
+
+#: inc/Elements/Testimonial_Slider.php:28
+msgid "DA: Testimonial Slider"
+msgstr ""
+
+#: inc/Elements/Testimonial_Slider.php:61
+msgid "Testimonial Slider"
+msgstr ""
+
+#: inc/Elements/Testimonial_Slider.php:164
+msgid "Default:1"
+msgstr ""
+
+#: inc/Elements/Testimonial_Slider.php:242
+msgid "Container Style"
+msgstr ""
+
+#: inc/Elements/Testimonial_Slider.php:260
+msgid "Down"
+msgstr ""
+
+#: inc/Elements/Testimonial_Slider.php:577
+msgid "Testimonial Content"
+msgstr ""
+
+#: inc/Elements/Type.php:32
+msgid "DA: Type Animation"
+msgstr ""
+
+#: inc/Elements/Type.php:66
+msgid "Type Animation"
+msgstr ""
+
+#: inc/Elements/Type.php:76 inc/Elements/Type.php:127
+msgid "Typing Text"
+msgstr ""
+
+#: inc/Elements/Type.php:77
+msgid "I am typing animation"
+msgstr ""
+
+#: inc/Elements/Type.php:86
+msgid "Typing Speed"
+msgstr ""
+
+#: inc/Elements/Type.php:137
+msgid "Type Text Color"
+msgstr ""
+
+#: inc/Elements/Type.php:147
+msgid "Type Text Background Color"
+msgstr ""
+
+#: inc/Elements/Type.php:168
+msgid "Type Text Hover Color"
+msgstr ""
+
+#: inc/Elements/Wording.php:32
+msgid "DA: Wording"
+msgstr ""
+
+#: inc/Elements/Wording.php:66
+msgid "Wording"
+msgstr ""
+
+#: inc/Elements/Wording.php:76 inc/Elements/Wording.php:86
+#: inc/Elements/Wording.php:95 inc/Elements/Wording.php:104
+msgid "Enter one or more word"
+msgstr ""
+
+#: inc/Elements/Wording.php:77
+msgid "Word1"
+msgstr ""
+
+#: inc/Elements/Wording.php:87
+msgid "Word2"
+msgstr ""
+
+#: inc/Elements/Wording.php:96
+msgid "Word3"
+msgstr ""
+
+#: inc/Elements/Wording.php:105
+msgid "Word4"
+msgstr ""
+
+#: inc/Elements/Wording.php:113
+msgid "Wording Display Style"
+msgstr ""
+
+#: inc/Elements/Wording.php:127
+msgid "Animation Iteration"
+msgstr ""
+
+#: inc/Elements/Wording.php:132
+msgid "Once"
+msgstr ""
+
+#: inc/Elements/Wording.php:133
+msgid "Infinite"
+msgstr ""
+
+#: inc/Elements/Wording.php:175
+msgid "Word1 Style"
+msgstr ""
+
+#: inc/Elements/Wording.php:183
+msgid "Word1 Text Color"
+msgstr ""
+
+#: inc/Elements/Wording.php:193
+msgid "Word1 Background Color"
+msgstr ""
+
+#: inc/Elements/Wording.php:203
+msgid "Word1 Text Hover Color"
+msgstr ""
+
+#: inc/Elements/Wording.php:213
+msgid "Word1 Text Background Hover Color"
+msgstr ""
+
+#: inc/Elements/Wording.php:233
+msgid "Word1 Padding"
+msgstr ""
+
+#: inc/Elements/Wording.php:247 inc/Elements/Wording.php:335
+#: inc/Elements/Wording.php:422 inc/Elements/Wording.php:507
+msgid "Animation Type"
+msgstr ""
+
+#: inc/Elements/Wording.php:261
+msgid "Word2 Style"
+msgstr ""
+
+#: inc/Elements/Wording.php:269
+msgid "Word2 Text Color"
+msgstr ""
+
+#: inc/Elements/Wording.php:280
+msgid "Word2 Background Color"
+msgstr ""
+
+#: inc/Elements/Wording.php:291
+msgid "Word2 Text Hover Color"
+msgstr ""
+
+#: inc/Elements/Wording.php:302
+msgid "Word2 Text Background Hover Color"
+msgstr ""
+
+#: inc/Elements/Wording.php:322
+msgid "Word2 Padding"
+msgstr ""
+
+#: inc/Elements/Wording.php:349
+msgid "Word3 Style"
+msgstr ""
+
+#: inc/Elements/Wording.php:359
+msgid "Word3 Text Color"
+msgstr ""
+
+#: inc/Elements/Wording.php:369
+msgid "Word3 Background Color"
+msgstr ""
+
+#: inc/Elements/Wording.php:379
+msgid "Word3 Text Hover Color"
+msgstr ""
+
+#: inc/Elements/Wording.php:389
+msgid "Word3 Text Background Hover Color"
+msgstr ""
+
+#: inc/Elements/Wording.php:409
+msgid "Word3 Padding"
+msgstr ""
+
+#: inc/Elements/Wording.php:434
+msgid "Word4 Style"
+msgstr ""
+
+#: inc/Elements/Wording.php:444
+msgid "Word4 Text Color"
+msgstr ""
+
+#: inc/Elements/Wording.php:454
+msgid "Word4 Background Color"
+msgstr ""
+
+#: inc/Elements/Wording.php:464
+msgid "Word4 Text Hover Color"
+msgstr ""
+
+#: inc/Elements/Wording.php:474
+msgid "Word4 Text Background Hover Color"
+msgstr ""
+
+#: inc/Elements/Wording.php:494
+msgid "Word4 Padding"
+msgstr ""
+
+#: inc/Elements/WpForm.php:33
+msgid "DA: WPForms"
+msgstr ""
+
+#: inc/Elements/WpForm.php:76
+msgid "WPForms is not installed & activated. Please install and activate it."
+msgstr ""
+
+#: inc/Elements/WpForm.php:87
+msgid "WPForms"
+msgstr ""
+
+#: inc/Elements/WpForm.php:137
+msgid "I am WPForm Title."
+msgstr ""
+
+#: inc/Elements/WpForm.php:542
+msgid "Checkbox/Multiple Choice"
+msgstr ""
+
+#: inc/Elements/WpForm.php:550
+msgid "Checkbox/Multiple Choice Width"
+msgstr ""
+
+#: inc/Elements/WpForm.php:562
+msgid "Checkbox/Multiple Choice Height"
+msgstr ""
+
+#: inc/Elements/WpForm.php:573
+msgid "Checkbox/Multiple Choice Color"
+msgstr ""
+
+#: inc/Elements/heading-with-separator.php:32
+msgid "DA: Heading with Separator"
+msgstr ""
+
+#: inc/Elements/heading-with-separator.php:66
+msgid "Heading with Separator"
+msgstr ""
+
+#: inc/Elements/heading-with-separator.php:76
+msgid "Heading Text"
+msgstr ""
+
+#: inc/Elements/heading-with-separator.php:77
+msgid "I am heading or text"
+msgstr ""
+
+#: inc/Elements/heading-with-separator.php:101
+msgid "Show/Hide Separator"
+msgstr ""
+
+#: inc/Elements/heading-with-separator.php:145
+msgid "Heading"
+msgstr ""
+
+#: inc/Elements/heading-with-separator.php:201
+msgid "Heading Separator"
+msgstr ""
+
+#: inc/Elements/heading-with-separator.php:208
+msgid "separator Color"
+msgstr ""
+
+#: inc/Elements/heading-with-separator.php:220
+msgid "Separator Width"
+msgstr ""
+
+#: inc/Elements/heading-with-separator.php:235
+msgid "Separator Height"
+msgstr ""
+
+#: inc/Elements/heading-with-separator.php:252
+msgid "Separator Bottom Spacing"
+msgstr ""
+
+#: inc/Reuses/Reuse.php:30
+#, php-format
+msgid "Continue reading %s"
+msgstr ""
+
+#: inc/Reuses/Reuse.php:129 inc/Reuses/Reuse.php:153
+#, php-format
+msgid "By %s"
+msgstr ""
+
+#: inc/Reuses/Reuse.php:174 inc/Reuses/Reuse.php:194 inc/Reuses/Reuse.php:213
+msgid "No Form found. Create New form "
+msgstr ""
+
+#: inc/Reuses/Reuse.php:175 inc/Reuses/Reuse.php:214
+msgid "Click here"
+msgstr ""
+
+#: inc/Reuses/Reuse.php:222
+msgid "none"
+msgstr ""
+
+#: inc/Reuses/Reuse.php:223
+msgid "bounce"
+msgstr ""
+
+#: inc/Reuses/Reuse.php:224
+msgid "flash"
+msgstr ""
+
+#: inc/Reuses/Reuse.php:225
+msgid "pulse"
+msgstr ""
+
+#: inc/Reuses/Reuse.php:226
+msgid "rubberBand"
+msgstr ""
+
+#: inc/Reuses/Reuse.php:227
+msgid "shake"
+msgstr ""
+
+#: inc/Reuses/Reuse.php:228
+msgid "headShake"
+msgstr ""
+
+#: inc/Reuses/Reuse.php:229
+msgid "swing"
+msgstr ""
+
+#: inc/Reuses/Reuse.php:230
+msgid "tada"
+msgstr ""
+
+#: inc/Reuses/Reuse.php:231
+msgid "wobble"
+msgstr ""
+
+#: inc/Reuses/Reuse.php:232
+msgid "jello"
+msgstr ""
+
+#: inc/Reuses/Reuse.php:233
+msgid "bounceIn"
+msgstr ""
+
+#: inc/Reuses/Reuse.php:234
+msgid "bounceInDown"
+msgstr ""
+
+#: inc/Reuses/Reuse.php:235 inc/Reuses/Reuse.php:236
+msgid "bounceInLeft"
+msgstr ""
+
+#: inc/Reuses/Reuse.php:237
+msgid "bounceInUp"
+msgstr ""
+
+#: inc/Reuses/Reuse.php:238
+msgid "bounceOut"
+msgstr ""
+
+#: inc/Reuses/Reuse.php:239
+msgid "bounceOutDown"
+msgstr ""
+
+#: inc/Reuses/Reuse.php:240
+msgid "bounceOutLeft"
+msgstr ""
+
+#: inc/Reuses/Reuse.php:241
+msgid "bounceOutRight"
+msgstr ""
+
+#: inc/Reuses/Reuse.php:242
+msgid "bounceOutUp"
+msgstr ""
+
+#: inc/Reuses/Reuse.php:243
+msgid "fadeIn"
+msgstr ""
+
+#: inc/Reuses/Reuse.php:244
+msgid "fadeInDown"
+msgstr ""
+
+#: inc/Reuses/Reuse.php:245
+msgid "fadeInDownBig"
+msgstr ""
+
+#: inc/Reuses/Reuse.php:246
+msgid "fadeInLeft"
+msgstr ""
+
+#: inc/Reuses/Reuse.php:247
+msgid "fadeInLeftBig"
+msgstr ""
+
+#: inc/Reuses/Reuse.php:248
+msgid "fadeInRight"
+msgstr ""
+
+#: inc/Reuses/Reuse.php:249
+msgid "fadeInRightBig"
+msgstr ""
+
+#: inc/Reuses/Reuse.php:250
+msgid "fadeInUp"
+msgstr ""
+
+#: inc/Reuses/Reuse.php:251
+msgid "fadeInUpBig"
+msgstr ""
+
+#: inc/Reuses/Reuse.php:252
+msgid "fadeOut"
+msgstr ""
+
+#: inc/Reuses/Reuse.php:253
+msgid "fadeOutDown"
+msgstr ""
+
+#: inc/Reuses/Reuse.php:254
+msgid "fadeOutDownBig"
+msgstr ""
+
+#: inc/Reuses/Reuse.php:255
+msgid "fadeOutLeft"
+msgstr ""
+
+#: inc/Reuses/Reuse.php:256
+msgid "fadeOutLeftBig"
+msgstr ""
+
+#: inc/Reuses/Reuse.php:257
+msgid "fadeOutRight"
+msgstr ""
+
+#: inc/Reuses/Reuse.php:258
+msgid "fadeOutRightBig"
+msgstr ""
+
+#: inc/Reuses/Reuse.php:259
+msgid "fadeOutUp"
+msgstr ""
+
+#: inc/Reuses/Reuse.php:260
+msgid "fadeOutUpBig"
+msgstr ""
+
+#: inc/Reuses/Reuse.php:261
+msgid "flipInX"
+msgstr ""
+
+#: inc/Reuses/Reuse.php:262
+msgid "flipInY"
+msgstr ""
+
+#: inc/Reuses/Reuse.php:263
+msgid "flipOutX"
+msgstr ""
+
+#: inc/Reuses/Reuse.php:264
+msgid "flipOutY"
+msgstr ""
+
+#: inc/Reuses/Reuse.php:265
+msgid "lightSpeedIn"
+msgstr ""
+
+#: inc/Reuses/Reuse.php:266
+msgid "lightSpeedOut"
+msgstr ""
+
+#: inc/Reuses/Reuse.php:267
+msgid "rotateIn"
+msgstr ""
+
+#: inc/Reuses/Reuse.php:268
+msgid "rotateInDownLeft"
+msgstr ""
+
+#: inc/Reuses/Reuse.php:269
+msgid "rotateInDownRight"
+msgstr ""
+
+#: inc/Reuses/Reuse.php:270
+msgid "rotateInUpLeft"
+msgstr ""
+
+#: inc/Reuses/Reuse.php:271
+msgid "rotateInUpRight"
+msgstr ""
+
+#: inc/Reuses/Reuse.php:272
+msgid "rotateOut"
+msgstr ""
+
+#: inc/Reuses/Reuse.php:273
+msgid "rotateOutDownLeft"
+msgstr ""
+
+#: inc/Reuses/Reuse.php:274
+msgid "rotateOutDownRight"
+msgstr ""
+
+#: inc/Reuses/Reuse.php:275
+msgid "rotateOutUpLeft"
+msgstr ""
+
+#: inc/Reuses/Reuse.php:276
+msgid "rotateOutUpRight"
+msgstr ""
+
+#: inc/Reuses/Reuse.php:277
+msgid "hinge"
+msgstr ""
+
+#: inc/Reuses/Reuse.php:278
+msgid "jackInTheBox"
+msgstr ""
+
+#: inc/Reuses/Reuse.php:279
+msgid "rollIn"
+msgstr ""
+
+#: inc/Reuses/Reuse.php:280
+msgid "rollOut"
+msgstr ""
+
+#: inc/Reuses/Reuse.php:281
+msgid "zoomIn"
+msgstr ""
+
+#: inc/Reuses/Reuse.php:282
+msgid "zoomInDown"
+msgstr ""
+
+#: inc/Reuses/Reuse.php:283
+msgid "zoomInLeft"
+msgstr ""
+
+#: inc/Reuses/Reuse.php:284
+msgid "zoomInRight"
+msgstr ""
+
+#: inc/Reuses/Reuse.php:285
+msgid "zoomInUp"
+msgstr ""
+
+#: inc/Reuses/Reuse.php:286
+msgid "zoomOut"
+msgstr ""
+
+#: inc/Reuses/Reuse.php:287
+msgid "zoomOutDown"
+msgstr ""
+
+#: inc/Reuses/Reuse.php:288
+msgid "zoomOutLeft"
+msgstr ""
+
+#: inc/Reuses/Reuse.php:289
+msgid "zoomOutRight"
+msgstr ""
+
+#: inc/Reuses/Reuse.php:290
+msgid "zoomOutUp"
+msgstr ""
+
+#: inc/Reuses/Reuse.php:291
+msgid "slideInDown"
+msgstr ""
+
+#: inc/Reuses/Reuse.php:292
+msgid "slideInLeft"
+msgstr ""
+
+#: inc/Reuses/Reuse.php:293
+msgid "slideInRight"
+msgstr ""
+
+#: inc/Reuses/Reuse.php:294
+msgid "slideInUp"
+msgstr ""
+
+#: inc/Reuses/Reuse.php:295
+msgid "slideOutDown"
+msgstr ""
+
+#: inc/Reuses/Reuse.php:296
+msgid "slideOutLeft"
+msgstr ""
+
+#: inc/Reuses/Reuse.php:297
+msgid "slideOutRight"
+msgstr ""
+
+#: inc/Reuses/Reuse.php:298
+msgid "slideOutUp"
+msgstr ""
