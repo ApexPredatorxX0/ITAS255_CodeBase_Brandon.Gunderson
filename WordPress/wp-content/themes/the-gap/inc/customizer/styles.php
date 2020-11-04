@@ -78,6 +78,7 @@ function the_gap_customizer_css($style) {
 		if(class_exists('woocommerce')){
 		$style .= the_gap_get_two_dimension_style('style','woo-hide');
 		$style .= the_gap_media_woo_title_family();
+		$style .= the_gap_get_product_family();
 		}
 		
 		$style .= the_gap_get_two_dimension_style('style','check');
@@ -769,13 +770,25 @@ function the_gap_get_post_family(){
 	$style = '';
 	$font_family = get_theme_mod('post-title-font-family','oswald,sans-serif');
 	if (class_exists('The_Gap_Pro')){
-		$style .= 'h3.entry-title a,h4.entry-title a, h1.single-title,.woo-front-page .widget-title, .product-cat-title, .product-brand-title{ font-family: '.esc_attr($font_family).';}';
+		$style .= 'h3.entry-title a,h4.entry-title a, h1.single-title{ font-family: '.esc_attr($font_family).';}';
 	} else {
-		$style .= 'h3.entry-title a,h4.entry-title a, h1.single-title,.woo-front-page .widget-title, .product-cat-title, .product-brand-title{ font-family: oswald,sans-serif;}';
+		$style .= 'h3.entry-title a,h4.entry-title a, h1.single-title{ font-family: oswald,sans-serif;}';
 	}
 	return $style;
 
-}	
+}
+
+function the_gap_get_product_family(){
+	$style = '';
+	$font_family = get_theme_mod('woofrontpage-title-font-family','oswald,sans-serif');
+	if (class_exists('The_Gap_Pro')){
+		$style .= '.woo-front-page .widget-title, .product-cat-title, .product-brand-title{ font-family: '.esc_attr($font_family).';}';
+	} else {
+		$style .= '.woo-front-page .widget-title, .product-cat-title, .product-brand-title{ font-family: oswald,sans-serif;}';
+	}
+	return $style;
+
+}		
 
 function the_gap_primary_fonts(){
 	
@@ -1039,7 +1052,7 @@ function the_gap_button_border_color(){
 		
 		$style .= 'a.read-more:hover,a.more-link:hover,button:not(.sbtn):hover, input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover{ color: '.esc_attr($btnHoverColor).'}';
 		
-		$style .= 'a.read-more:hover,a.more-link:hover,button:not(.sbtn):not(.hide-mob-menu.show):hover, input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover{ background-color: '.esc_attr($btnHoverBgColor).'}';
+		$style .= 'a.read-more:hover,a.more-link:hover,button:not(.sbtn):not(.hide-mob-menu):hover, input[type="button"]:hover, input[type="reset"]:hover, input[type="submit"]:hover{ background-color: '.esc_attr($btnHoverBgColor).'}';
 
 		$style .=  ' ' .$selectors.'
 		{ border-color: '.esc_attr($bordercolor).'}';

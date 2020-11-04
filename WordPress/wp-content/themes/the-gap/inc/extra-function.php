@@ -590,19 +590,19 @@ function the_gap_feature_post_select_slider() {
 		$background_animation = get_theme_mod('enable-background-animation');
 		if ( get_header_image() && get_theme_mod('header-media-type','image')=='image') {
 		
-		if ( class_exists('The_Gap_Pro')) { 
+		/*if ( class_exists('The_Gap_Pro')) { 
 			
 			if ($background_animation == '1'){
 					the_gap_pro_header_media_image_overlay();
 				} else {
 					the_gap_header_media_image_overlay();
 				}
-			} else {
+			} else {*/
 			
 				the_gap_header_media_image_overlay();
 		
 		
-			}
+			/*}*/
 		}
 		
 		if (( get_theme_mod('header-media-type','image')=='video')) {
@@ -709,32 +709,32 @@ function the_gap_popular_post(){
 
 <?php 	} ?>
 <?php 	if ($pop_post_style == 'style2'){ ?>
-							<div class="blog-pop-cta <?php echo esc_attr( $pop_post_style );  ?>">
-							<div class="pop-title">
-							<a href="<?php the_permalink(); ?>" target="_self">
+				<div class="blog-pop-cta <?php echo esc_attr( $pop_post_style );  ?>">
+					<div class="pop-title">
+						<a href="<?php the_permalink(); ?>" target="_self">
 							<h3 class="blog-title"><?php the_title(); ?></h3>
 							</a>
-							</div>
+					</div>
 							
-							</div>
+				</div>
 							
-							<div class="pop-txt">
+						<div class="pop-txt">
 							<div class="pop-inner">
-							<dl>
-							<dt>
+							
+							<span class="pop-cat">
 							<?php echo wp_kses_post(get_the_category_list());?>
-							</dt>
-							</dl>
-							<dl>
-								<dt>
+							</span>
+						
+							
+							<span class="pop-date">
 									<?php the_gap_posted_date(); ?>
-								</dt>
-							</dl>
-							<dl>
-								<dt>
+							</span>
+							
+							
+							<span class="pop-byline">
 									<?php the_gap_posted_byline(); ?>
-								</dt>
-							</dl>
+							</span>
+							
 							
 							</div>
 							

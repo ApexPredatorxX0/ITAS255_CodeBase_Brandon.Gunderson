@@ -8,7 +8,7 @@
 
 $panels = the_gap_panels();
 
-$priority = 1;
+$priority = 2;
 
 
 foreach ($panels as $panel_id=>$panel_label) {
@@ -45,5 +45,13 @@ foreach ($controls as $control) {
 	
 	$i++;
 }
+
+
+
+
+
+
+
+
 
 

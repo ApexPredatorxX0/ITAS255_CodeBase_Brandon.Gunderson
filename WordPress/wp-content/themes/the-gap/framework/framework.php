@@ -59,9 +59,10 @@ function the_gap_enqueue_scripts() {
 	wp_enqueue_script( 'the_gap_few_handle', get_template_directory_uri() . '/js/main.js', array('jquery'),'', true );
 	
 	wp_enqueue_script( 'flexslider', get_template_directory_uri() . '/js/jquery.flexslider.js', array('jquery'), '2.4.0', true );
-		wp_enqueue_script( 'minimer-slick', get_template_directory_uri() . '/js/slick.min.js', array( 'jquery' ),'', false );
+	wp_enqueue_script( 'minimer-slick', get_template_directory_uri() . '/js/slick.min.js', array( 'jquery' ),'', false );
 
-
+	wp_enqueue_script( 'the-gap-upgrade', get_template_directory_uri() . '/inc/customizer/js/the-gap-upgrade-section.js', array( 'jquery' ),'', false );
+	
 }
 
 
@@ -73,6 +74,7 @@ function the_gap_enqueue_scripts() {
 function the_gap_enqueue_styles() {
 	
 	wp_register_style( 'the_gap_style', get_stylesheet_uri() );
+	
 	wp_enqueue_style('the_gap_style');
 	
 	wp_enqueue_style('the_gap_customize_css');
@@ -317,8 +319,7 @@ function the_gap_google_fonts_url() {
 	function the_gap_initialize() {
 
             add_action('tgmpa_register', array(&$this, 'the_gap_register_recommended_plugins'));
-			//add_action('tgmpa_register', array(&$this, 'the_gap_register_recommended_woo_plugins'));
-
+			
     }
 
         /**

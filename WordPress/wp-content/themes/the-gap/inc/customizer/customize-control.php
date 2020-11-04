@@ -30,6 +30,47 @@ public function the_gap_customizer_styles($styles) {
 
 $styles = '';
 
+
+$styles .=
+'#accordion-section-thegap-customize-upgrade-section h3.accordion-section-title {
+	color: #ffffff;
+	background-color: #06d8a0;
+	border-left-color: #06d8a0;
+	padding: 0;
+}
+
+#accordion-section-thegap-customize-upgrade-section h3.accordion-section-title a {
+	color: #ffffff;
+	display: block;
+	padding:15px;
+	text-decoration: none;
+}
+
+#accordion-section-thegap-customize-upgrade-section h3.accordion-section-title a:hover {
+	background-color: #06d8c9;
+}';
+
+$styles .=
+'#accordion-section-thegap_customize_doc_section h3.accordion-section-title {
+	color: #ffffff;
+	background-color: #06d8a0;
+	border-left-color: #06d8a0;
+	padding: 0;
+}
+
+#accordion-section-thegap_customize_doc_section h3.accordion-section-title a {
+	color: #ffffff;
+	display: block;
+	padding:15px;
+	text-decoration: none;
+}
+
+#accordion-section-thegap_customize_doc_section h3.accordion-section-title a:hover {
+	background-color: #06d8c9;
+}';
+
+
+
 $styles .= '.customize-control.customize-control-select span.customize-control-title{
 	margin-bottom:10px;}
 

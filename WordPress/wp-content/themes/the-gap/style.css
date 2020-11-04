@@ -4,7 +4,7 @@ Theme URI: http://themenextlevel.com/the-gap/
 Author: Kudrat E Khuda
 Author URI: http://themenextlevel.com/
 Description: The Gap is modern and clean theme, crafted for a wide range of blog sites, online stores and business sites. 25+ Demos created by The Gap that demonstrates most versatile theme in this directory. The Gap includes 4 blog layout,google fonts, different header styles, related post in single and home page,popular post,subscription,ready widgets,header media with slider/image/video, product slider, product carousel, product brand carousel, product grid,feaured post carousel and slider. The Gap covers the all areas of website design. Though The Gap is advanced level theme but its settings and options are easy to follow which make this theme attractive both for beginners and advanced users. It is Gutenberg Compatible. Please don't forget to visit our demo site:https://themenextlevel.com/the-gap/ and documentation site:https://the-gap-docs.themenextlevel.com/
-Version: 1.6.20
+Version: 1.7.1
 Tested up to: 5.5.1
 Requires PHP: 5.6
 License: GNU General Public License v2 or later 
@@ -2764,19 +2764,19 @@ content:'';
 }
 
 .nl-media-ovr-sub-title:before,.feature-post-title:before,.popular-post-title:before,
-.blog_post_section_title:before,.subscription-title:before {
+.blog_post_section_title:before,.subscription-title:before,.subscription-section-title:before {
     margin-right: 15px;
 }
 
 .nl-media-ovr-sub-title:after,.feature-post-title:after,.popular-post-title:after,
-.blog_post_section_title:after,.subscription-title:after {
+.blog_post_section_title:after,.subscription-title:after,.subscription-section-title:after {
     margin-left: 15px;
 }
 
 .nl-media-ovr-sub-title:after, .nl-media-ovr-sub-title:before,.feature-post-title:after
 ,.feature-post-title:before,.popular-post-title:before,.popular-post-title:after,
 .blog_post_section_title:after,.blog_post_section_title:before,.subscription-title:before,
-.subscription-title:after {
+.subscription-title:after,.subscription-section-title:after,.subscription-section-title:before {
     content: "";
     width: 45px;
     border-bottom: 1px solid;
@@ -5183,7 +5183,7 @@ form.woocommerce-product-search .button {
 .header-cart-icon {
     float: left;
     padding: 8px 0 8px 0px;
-    color: #999;
+    
     position: relative;
     line-height: 1;
 }
@@ -5252,7 +5252,8 @@ form.woocommerce-product-search .button {
 
 .woo-front-page .product-entry {position:relative;}
 
-
+.news-letter-container{margin-bottom:75px;margin-top:50px;}
+.subscription-section-title{margin-bottom:50px;}
 
 .wp-block-button {margin-bottom:15px;}
 .sidebar img {height:auto;}
@@ -7964,8 +7965,8 @@ color: #fff;
 }
 
 .blog-pop-cta .pop-title {
-background: linear-gradient(to bottom, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%);
-    border-radius: 5px 5px 0 0;
+	background: linear-gradient(to bottom, rgba(0,0,0,0.75) 0%,rgba(0,0,0,0) 100%);
+    border-radius: 10px 10px 0 0;
     position: absolute;
     top: 0;
     width: 100%;
@@ -7974,36 +7975,29 @@ background: linear-gradient(to bottom, rgba(0,0,0,0.65) 0%,rgba(0,0,0,0) 100%);
 .blog-pop-cta {
 background:none!important;	
 }
-.pop-txt {
-	display: table;
-    width: 100%;
-	background-color:#eee;
-}
-.pop-inner {
-display: table-row;
-}
+
 .blog-pop-cta.style2 h3.blog-title {
 	margin-left:10px;	
 }
 .blog-pop-cta.style1 .blog-title {
 	margin-left:0;	
 }
-.pop-inner dl {
-    display: table-cell;
+
+.pop-txt {
+	padding:15px 5px;
+    width: 100%;
+	background-color:#eee;
+	overflow:hidden;
+}
+.pop-inner .pop-cat,.pop-inner .pop-date, .pop-inner .pop-byline {
+    
 	 width: 33%;
-    padding: 16px 8px;
-    padding-top: 1em;
-    padding-right: 8px;
-    padding-bottom: 16px;
-    padding-left: 8px;
-    line-height: 1.125;
-    vertical-align: top;
+	 float:left;
+   
    
 }
-.pop-inner dt {
-    color: #aab3bd;
-}
-.pop-inner a {
+
+.pop-inner a,.pop-inner span {
     color: #aab3bd!important;
 }
 
@@ -8757,12 +8751,15 @@ form.woocommerce-product-search input[type="search"]{
   width:150px!important;
   
 }
+
 .search-container.woo .nl-search-box {
 	width:250px!important;
 }
+
 .search-container.woo .nl-search-box.visible {
 	right:-90px;
 }
+
 .banner-text h2 {
 	font-size:20px!important;
 }
@@ -8817,7 +8814,5 @@ h3.blog-title {margin-top:7px!important;}
 /*--------------------------------------------------------------
 Responsive End
 --------------------------------------------------------------*/
-
-
 
 

@@ -143,3 +143,55 @@ if ( ! class_exists( 'The_Gap_Custom_Font_Control' ) ) {
 	
 }
 
+
+if ( class_exists( 'WP_Customize_Section' ) ) {
+
+	/**
+	 * Class/Control- The_Gap_Customize_Upgrade_Section
+	 */
+	class The_Gap_Customize_Upgrade_Section extends WP_Customize_Section {
+
+		/**
+		 * Type of this section.
+		 *
+		 * @var string
+		 */
+		public $type = 'thegap-customize-upgrade-section';
+
+		/**
+		 * Redirect URL.
+		 *
+		 * @var string
+		 */
+		public $section_url = '';
+
+		/**
+		 * id of the control.
+		 *
+		 * @var string
+		 */
+		public $id = '';
+
+		
+		public function json() {
+			$control_json        = parent::json();
+			$control_json['id']  = $this->id;
+			$control_json['section_url'] = esc_url( $this->section_url );
+
+			return $control_json;
+		}
+
+		/**
+		 * An Underscore (JS) template
+		 */
+		protected function render_template() {
+			?>
+			<li id="accordion-section-{{ data.id }}" class="the-gap-upgrade-accordion-section control-section-{{ data.type }} cannot-expand accordion-section">
+				<h3 class="accordion-section-title"><a href="{{{ data.section_url }}}" target="_blank">{{ data.title }}</a></h3>
+			</li>
+			<?php
+		}
+	}
+
+}
+

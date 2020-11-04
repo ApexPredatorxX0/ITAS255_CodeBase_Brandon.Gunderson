@@ -60,7 +60,7 @@ function the_gap_panels_sections() {
 	'layout' => array('site-layout' => 
 	array('site-layout'=>'site-layout','label'=>__('Site Layout','the-gap'),'description'=>''),
 	'site-background' =>array('site-background'=>'site-background','label'=>__('Site Background','the-gap'),'description'=>''),
-	'sidebar-layout' =>array('sidebar-layout'=>'sidebar-layout','label'=>__('Sidebar Layout','the-gap'),'description'=>'')
+	'sidebar-layout' =>array('sidebar-layout'=>'sidebar-layout','label'=>__('Sidebar & Sidebar Layout','the-gap'),'description'=>'')
 	),
 	
 	
@@ -1766,7 +1766,7 @@ $fourcolors = array(
 	
 		'main-menu-top-level-color' => array(
 			'section'=>$sections['site-header']['main-menu']['main-menu'],
-			'selector'=>'#main-navigation.main-menu ul li a,.menu-btn,#main-navigation .search-icon .sbtn .fa,.sidebar-icon,.cart-value,.total-label,.cart-total-val,.wishlist-icon,.woo-icon-part .fa,span.shopping-cart-value','default'=>'#333',
+			'selector'=>'#main-navigation.main-menu ul li a,.menu-btn,#main-navigation .search-icon .sbtn .fa,.sidebar-icon,.cart-value,.total-label,.cart-total-val,.wishlist-icon,.woo-icon-part .fa,span.shopping-cart-value,.header-cart-icon','default'=>'#333',
 			'priority'=>'110','label'=>__('Color','the-gap'),'sanitize'=>'','property'=>'color',
 		'transport'  => 'postMessage','description'  => ''),
 		

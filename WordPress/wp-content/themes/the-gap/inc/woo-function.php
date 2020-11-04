@@ -67,6 +67,7 @@ function the_gap_product_promo_items(){
 	<?php 
 }
 
+
 function the_gap_product_promo_items_vertical(){
 
 	$style = '';

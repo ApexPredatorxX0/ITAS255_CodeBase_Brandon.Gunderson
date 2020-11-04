@@ -148,7 +148,14 @@ the_gap_blog_front_page_content_header(); ?>
 		
 		</main><!-- main -->
 		
-		<?php the_gap_blog_fpage_feature_post_bottom();
+		<?php 
+		if (class_exists('The_Gap_Pro')){
+			$enable_subscription = get_theme_mod('enable-subscription-form');
+			if ($enable_subscription == '1'){
+			the_gap_pro_mail_chimp_subscription();
+			}
+		}
+		the_gap_blog_fpage_feature_post_bottom();
 		the_gap_blog_fpage_popular_post_bottom();
 		?>
 	

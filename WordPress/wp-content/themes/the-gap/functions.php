@@ -8,6 +8,8 @@
 
 require_once( get_template_directory() . '/inc/nl-admin.php' );
 require_once( get_template_directory() . '/inc/meta-boxes.php' );
+require_once( get_template_directory() . '/inc/admin/admin_welcome.php' );
+
 
 /**
  * Styles
@@ -70,6 +72,64 @@ function the_gap_customize_register( $wp_customize ) {
 	require get_template_directory() . '/inc/customizer/settings/input.php';
 	require get_template_directory() . '/inc/customizer/settings/local/extra/extras.php';
 	require get_template_directory() . '/inc/customizer/contextual-control.php';
+	
+	
+	$wp_customize->register_section_type( 'The_Gap_Customize_Upgrade_Section' );
+	
+
+	$wp_customize->add_section(
+		new The_Gap_Customize_Upgrade_Section(
+			$wp_customize,
+			'thegap-customize-upgrade-section',
+			array(
+				'title'      => esc_html__( 'View Pro Version', 'the-gap' ),
+				'priority'   => 1,
+				'section_url'        => 'https://themenextlevel.com/the-gap/',
+			
+			)
+		)
+	);
+	
+    
+	
+	$wp_customize->add_control( 'new-post', array(
+    'section' => 'thegap-customize-upgrade-section',
+	
+    'settings' => array(),
+    'type' => 'button',
+    'input_attrs'  => array(
+        'value' =>__( 'View Demos', 'the-gap' ),
+    ),
+    'capability' => 'edit_posts',
+	) );
+	
+	
+	$wp_customize->add_section(
+		new The_Gap_Customize_Upgrade_Section(
+			$wp_customize,
+			'thegap_customize_doc_section',
+			array(
+				'title'      => esc_html__( 'View Documentation', 'the-gap' ),
+				'priority'   => 1000,
+				'section_url'        => 'https://the-gap-docs.themenextlevel.com/',
+			
+			)
+		)
+	);
+	
+    
+	
+	$wp_customize->add_control( 'new-doc', array(
+    'section' => 'thegap_customize_doc_section',
+	
+    'settings' => array(),
+    'type' => 'button',
+    'input_attrs'  => array(
+        'value' =>__( 'View Documentation', 'the-gap' ),
+    ),
+    'capability' => 'edit_posts',
+	) );
+	
 		
 }
 add_action( 'customize_register', 'the_gap_customize_register' );
@@ -108,6 +168,9 @@ function the_gap_widgets_initialise() {
 		register_widget( $panel_widget);
 		
 		}
+	if(class_exists('The_Gap_Pro')){
+		register_widget('The_Gap_Subscription');
+	}
 	if(class_exists('woocommerce')){
 		register_widget('The_Gap_Widget_Products');
 	}
@@ -140,4 +203,10 @@ if(class_exists('woocommerce')){
 require_once dirname( __FILE__ ) . '/framework/plugin/class-tgm-plugin-activation.php';
 
 
-
+function the_gap_load_custom_wp_admin_style(){
+   
+  wp_register_style( 'welcome', get_template_directory_uri() . '/inc/admin/css/welcome.css', array(), true );
+	
+   wp_enqueue_style( 'welcome' );
+}
+add_action('admin_enqueue_scripts', 'the_gap_load_custom_wp_admin_style');

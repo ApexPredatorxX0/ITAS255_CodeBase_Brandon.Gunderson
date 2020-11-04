@@ -56,7 +56,7 @@ class The_Gap_Admin {
 		
 	}
 
-	public function the_gap_activation_admin_notice() {
+public function the_gap_activation_admin_notice() {
             
 		global $pagenow;
 		
@@ -64,17 +64,19 @@ class The_Gap_Admin {
 				wp_die( __( 'Cheatin&#8217; huh?', 'the-gap' ) ); // WPCS: xss ok.
 		}
              ?>
-			 <?php  
-				  if (is_admin() && ('themes.php' == $pagenow) && (isset($_GET['activated']))) {  ?>
-                   
+			
                 <div class="notice notice-success is-dismissible"> 
 				
-				   <p><?php echo esc_html__('Welcome! Thank you for choosing The Gap. Recommended plugin is elementor. In addition WooCommerce,YITH WooCommerce Quick View,YITH WooCommerce Wishlist are recommended for E-commerce users.', 'the-gap'); ?></p>
-                  
-					<p><a class="button button-primary" href="<?php echo esc_url(admin_url('/themes.php?page=nl-welcome')); ?>"><?php echo esc_html__('Get Started', 'the-gap'); ?></a></p>
-				  
+				  <div class="tg-welcome-screenshot">
+                            <img src="<?php echo esc_url(get_stylesheet_directory_uri() . '/screenshot.png'); ?>" alt="<?php echo esc_attr_e('The Gap Demo', 'the-gap'); ?>">
+                   </div>
+				<div class="tg-welcome-cta">
+				   <p class="tg-welcome"><?php echo esc_html__('Welcome! Thank you for choosing The Gap.', 'the-gap'); ?></p>
+           
+					<p><a class="button button-primary" href="<?php echo esc_url(admin_url('/themes.php?page=nl-welcome')); ?>"><?php echo esc_html__('Get Started with The Gap', 'the-gap'); ?></a></p>
+				 </div>
 				</div>
-				<?php  } ?>
+				
                 <?php
            
     }
@@ -98,7 +100,7 @@ class The_Gap_Admin {
 		
 		$theme_version = $theme->get( 'Version' );
 		?>
-		<div class="nl-theme-info">
+		<div class="nl-theme-info clear">
 			<h1>
 				<?php esc_html_e( 'About', 'the-gap' ); ?>
 				<?php echo esc_html($theme->display( 'Name' )); ?>
@@ -118,11 +120,13 @@ class The_Gap_Admin {
 	}
 	
 	$theme = wp_get_theme( get_template() );
-		$theme_versions = $theme['Version']; ?>
+		$theme_versions = $theme['Version']; 
+		
+		?>
 		
 		<h2 class="nav-tab-wrapper">
 		    
-			<a class="nav-tab <?php if ( isset( $_GET['page']) == 'nl_first_tab' ) echo 'nav-tab-active'; ?>" href="<?php echo esc_url( admin_url( add_query_arg( array( 'page' => 'nl-welcome' ), 'themes.php' ) ) ); ?>">
+			<a class="nav-tab <?php if ( isset( $_GET['tab'] ) && $_GET['tab'] == 'nl_first_tab' ) echo 'nav-tab-active'; ?>" href="<?php echo esc_url( admin_url( add_query_arg( array( 'page' => 'nl-welcome', 'tab' => 'nl_first_tab' ), 'themes.php' ) ) ); ?>">
 				<?php echo esc_html($theme->display( 'Name' )); ?>
 			</a>
 			
@@ -130,8 +134,10 @@ class The_Gap_Admin {
 				<?php esc_html_e( 'Recommended Plugins', 'the-gap' ); ?>
 			</a>
 			
+			<a class="nav-tab <?php if ( isset( $_GET['tab'] ) && $_GET['tab'] == 'show_pro_vs_free' ) echo 'nav-tab-active'; ?>" href="<?php echo esc_url( admin_url( add_query_arg( array( 'page' => 'nl-welcome', 'tab' => 'show_pro_vs_free' ), 'themes.php' ) ) ); ?>">
+				<?php esc_html_e( 'The Gap Pro vs Free', 'the-gap' ); ?>
+			</a>
 		
-			
 		</h2>
 		
 		<?php
@@ -160,52 +166,59 @@ class The_Gap_Admin {
 	public function nl_first_tab() {
 		$theme = wp_get_theme( get_template() );
 		?>
-		<div class="about-wrap">
+		 <div class="wrap about-wrap">
 
 			<?php $this->nl_first_phase(); ?>
 				
 					<?php $this->nl_third_phase(); ?>
 
-			<div class="nav-tab-wrapper">
-				<div class="two-col">
-					
-					<div class="col">
-						<h3><?php esc_html_e( 'Theme Demos', 'the-gap' ); ?></h3>
-						<p><?php esc_html_e( '10 Demos are avaible right now.', 'the-gap' ) ?></p>
-						<p><a href="<?php echo esc_url( 'https://themenextlevel.com/the-gap/' ); ?>"  target="_blank" class="button"><?php esc_html_e( 'Theme Demos', 'the-gap' ); ?></a></p>
+			
+				<div class="nl_grid_row col_gap_30">
+					<div class="first-row clear">
+					<div class="no_of_col_1 item1 col_padd_margin">
+						<h3><?php esc_html_e( 'Installation & How to start', 'the-gap' ); ?></h3>
+						<p><?php esc_html_e( 'Installation detail of theme & plugins are available. Also detail instructions are
+						available how to start blog, e-commerce or company website.', 'the-gap' ) ?></p>
+						<p><a href="<?php echo esc_url( 'https://the-gap-docs.themenextlevel.com/' ); ?>"  target="_blank" class="button"><?php esc_html_e( 'Install & Start', 'the-gap' ); ?></a></p>
 					</div>
 					
-					<div class="col">
+					<div class="no_of_col_2 item2 col_padd_margin">
+						<h3><?php esc_html_e( 'Theme Demos', 'the-gap' ); ?></h3>
+						<p><?php esc_html_e( '30 Demos are avaible right now.', 'the-gap' ) ?></p>
+						<p><a href="<?php echo esc_url( 'https://themenextlevel.com/the-gap/' ); ?>"  target="_blank" class="button"><?php esc_html_e( 'Theme Demos', 'the-gap' ); ?></a></p>
+					</div>
+					</div>
+					
+					<div class="second-row clear">
+					<div class="no_of_col_3 item3 col_padd_margin">
 						<h3><?php esc_html_e( 'Documentation', 'the-gap' ); ?></h3>
 						<p><?php esc_html_e( 'Please view our documentation page to setup the theme.', 'the-gap' ) ?></p>
 						<p><a href="<?php echo esc_url( 'https://the-gap-docs.themenextlevel.com/'); ?>" target="_blank" class="button button-secondary"><?php esc_html_e( 'Documentation', 'the-gap' ); ?></a></p>
 					</div>
 
-					<div class="col">
+					<div class="no_of_col_4 item4 col_padd_margin">
 						<h3><?php esc_html_e( 'Theme Support', 'the-gap' ); ?></h3>
 						<p><?php esc_html_e( 'Please put it in our dedicated support forum.', 'the-gap' ) ?></p>
 						<p><a href="<?php echo esc_url( 'https://themenextlevel.com/support/' ); ?>"  target="_blank" class="button"><?php esc_html_e( 'Theme Support', 'the-gap' ); ?></a></p>
 					</div>
+					</div>
 					
 		
 				</div>
-			</div>
+						<div class="welcome-footer-content clear" style="overflow:hidden;">
+							<?php the_gap_demo_preview(); ?>
+						</div>
+		 
+		</div>
 
 
 		<?php
-		$this->nl_back_to_dash_board();
+		
 		
 	}
 
 
-public function nl_back_to_dash_board(){ 	?>
-    			<div class="return-to-dashboard nextlevel">
-				
-				<a href="<?php echo esc_url( self_admin_url() ); ?>"><?php is_blog_admin() ? esc_html_e( 'Back to Dashboard', 'the-gap' ) : esc_html_e( 'Back to Dashboard', 'the-gap' ); ?></a>
-			</div>
-		</div>
-    <?php
-}
+
 
 	/**
 	 * Output the supported plugins screen.
@@ -215,19 +228,19 @@ public function nl_back_to_dash_board(){ 	?>
 	public function show_recommended_plugins() {
 		?>
 		<div class="wrap about-wrap">
-
+			
 			<?php $this->nl_first_phase(); ?>
 				
 					<?php $this->nl_third_phase(); ?>
-
-			<p class="about-description"><?php esc_html_e( 'This theme recommends following plugins.', 'the-gap' ); ?></p>
+			<div class="recommended_plugins">
+			<p class="about-description"><?php esc_html_e( 'The Gap recommends following plugins.', 'the-gap' ); ?></p>
 			<ul>
 				<li><?php esc_html_e( 'Elementor Page Builder', 'the-gap' ); ?></li>
 				
 				<li><?php esc_html_e( 'Definitive Addons for Elementor', 'the-gap' ); ?></li>
 				
 			</ul>
-			<p class="about-description"><?php esc_html_e( 'This theme recommends additional plugins for shop or store users.', 'the-gap' ); ?></p>
+			<p class="about-description"><?php esc_html_e( 'The Gap recommends additional plugins for shop or store users.', 'the-gap' ); ?></p>
 			<ul>
 			
 				<li><?php esc_html_e( 'WooCommerce', 'the-gap' ); ?></li>
@@ -235,11 +248,35 @@ public function nl_back_to_dash_board(){ 	?>
 				<li><?php esc_html_e( 'YITH WooCommerce Wishlist', 'the-gap' ); ?></li>
 				
 			</ul>
+			</div>
+			
+				<div class="welcome-demo-containers clear">
+                    <?php the_gap_demo_preview(); ?>
+				</div>
 
 		</div>
+		
 		<?php
 	}
+	
+	public function show_pro_vs_free() {
+		?>
+		<div class="wrap about-wrap">
 
+			<?php $this->nl_first_phase(); ?>
+				
+			<?php $this->nl_third_phase(); ?>
+			<?php the_gap_free_vs_pro(); ?>
+
+			
+
+
+		<div class="welcome-demo-containers clear">
+             <?php the_gap_demo_preview(); ?>
+        </div>
+		<?php
+		
+	}
 	
 	
 }

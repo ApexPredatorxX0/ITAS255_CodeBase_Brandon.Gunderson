@@ -82,8 +82,6 @@
 			<div id="site-header" class="site-header clear">		
 				<div  class="inner-header">	
 		
-			
-					
 	
 	<!-- Main site-header starts from here -->
 	

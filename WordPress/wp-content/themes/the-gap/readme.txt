@@ -4,7 +4,7 @@ Author: khuda
 Requires at least: 4.7
 Tested up to: 5.5.1
 Requires PHP: 5.6
-Version: 1.6.20
+Version: 1.7.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -26,6 +26,14 @@ The Gap is licensed under GNU General Public License V2 or later. Please find th
 
 
 == Changelog ==
+
+= Version 1.7.1
+* Popular post modified
+
+= Version 1.7.0
+* few issues fixed
+* customizer upgrade section added
+* Welcome page modified
 
 = Version 1.6.20
 * popular post two styles added

@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: The Gap\n"
-"POT-Creation-Date: 2020-09-23 01:21+0600\n"
+"POT-Creation-Date: 2020-10-27 23:28+0600\n"
 "PO-Revision-Date: 2019-06-12 23:13+0600\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -74,59 +74,59 @@ msgstr ""
 msgid "Go to Top"
 msgstr ""
 
-#: framework/framework.php:196
+#: framework/framework.php:198
 msgid "Sidebar"
 msgstr ""
 
-#: framework/framework.php:198 framework/framework.php:208
+#: framework/framework.php:200 framework/framework.php:210
 msgid "Add widgets here."
 msgstr ""
 
-#: framework/framework.php:206
+#: framework/framework.php:208
 msgid "Toggle Sidebar"
 msgstr ""
 
-#: framework/framework.php:221
+#: framework/framework.php:223
 msgid "Front Page Widget Area1"
 msgstr ""
 
-#: framework/framework.php:223 framework/framework.php:233
+#: framework/framework.php:225 framework/framework.php:235
 msgid "Add one or more widgets here."
 msgstr ""
 
-#: framework/framework.php:231
+#: framework/framework.php:233
 msgid "Front Page Widget Area2"
 msgstr ""
 
-#: framework/framework.php:241
+#: framework/framework.php:243
 msgid "WooCommerce Sidebar"
 msgstr ""
 
-#: framework/framework.php:243
+#: framework/framework.php:245
 msgid "Add WooCommerce Widgets Only"
 msgstr ""
 
-#: framework/framework.php:253
+#: framework/framework.php:255
 msgid "Front Page Template Column- "
 msgstr ""
 
-#: framework/framework.php:268
+#: framework/framework.php:270
 msgid "Footer Widget "
 msgstr ""
 
-#: framework/framework.php:306
+#: framework/framework.php:308
 msgid "Primary"
 msgstr ""
 
-#: framework/framework.php:308
+#: framework/framework.php:310
 msgid "Footer"
 msgstr ""
 
-#: framework/framework.php:331
+#: framework/framework.php:332
 msgid "Elementor"
 msgstr ""
 
-#: framework/framework.php:337 inc/nl-admin.php:227
+#: framework/framework.php:338 inc/nl-admin.php:240
 msgid "Definitive Addons for Elementor"
 msgstr ""
 
@@ -545,8 +545,342 @@ msgstr ""
 msgid "Installing Plugin %1$s (%2$d/%3$d)"
 msgstr ""
 
+#: functions.php:85
+msgid "View Pro Version"
+msgstr ""
+
+#: functions.php:101
+msgid "View Demos"
+msgstr ""
+
+#: functions.php:112 functions.php:128
+msgid "View Documentation"
+msgstr ""
+
 #: header.php:29
 msgid "Skip to content"
+msgstr ""
+
+#: inc/admin/admin_welcome.php:7
+msgid "Our Refund Policy"
+msgstr ""
+
+#: inc/admin/admin_welcome.php:8
+msgid "We are going to change our refund policy very soon."
+msgstr ""
+
+#: inc/admin/admin_welcome.php:12
+msgid "The Gap Pro"
+msgstr ""
+
+#: inc/admin/admin_welcome.php:14
+msgid "Lifetime Update"
+msgstr ""
+
+#: inc/admin/admin_welcome.php:15
+msgid "Quality Checked"
+msgstr ""
+
+#: inc/admin/admin_welcome.php:16
+msgid "1 Site Licence"
+msgstr ""
+
+#: inc/admin/admin_welcome.php:17
+msgid "Premium Support"
+msgstr ""
+
+#: inc/admin/admin_welcome.php:20
+msgid "Price - $39"
+msgstr ""
+
+#: inc/admin/admin_welcome.php:29 inc/admin/admin_welcome.php:292
+msgid " Buy Now "
+msgstr ""
+
+#: inc/admin/admin_welcome.php:36
+msgid "Features"
+msgstr ""
+
+#: inc/admin/admin_welcome.php:37
+msgid "Free"
+msgstr ""
+
+#: inc/admin/admin_welcome.php:38
+msgid "Pro"
+msgstr ""
+
+#: inc/admin/admin_welcome.php:42
+msgid "Number of Widget Areas in Footer"
+msgstr ""
+
+#: inc/admin/admin_welcome.php:44
+msgid "3-4"
+msgstr ""
+
+#: inc/admin/admin_welcome.php:45
+msgid "1-4"
+msgstr ""
+
+#: inc/admin/admin_welcome.php:49
+msgid "Sidebar Header Style"
+msgstr ""
+
+#: inc/admin/admin_welcome.php:51
+msgid "1"
+msgstr ""
+
+#: inc/admin/admin_welcome.php:52 inc/admin/admin_welcome.php:59
+#: inc/admin/admin_welcome.php:271
+msgid "5"
+msgstr ""
+
+#: inc/admin/admin_welcome.php:56
+msgid "Header Media Overlay Box Style"
+msgstr ""
+
+#: inc/admin/admin_welcome.php:58
+msgid "3"
+msgstr ""
+
+#: inc/admin/admin_welcome.php:63
+msgid "Header Slider Options"
+msgstr ""
+
+#: inc/admin/admin_welcome.php:65 inc/admin/admin_welcome.php:79
+#: inc/admin/admin_welcome.php:86 inc/admin/admin_welcome.php:93
+#: inc/admin/admin_welcome.php:100 inc/admin/admin_welcome.php:107
+#: inc/admin/admin_welcome.php:114 inc/admin/admin_welcome.php:135
+#: inc/admin/admin_welcome.php:144 inc/admin/admin_welcome.php:151
+#: inc/admin/admin_welcome.php:158 inc/admin/admin_welcome.php:164
+#: inc/admin/admin_welcome.php:178 inc/admin/admin_welcome.php:185
+#: inc/admin/admin_welcome.php:214 inc/admin/admin_welcome.php:221
+#: inc/admin/admin_welcome.php:228 inc/admin/admin_welcome.php:235
+#: inc/admin/admin_welcome.php:285 inc/widgets/slides-overlays.php:143
+msgid "No"
+msgstr ""
+
+#: inc/admin/admin_welcome.php:66 inc/admin/admin_welcome.php:80
+#: inc/admin/admin_welcome.php:87 inc/admin/admin_welcome.php:94
+#: inc/admin/admin_welcome.php:101 inc/admin/admin_welcome.php:108
+#: inc/admin/admin_welcome.php:115 inc/admin/admin_welcome.php:136
+#: inc/admin/admin_welcome.php:143 inc/admin/admin_welcome.php:150
+#: inc/admin/admin_welcome.php:157 inc/admin/admin_welcome.php:165
+#: inc/admin/admin_welcome.php:179 inc/admin/admin_welcome.php:186
+#: inc/admin/admin_welcome.php:215 inc/admin/admin_welcome.php:222
+#: inc/admin/admin_welcome.php:229 inc/admin/admin_welcome.php:236
+#: inc/admin/admin_welcome.php:286 inc/widgets/slides-overlays.php:143
+msgid "Yes"
+msgstr ""
+
+#: inc/admin/admin_welcome.php:70
+msgid "Number of Slides in Header Media"
+msgstr ""
+
+#: inc/admin/admin_welcome.php:72 inc/admin/admin_welcome.php:128
+#: inc/admin/admin_welcome.php:250
+msgid "4"
+msgstr ""
+
+#: inc/admin/admin_welcome.php:73 inc/admin/admin_welcome.php:207
+msgid "7"
+msgstr ""
+
+#: inc/admin/admin_welcome.php:77
+msgid "Header Title Font Settings"
+msgstr ""
+
+#: inc/admin/admin_welcome.php:84
+msgid "Subscription Widget"
+msgstr ""
+
+#: inc/admin/admin_welcome.php:91
+msgid "Subscription in Front Page/Home Page"
+msgstr ""
+
+#: inc/admin/admin_welcome.php:98
+msgid "Full Page Header Media"
+msgstr ""
+
+#: inc/admin/admin_welcome.php:105
+msgid "Topbar Text Font Size"
+msgstr ""
+
+#: inc/admin/admin_welcome.php:112
+msgid "Topbar Social Font Size"
+msgstr ""
+
+#: inc/admin/admin_welcome.php:119
+msgid "Feature Post Animation Type"
+msgstr ""
+
+#: inc/admin/admin_welcome.php:121
+msgid "Slide Only"
+msgstr ""
+
+#: inc/admin/admin_welcome.php:122
+msgid "Fade & Slide"
+msgstr ""
+
+#: inc/admin/admin_welcome.php:126
+msgid "Popular Post Number"
+msgstr ""
+
+#: inc/admin/admin_welcome.php:129 inc/admin/admin_welcome.php:272
+msgid "Unlimited"
+msgstr ""
+
+#: inc/admin/admin_welcome.php:133
+msgid "Post Title Font Settings"
+msgstr ""
+
+#: inc/admin/admin_welcome.php:141
+msgid "Post Meta Font Settings"
+msgstr ""
+
+#: inc/admin/admin_welcome.php:148
+msgid "Single Post Title Font Settings"
+msgstr ""
+
+#: inc/admin/admin_welcome.php:155
+msgid "Single Post Meta Font Settings"
+msgstr ""
+
+#: inc/admin/admin_welcome.php:162
+msgid "Navigation Font Settings"
+msgstr ""
+
+#: inc/admin/admin_welcome.php:169
+msgid "Post Advanced Animation"
+msgstr ""
+
+#: inc/admin/admin_welcome.php:171 inc/admin/admin_welcome.php:242
+#: inc/admin/admin_welcome.php:257
+msgid "Fixed"
+msgstr ""
+
+#: inc/admin/admin_welcome.php:172
+msgid "Many"
+msgstr ""
+
+#: inc/admin/admin_welcome.php:176
+msgid "Blog Front/Home page Section heading – Font Settings"
+msgstr ""
+
+#: inc/admin/admin_welcome.php:183
+msgid "Blog Front/Home page Section heading – Align"
+msgstr ""
+
+#: inc/admin/admin_welcome.php:191
+msgid "Popular Post Position"
+msgstr ""
+
+#: inc/admin/admin_welcome.php:193
+msgid "Bottom of Recent Post"
+msgstr ""
+
+#: inc/admin/admin_welcome.php:194 inc/admin/admin_welcome.php:201
+msgid "Top or Bottom"
+msgstr ""
+
+#: inc/admin/admin_welcome.php:198
+msgid "Feature Post Position"
+msgstr ""
+
+#: inc/admin/admin_welcome.php:200
+msgid "Top of Recent Post"
+msgstr ""
+
+#: inc/admin/admin_welcome.php:205
+msgid "Number of Body Font"
+msgstr ""
+
+#: inc/admin/admin_welcome.php:208
+msgid "850+"
+msgstr ""
+
+#: inc/admin/admin_welcome.php:212
+msgid "Woocommerce Section Heading Font Settings"
+msgstr ""
+
+#: inc/admin/admin_welcome.php:219
+msgid "Woocommerce Section Heading Align"
+msgstr ""
+
+#: inc/admin/admin_welcome.php:226
+msgid "Woocommerce title Font Settings"
+msgstr ""
+
+#: inc/admin/admin_welcome.php:233
+msgid "Woocommerce title Heading Align"
+msgstr ""
+
+#: inc/admin/admin_welcome.php:240
+msgid "Woocommerce Banner Position"
+msgstr ""
+
+#: inc/admin/admin_welcome.php:243 inc/admin/admin_welcome.php:258
+msgid "Flexible"
+msgstr ""
+
+#: inc/admin/admin_welcome.php:248
+msgid "Woocommerce Feature Product Slider Number"
+msgstr ""
+
+#: inc/admin/admin_welcome.php:251
+msgid "8"
+msgstr ""
+
+#: inc/admin/admin_welcome.php:255
+msgid "Woocommerce Feature Product Slider Speed"
+msgstr ""
+
+#: inc/admin/admin_welcome.php:262
+msgid "Woocommerce Feature Product Slider Animation Type"
+msgstr ""
+
+#: inc/admin/admin_welcome.php:264 inc/customizer/core.php:3716
+#: inc/customizer/settings/layout.php:161
+msgid "Slide"
+msgstr ""
+
+#: inc/admin/admin_welcome.php:265
+msgid "Slide & Fade"
+msgstr ""
+
+#: inc/admin/admin_welcome.php:269
+msgid "Number of Category in CategoyBox"
+msgstr ""
+
+#: inc/admin/admin_welcome.php:276
+msgid "Number of Product Brand Item"
+msgstr ""
+
+#: inc/admin/admin_welcome.php:278
+msgid "6"
+msgstr ""
+
+#: inc/admin/admin_welcome.php:279
+msgid "10"
+msgstr ""
+
+#: inc/admin/admin_welcome.php:283
+msgid "Product Brand Carousel Speed"
+msgstr ""
+
+#: inc/admin/admin_welcome.php:306 inc/admin/admin_welcome.php:319
+#: inc/admin/admin_welcome.php:332 inc/admin/admin_welcome.php:345
+#: inc/admin/admin_welcome.php:358 inc/admin/admin_welcome.php:371
+#: inc/admin/admin_welcome.php:384 inc/admin/admin_welcome.php:397
+#: inc/admin/admin_welcome.php:410 inc/nl-admin.php:71
+msgid "The Gap Demo"
+msgstr ""
+
+#: inc/admin/admin_welcome.php:312 inc/admin/admin_welcome.php:325
+#: inc/admin/admin_welcome.php:338 inc/admin/admin_welcome.php:351
+#: inc/admin/admin_welcome.php:364 inc/admin/admin_welcome.php:377
+#: inc/admin/admin_welcome.php:390 inc/admin/admin_welcome.php:403
+#: inc/admin/admin_welcome.php:416
+msgid "Preview"
 msgstr ""
 
 #: inc/customizer/controls.php:89
@@ -654,7 +988,7 @@ msgstr ""
 msgid "Product Brand Section Description"
 msgstr ""
 
-#: inc/customizer/core-woo.php:243 inc/woo-function.php:594
+#: inc/customizer/core-woo.php:243 inc/woo-function.php:595
 msgid "Buy One Get One Free"
 msgstr ""
 
@@ -871,7 +1205,7 @@ msgid "Site Background"
 msgstr ""
 
 #: inc/customizer/core.php:63
-msgid "Sidebar Layout"
+msgid "Sidebar & Sidebar Layout"
 msgstr ""
 
 #: inc/customizer/core.php:68
@@ -1188,7 +1522,7 @@ msgid "Content Link Color"
 msgstr ""
 
 #: inc/customizer/core.php:1892
-#: inc/customizer/settings/local/extra/extras.php:52
+#: inc/customizer/settings/local/extra/extras.php:58
 msgid "Post/page content and block button link color"
 msgstr ""
 
@@ -1750,12 +2084,12 @@ msgstr ""
 msgid "Page Layout"
 msgstr ""
 
-#: inc/customizer/core.php:3611 inc/customizer/core.php:3934
-#: inc/customizer/core.php:3946
+#: inc/customizer/core.php:3611 inc/customizer/core.php:3946
+#: inc/customizer/core.php:3958
 msgid "Three"
 msgstr ""
 
-#: inc/customizer/core.php:3612 inc/customizer/core.php:3947
+#: inc/customizer/core.php:3612 inc/customizer/core.php:3959
 msgid "Four"
 msgstr ""
 
@@ -1858,10 +2192,6 @@ msgstr ""
 msgid "Slider Type"
 msgstr ""
 
-#: inc/customizer/core.php:3716 inc/customizer/settings/layout.php:161
-msgid "Slide"
-msgstr ""
-
 #: inc/customizer/core.php:3717
 msgid "Carousel"
 msgstr ""
@@ -1882,7 +2212,7 @@ msgstr ""
 msgid "Number of Column & Layout"
 msgstr ""
 
-#: inc/customizer/core.php:3738 inc/customizer/core.php:3932
+#: inc/customizer/core.php:3738 inc/customizer/core.php:3944
 msgid "One"
 msgstr ""
 
@@ -1890,8 +2220,8 @@ msgstr ""
 msgid "One - Inline"
 msgstr ""
 
-#: inc/customizer/core.php:3740 inc/customizer/core.php:3933
-#: inc/customizer/core.php:3945
+#: inc/customizer/core.php:3740 inc/customizer/core.php:3945
+#: inc/customizer/core.php:3957
 msgid "Two"
 msgstr ""
 
@@ -2006,7 +2336,7 @@ msgstr ""
 #: inc/customizer/core.php:3828 inc/customizer/settings/colors.php:277
 #: inc/customizer/settings/colors.php:423
 #: inc/customizer/settings/colors.php:507
-#: inc/customizer/settings/layout.php:158 inc/extra-function.php:922
+#: inc/customizer/settings/layout.php:158 inc/extra-function.php:938
 #: inc/widgets/ms-author-detail.php:228
 msgid "None"
 msgstr ""
@@ -2103,39 +2433,51 @@ msgstr ""
 msgid "H4"
 msgstr ""
 
-#: inc/customizer/core.php:3917
-msgid "Social Item Target"
+#: inc/customizer/core.php:3916
+msgid "Popular Post Style"
 msgstr ""
 
-#: inc/customizer/core.php:3921
-msgid "Same Window"
+#: inc/customizer/core.php:3920 inc/widgets/ms-author-detail.php:228
+msgid "Style1"
 msgstr ""
 
-#: inc/customizer/core.php:3922
-msgid "New Window"
+#: inc/customizer/core.php:3921 inc/widgets/ms-author-detail.php:228
+msgid "Style2"
 msgstr ""
 
 #: inc/customizer/core.php:3929
-msgid "Number of Link Item"
+msgid "Social Item Target"
+msgstr ""
+
+#: inc/customizer/core.php:3933
+msgid "Same Window"
+msgstr ""
+
+#: inc/customizer/core.php:3934
+msgid "New Window"
 msgstr ""
 
 #: inc/customizer/core.php:3941
+msgid "Number of Link Item"
+msgstr ""
+
+#: inc/customizer/core.php:3953
 msgid "Number of Social Icon"
 msgstr ""
 
-#: inc/customizer/core.php:3948
+#: inc/customizer/core.php:3960
 msgid "Five"
 msgstr ""
 
-#: inc/customizer/core.php:3949
+#: inc/customizer/core.php:3961
 msgid "Six"
 msgstr ""
 
-#: inc/customizer/core.php:3950
+#: inc/customizer/core.php:3962
 msgid "Seven"
 msgstr ""
 
-#: inc/customizer/core.php:3951
+#: inc/customizer/core.php:3963
 msgid "Eight"
 msgstr ""
 
@@ -2458,60 +2800,60 @@ msgid "arrow"
 msgstr ""
 
 #: inc/customizer/settings/input.php:141 inc/customizer/settings/input.php:241
-#: inc/customizer/settings/input.php:250 inc/extra-function.php:773
-#: inc/extra-function.php:810
+#: inc/customizer/settings/input.php:250 inc/extra-function.php:789
+#: inc/extra-function.php:826
 msgid "none"
 msgstr ""
 
-#: inc/customizer/settings/input.php:242 inc/extra-function.php:777
+#: inc/customizer/settings/input.php:242 inc/extra-function.php:793
 msgid "behance"
 msgstr ""
 
-#: inc/customizer/settings/input.php:242 inc/extra-function.php:777
+#: inc/customizer/settings/input.php:242 inc/extra-function.php:793
 msgid "codepen"
 msgstr ""
 
-#: inc/customizer/settings/input.php:242 inc/extra-function.php:778
+#: inc/customizer/settings/input.php:242 inc/extra-function.php:794
 msgid "deviantart"
 msgstr ""
 
-#: inc/customizer/settings/input.php:242 inc/extra-function.php:778
+#: inc/customizer/settings/input.php:242 inc/extra-function.php:794
 msgid "digg"
 msgstr ""
 
-#: inc/customizer/settings/input.php:243 inc/extra-function.php:779
+#: inc/customizer/settings/input.php:243 inc/extra-function.php:795
 msgid "dribbble"
 msgstr ""
 
-#: inc/customizer/settings/input.php:243 inc/extra-function.php:779
+#: inc/customizer/settings/input.php:243 inc/extra-function.php:795
 msgid "dropbox"
 msgstr ""
 
-#: inc/customizer/settings/input.php:243 inc/extra-function.php:780
+#: inc/customizer/settings/input.php:243 inc/extra-function.php:796
 msgid "facebook"
 msgstr ""
 
-#: inc/customizer/settings/input.php:243 inc/extra-function.php:780
+#: inc/customizer/settings/input.php:243 inc/extra-function.php:796
 msgid "flickr"
 msgstr ""
 
-#: inc/customizer/settings/input.php:244 inc/extra-function.php:781
+#: inc/customizer/settings/input.php:244 inc/extra-function.php:797
 msgid "foursquare"
 msgstr ""
 
-#: inc/customizer/settings/input.php:244 inc/extra-function.php:781
+#: inc/customizer/settings/input.php:244 inc/extra-function.php:797
 msgid "google-plus"
 msgstr ""
 
-#: inc/customizer/settings/input.php:244 inc/extra-function.php:782
+#: inc/customizer/settings/input.php:244 inc/extra-function.php:798
 msgid "github"
 msgstr ""
 
-#: inc/customizer/settings/input.php:244 inc/extra-function.php:783
+#: inc/customizer/settings/input.php:244 inc/extra-function.php:799
 msgid "instagram"
 msgstr ""
 
-#: inc/customizer/settings/input.php:245 inc/extra-function.php:784
+#: inc/customizer/settings/input.php:245 inc/extra-function.php:800
 msgid "linkedin"
 msgstr ""
 
@@ -2519,60 +2861,60 @@ msgstr ""
 msgid "envelope-o"
 msgstr ""
 
-#: inc/customizer/settings/input.php:245 inc/extra-function.php:785
+#: inc/customizer/settings/input.php:245 inc/extra-function.php:801
 msgid "medium"
 msgstr ""
 
-#: inc/customizer/settings/input.php:245 inc/extra-function.php:786
+#: inc/customizer/settings/input.php:245 inc/extra-function.php:802
 msgid "pinterest-p"
 msgstr ""
 
-#: inc/customizer/settings/input.php:246 inc/extra-function.php:787
+#: inc/customizer/settings/input.php:246 inc/extra-function.php:803
 msgid "get-pocket"
 msgstr ""
 
-#: inc/customizer/settings/input.php:246 inc/extra-function.php:788
+#: inc/customizer/settings/input.php:246 inc/extra-function.php:804
 msgid "reddit-alien"
 msgstr ""
 
 #: inc/customizer/settings/input.php:246 inc/customizer/settings/input.php:247
-#: inc/extra-function.php:790
+#: inc/extra-function.php:806
 msgid "skype"
 msgstr ""
 
-#: inc/customizer/settings/input.php:247 inc/extra-function.php:790
+#: inc/customizer/settings/input.php:247 inc/extra-function.php:806
 msgid "slideshare"
 msgstr ""
 
-#: inc/customizer/settings/input.php:247 inc/extra-function.php:791
+#: inc/customizer/settings/input.php:247 inc/extra-function.php:807
 msgid "snapchat-ghost"
 msgstr ""
 
-#: inc/customizer/settings/input.php:247 inc/extra-function.php:792
+#: inc/customizer/settings/input.php:247 inc/extra-function.php:808
 msgid "soundcloud"
 msgstr ""
 
-#: inc/customizer/settings/input.php:248 inc/extra-function.php:793
+#: inc/customizer/settings/input.php:248 inc/extra-function.php:809
 msgid "spotify"
 msgstr ""
 
-#: inc/customizer/settings/input.php:248 inc/extra-function.php:794
+#: inc/customizer/settings/input.php:248 inc/extra-function.php:810
 msgid "stumbleupon"
 msgstr ""
 
-#: inc/customizer/settings/input.php:248 inc/extra-function.php:795
+#: inc/customizer/settings/input.php:248 inc/extra-function.php:811
 msgid "tumblr"
 msgstr ""
 
-#: inc/customizer/settings/input.php:248 inc/extra-function.php:796
+#: inc/customizer/settings/input.php:248 inc/extra-function.php:812
 msgid "twitter"
 msgstr ""
 
-#: inc/customizer/settings/input.php:248 inc/extra-function.php:796
+#: inc/customizer/settings/input.php:248 inc/extra-function.php:812
 msgid "vimeo"
 msgstr ""
 
-#: inc/customizer/settings/input.php:248 inc/extra-function.php:797
+#: inc/customizer/settings/input.php:248 inc/extra-function.php:813
 msgid "vine"
 msgstr ""
 
@@ -2580,11 +2922,11 @@ msgstr ""
 msgid "wordpress"
 msgstr ""
 
-#: inc/customizer/settings/input.php:249 inc/extra-function.php:799
+#: inc/customizer/settings/input.php:249 inc/extra-function.php:815
 msgid "yelp"
 msgstr ""
 
-#: inc/customizer/settings/input.php:250 inc/extra-function.php:802
+#: inc/customizer/settings/input.php:250 inc/extra-function.php:818
 msgid "youtube"
 msgstr ""
 
@@ -2638,29 +2980,29 @@ msgstr ""
 msgid "Just another WordPress site"
 msgstr ""
 
-#: inc/customizer/settings/local/extra/extras.php:38
+#: inc/customizer/settings/local/extra/extras.php:44
 msgid ""
 "You have to select \"One column\" or \"One Column-inline\" from \"Number of "
 "Column & Layout\" option before enable this setting."
 msgstr ""
 
-#: inc/customizer/settings/local/extra/extras.php:39
+#: inc/customizer/settings/local/extra/extras.php:45
 msgid ""
 "When you upload logo click on skip cropping button if you want to use actual "
 "size or custom size."
 msgstr ""
 
-#: inc/customizer/settings/local/extra/extras.php:40
+#: inc/customizer/settings/local/extra/extras.php:46
 msgid "if you use % as unit it may fit with mobile devices."
 msgstr ""
 
-#: inc/customizer/settings/local/extra/extras.php:68
+#: inc/customizer/settings/local/extra/extras.php:74
 msgid ""
 "Follow documentation - https://the-gap-docs.themenextlevel.com/background-"
 "color-box-layout/"
 msgstr ""
 
-#: inc/customizer/settings/local/extra/extras.php:69
+#: inc/customizer/settings/local/extra/extras.php:75
 msgid ""
 "Follow documentation - https://the-gap-docs.themenextlevel.com/header-media-"
 "slider/"
@@ -2695,133 +3037,133 @@ msgstr ""
 msgid "BLOG TITLE"
 msgstr ""
 
-#: inc/extra-function.php:774
+#: inc/extra-function.php:790
 msgid "500px"
 msgstr ""
 
-#: inc/extra-function.php:775
+#: inc/extra-function.php:791
 msgid "adn"
 msgstr ""
 
-#: inc/extra-function.php:775
+#: inc/extra-function.php:791
 msgid "amazon"
 msgstr ""
 
-#: inc/extra-function.php:776
+#: inc/extra-function.php:792
 msgid "android"
 msgstr ""
 
-#: inc/extra-function.php:776
+#: inc/extra-function.php:792
 msgid "apple"
 msgstr ""
 
-#: inc/extra-function.php:795
+#: inc/extra-function.php:811
 msgid "twitch"
 msgstr ""
 
-#: inc/extra-function.php:798
+#: inc/extra-function.php:814
 msgid "vk"
 msgstr ""
 
-#: inc/extra-function.php:798
+#: inc/extra-function.php:814
 msgid "WordPress"
 msgstr ""
 
-#: inc/extra-function.php:801
+#: inc/extra-function.php:817
 msgid "tripadvisor"
 msgstr ""
 
-#: inc/extra-function.php:803
+#: inc/extra-function.php:819
 msgid "whatsapp"
 msgstr ""
 
-#: inc/extra-function.php:805
+#: inc/extra-function.php:821
 msgid "amex"
 msgstr ""
 
-#: inc/extra-function.php:805
+#: inc/extra-function.php:821
 msgid "mastercard"
 msgstr ""
 
-#: inc/extra-function.php:805
+#: inc/extra-function.php:821
 msgid "cc-paypal"
 msgstr ""
 
-#: inc/extra-function.php:805
+#: inc/extra-function.php:821
 msgid "stripe"
 msgstr ""
 
-#: inc/extra-function.php:807
+#: inc/extra-function.php:823
 msgid "visa"
 msgstr ""
 
-#: inc/extra-function.php:807
+#: inc/extra-function.php:823
 msgid "credit-card"
 msgstr ""
 
-#: inc/extra-function.php:807
+#: inc/extra-function.php:823
 msgid "google-wallet"
 msgstr ""
 
-#: inc/extra-function.php:807
+#: inc/extra-function.php:823
 msgid "paypal"
 msgstr ""
 
-#: inc/extra-function.php:809
+#: inc/extra-function.php:825
 msgid "discover"
 msgstr ""
 
-#: inc/extra-function.php:809
+#: inc/extra-function.php:825
 msgid "jcb"
 msgstr ""
 
-#: inc/extra-function.php:818
+#: inc/extra-function.php:834
 msgid "Comment navigation"
 msgstr ""
 
-#: inc/extra-function.php:821
+#: inc/extra-function.php:837
 msgid "Older Comments"
 msgstr ""
 
-#: inc/extra-function.php:824
+#: inc/extra-function.php:840
 msgid "Newer Comments"
 msgstr ""
 
-#: inc/extra-function.php:840
+#: inc/extra-function.php:856
 msgid ""
 "<span class=\"meta-nav\">Published in</span><span class=\"post-title\">"
 "%title</span>"
 msgstr ""
 
-#: inc/extra-function.php:845
+#: inc/extra-function.php:861
 msgid "Next"
 msgstr ""
 
-#: inc/extra-function.php:846
+#: inc/extra-function.php:862
 msgid "Next post:"
 msgstr ""
 
-#: inc/extra-function.php:848
+#: inc/extra-function.php:864
 msgid "Previous"
 msgstr ""
 
-#: inc/extra-function.php:849
+#: inc/extra-function.php:865
 msgid "Previous post:"
 msgstr ""
 
-#: inc/extra-function.php:923
+#: inc/extra-function.php:939
 msgid "Double Border"
 msgstr ""
 
-#: inc/extra-function.php:924
+#: inc/extra-function.php:940
 msgid "Border Shadow"
 msgstr ""
 
-#: inc/extra-function.php:925
+#: inc/extra-function.php:941
 msgid "Corner Border"
 msgstr ""
 
-#: inc/extra-function.php:1188
+#: inc/extra-function.php:1204
 msgid "--All--"
 msgstr ""
 
@@ -2853,82 +3195,94 @@ msgstr ""
 msgid "Started with The Gap"
 msgstr ""
 
-#: inc/nl-admin.php:64 inc/nl-admin.php:117 inc/nl-admin.php:144
+#: inc/nl-admin.php:64 inc/nl-admin.php:119 inc/nl-admin.php:150
 msgid "Cheatin&#8217; huh?"
 msgstr ""
 
-#: inc/nl-admin.php:72
-msgid ""
-"Welcome! Thank you for choosing The Gap. Recommended plugin is elementor. In "
-"addition WooCommerce,YITH WooCommerce Quick View,YITH WooCommerce Wishlist "
-"are recommended for E-commerce users."
-msgstr ""
-
 #: inc/nl-admin.php:74
-msgid "Get Started"
+msgid "Welcome! Thank you for choosing The Gap."
 msgstr ""
 
-#: inc/nl-admin.php:88
+#: inc/nl-admin.php:76
+msgid "Get Started with The Gap"
+msgstr ""
+
+#: inc/nl-admin.php:90
 msgid "Get Started with NextLevel"
 msgstr ""
 
-#: inc/nl-admin.php:103
+#: inc/nl-admin.php:105
 msgid "About"
 msgstr ""
 
-#: inc/nl-admin.php:130
+#: inc/nl-admin.php:134
 msgid "Recommended Plugins"
 msgstr ""
 
-#: inc/nl-admin.php:173 inc/nl-admin.php:175
-msgid "Theme Demos"
+#: inc/nl-admin.php:138
+msgid "The Gap Pro vs Free"
 msgstr ""
 
-#: inc/nl-admin.php:174
-msgid "10 Demos are avaible right now."
-msgstr ""
-
-#: inc/nl-admin.php:179 inc/nl-admin.php:181
-msgid "Documentation"
+#: inc/nl-admin.php:179
+msgid "Installation & How to start"
 msgstr ""
 
 #: inc/nl-admin.php:180
+msgid ""
+"Installation detail of theme & plugins are available. Also detail "
+"instructions are\n"
+"\t\t\t\t\t\tavailable how to start blog, e-commerce or company website."
+msgstr ""
+
+#: inc/nl-admin.php:182
+msgid "Install & Start"
+msgstr ""
+
+#: inc/nl-admin.php:186 inc/nl-admin.php:188
+msgid "Theme Demos"
+msgstr ""
+
+#: inc/nl-admin.php:187
+msgid "30 Demos are avaible right now."
+msgstr ""
+
+#: inc/nl-admin.php:194 inc/nl-admin.php:196
+msgid "Documentation"
+msgstr ""
+
+#: inc/nl-admin.php:195
 msgid "Please view our documentation page to setup the theme."
 msgstr ""
 
-#: inc/nl-admin.php:185 inc/nl-admin.php:187
+#: inc/nl-admin.php:200 inc/nl-admin.php:202
 msgid "Theme Support"
 msgstr ""
 
-#: inc/nl-admin.php:186
+#: inc/nl-admin.php:201
 msgid "Please put it in our dedicated support forum."
 msgstr ""
 
-#: inc/nl-admin.php:204
-msgid "Back to Dashboard"
+#: inc/nl-admin.php:236
+msgid "The Gap recommends following plugins."
 msgstr ""
 
-#: inc/nl-admin.php:223
-msgid "This theme recommends following plugins."
-msgstr ""
-
-#: inc/nl-admin.php:225
+#: inc/nl-admin.php:238
 msgid "Elementor Page Builder"
 msgstr ""
 
-#: inc/nl-admin.php:230
-msgid "This theme recommends additional plugins for shop or store users."
+#: inc/nl-admin.php:243
+msgid "The Gap recommends additional plugins for shop or store users."
 msgstr ""
 
-#: inc/nl-admin.php:233
+#: inc/nl-admin.php:246
 msgid "WooCommerce"
 msgstr ""
 
-#: inc/nl-admin.php:234
+#: inc/nl-admin.php:247
 msgid "YITH WooCommerce Quick View"
 msgstr ""
 
-#: inc/nl-admin.php:235
+#: inc/nl-admin.php:248
 msgid "YITH WooCommerce Wishlist"
 msgstr ""
 
@@ -3050,14 +3404,6 @@ msgid "Author Box"
 msgstr ""
 
 #: inc/widgets/ms-author-detail.php:228
-msgid "Style1"
-msgstr ""
-
-#: inc/widgets/ms-author-detail.php:228
-msgid "Style2"
-msgstr ""
-
-#: inc/widgets/ms-author-detail.php:228
 msgid "Style3"
 msgstr ""
 
@@ -3157,14 +3503,6 @@ msgstr ""
 msgid "TG Slides Overlay"
 msgstr ""
 
-#: inc/widgets/slides-overlays.php:143
-msgid "No"
-msgstr ""
-
-#: inc/widgets/slides-overlays.php:143
-msgid "Yes"
-msgstr ""
-
 #: inc/widgets/slides-overlays.php:180
 msgid "Hide Overlay CTA?:"
 msgstr ""
@@ -3221,7 +3559,7 @@ msgstr ""
 msgid "The Gap Product List"
 msgstr ""
 
-#: inc/widgets/wc-widget-products-extended.php:27 inc/woo-function.php:203
+#: inc/widgets/wc-widget-products-extended.php:27 inc/woo-function.php:204
 msgid "Products"
 msgstr ""
 
@@ -3301,27 +3639,27 @@ msgstr ""
 msgid "Number of products to show per slide"
 msgstr ""
 
-#: inc/woo-function.php:57 inc/woo-function.php:99
+#: inc/woo-function.php:57 inc/woo-function.php:100
 msgid "Promo item image"
 msgstr ""
 
-#: inc/woo-function.php:240
+#: inc/woo-function.php:241
 msgid "Total"
 msgstr ""
 
-#: inc/woo-function.php:459
+#: inc/woo-function.php:460
 msgid "- Select a Category -"
 msgstr ""
 
-#: inc/woo-function.php:531
+#: inc/woo-function.php:532
 msgid "woo banner1"
 msgstr ""
 
-#: inc/woo-function.php:652
+#: inc/woo-function.php:653
 msgid "My Account"
 msgstr ""
 
-#: inc/woo-function.php:658
+#: inc/woo-function.php:659
 msgid "Log In/Register"
 msgstr ""
 

@@ -33,6 +33,12 @@
 	$wp_customize->get_section( 'header_image')->description  = '';
 	$wp_customize->get_section('sidebar-layout')->panel  = 'footer';
 	
+	if (class_exists('The_Gap_Pro')){
+		$wp_customize->get_section('mail-subscription')->priority  = 100;
+	
+	}
+	$wp_customize->get_section('gap-page')->priority  = 102;
+	
 	$wp_customize->get_control( 'scroll-up-icon-size')->priority  = 80;
 
 	$wp_customize->get_control( 'enable-related-post-home' )->description =__('You have to select "One column" or "One Column-inline" from "Number of Column & Layout" option before enable this setting.','the-gap');
@@ -68,8 +74,15 @@
 	$wp_customize->get_section( 'background_image')->description =__( 'Follow documentation - https://the-gap-docs.themenextlevel.com/background-color-box-layout/', 'the-gap' );
 	$wp_customize->get_control( 'page-selection-for-slides-heading' )->description =__( 'Follow documentation - https://the-gap-docs.themenextlevel.com/header-media-slider/', 'the-gap' );
 	
+
 	
+	//
 	
+    
+
+
+
+
 	
 	
 
