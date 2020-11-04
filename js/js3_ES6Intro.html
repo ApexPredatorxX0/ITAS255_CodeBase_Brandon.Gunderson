@@ -1,0 +1,139 @@
+<!doctype html>
+<html>
+<head>
+<title>JS Class 3</title>
+
+<script>
+var total = 0;
+
+</script>
+
+
+</head>
+
+<body>
+
+<h1>ES6 Examples - look at the source code!</h1>
+<script>
+
+	// LET and CONST
+
+	var age = 100; 
+	if(age > 12) { 
+		var dogYears = age * 7; 
+		console.log(`You are ${dogYears} dog years old!`); 
+	}
+	// will this work?
+	console.log(dogYears);
+
+	let points = 10;
+	//let points = 20;
+
+	function foo() {
+	  //console.log("Here is x:" + x );
+	  //console.log("Here is y:" + y );
+
+	  var x = 1;
+	  if (x === 1) {
+	    let y = 2;
+	    if (y == 2) {
+	    	console.log("Inner y: " + y);
+	    	let c = 4;
+	    }
+	    //console.log(c)
+	  }
+	  //console.log("Here is y now: " + y);
+	}
+
+	foo();
+	//console.log("Here is x after the function call: " + x );
+
+	const person = { 
+	name: 'Bob', 
+	age: 32 
+	} 
+	person.age = 33;
+	console.log("Adding height");
+	person.height = 5;
+
+	const person2 = { 
+	name: 'Joe', 
+	age: 32 
+	} 
+
+	//person = person2;
+
+
+
+	// TEMPLATE STRINGS
+	var a = 5;
+	var b = 10;
+	console.log('Fifteen is ' + (a + b) + ' and\nnot ' + (2 * a + b) + '.');
+	// "Fifteen is 15 and
+	// not 20."
+
+	// ES6 template string or template literal
+	var a = 5;
+	var b = 10;
+	console.log(`Fifteen is ${a + b} and
+	not ${2 * a + b}.`);
+	// "Fifteen is 15 and
+	// not 20."
+
+	// DESTRUCTURING
+	const obj = { first: 'Jane', last: 'Doe' };
+	const {first: f, last: l} = obj;
+    // f = 'Jane'; l = 'Doe'
+
+	// {prop} is short for {prop: prop}
+	const {first, last} = obj;
+	console.log("First name is: " + first);
+
+
+	// Setup our array
+	const avengers = ['Tony Stark', 'Steve Rogers', 'Natasha Romanoff'];
+
+	// Destructure array into individual variables. The array pattern
+	// is on the left of the assignment (i.e. the '=') and the array being
+	// destructured on the right.
+	const [ironMan, cap, blackWidow] = avengers;
+
+	// ironMan = 'Tony Stark' 
+	// cap = 'Steve Rogers'
+	// blackWidow = 'Natasha Romanoff'
+
+
+	console.log("Iron man is: " + ironMan);
+
+	// ARROW
+
+	varsmartPhones = [
+		{ name:'iphone', price:649 },
+		{ name:'Galaxy S6', price:576 },
+		{ name:'Galaxy Note 5', price:489 }
+		];
+
+	// ES5
+	console.log(smartPhones.map(
+    	function(smartPhone) {
+			return smartPhone.price;
+    	}
+	)); // [649, 576, 489]
+
+	// ES6
+	console.log(smartPhones.map(
+		smartPhone=>smartPhone.price
+	)); // [649, 576, 489]
+	
+
+	var map = new WeakMap();
+	map.set('cat', 'fluffy');
+	map.set('dog','spot');
+
+</script>
+
+
+	
+
+</body>
+</html>

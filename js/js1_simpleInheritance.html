@@ -1,0 +1,92 @@
+<!doctype html>
+
+<head>
+<title>Shapes - ES5 JS Inheritance</title>
+
+<script src="wz_jsgraphics.js"></script>
+<script>
+
+// define the base class Shape
+function Shape(x, y) {
+    this._x = x;
+    this._y = y;
+}
+Shape.prototype._x;
+Shape.prototype._y;
+Shape.prototype.getX = function() {
+	return this._x;
+}
+Shape.prototype.getY = function() {
+	return this._y;
+}
+Shape.prototype.draw = function() {
+    alert("Shape draw should never get called");
+}
+
+// define the Circle class
+Circle.prototype = new Shape();
+Circle.prototype.constructor = Circle;
+
+function Circle(x, y) {
+	this._x = x;
+	this._y = y;
+}
+Circle.prototype.draw = function() {
+
+	var cnv = document.getElementById("myCanvas");
+	var jg = new jsGraphics(cnv);
+
+	jg.setColor("#ff0000"); // red
+	jg.fillEllipse(this._x, this._y, 50, 50); 
+	jg.paint();
+
+	// DC - just demo why z should use var so not global
+	z = 50;
+}
+
+
+function drawCircle(form) {
+	z = 10;
+	console.log("Z is: " + z);
+	var circle = new Circle(parseInt(form.circlex.value), parseInt(form.circley.value));
+	console.log("The type of this object is: " + typeof(circle));
+	console.log(circle);
+	circle.draw();
+	console.log("Z is: " + z);
+}
+
+function drawRectangle() {
+	console.log("RECTANGLE: Not written yet!");
+}
+
+
+
+function drawTriangle() {
+	console.log("TRIANGLE: Not written yet!");
+}
+
+</script>
+</head>
+
+<body>
+
+<h1>Draw Shapes</h1>
+<form name="shapes" action="" method="GET">
+	<input type="button" name="circleButton" value="Draw circle" onClick="drawCircle(this.form)">
+	x: <input type="text" NAME="circlex" SIZE="3" VALUE="">
+	y: <input type="text" NAME="circley" SIZE="3" VALUE="">
+	<br>
+	<input type="button" name="rectangleButton" value="Draw rectangle" onClick="drawRectangle()">
+	x: <input type="text" NAME="rectx" SIZE="3" VALUE="">
+	y: <input type="text" NAME="recty" SIZE="3" VALUE="">
+	<br>
+	<input type="button" name="triangleButton" value="Draw triangle" onClick="drawTriangle()">
+	x: <input type="text" NAME="trianglex" SIZE="3" VALUE="">
+	y: <input type="text" NAME="triangley" SIZE="3" VALUE="">
+	<br>
+</form>
+
+<div id="myCanvas" style="position:relative;height:250px;width:100%;">Drawing region</div>
+
+</body>
+</html>

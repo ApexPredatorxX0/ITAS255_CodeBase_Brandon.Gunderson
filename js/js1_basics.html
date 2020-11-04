@@ -1,0 +1,121 @@
+<!doctype html>
+<html>
+<head>
+  <script>
+
+  </script>
+
+  <style>
+    .red { background: green;}
+  </style>
+</head>
+<body>
+<h1>ES5 JavaScript basics review</h1>
+
+<script>
+
+
+
+  // Here we declare ECMAScript2015 strict mode
+  "use strict";
+
+  // write out a header
+  document.write("<h2>Console logging</h2>");
+  
+  console.log("Hello World");
+	document.write("<p>This is from JS</p>");
+
+
+document.write("<h2>Variables and Scope</h2>");
+  
+  // What does this do?
+  var result = [], // Create a new Array
+      i;
+
+  console.log(result);
+  console.log(i);  // undefined
+
+  // will return a value of undefined
+  var myvar = 'my value';
+  
+  // look at this messy anonymous function   
+  (function() {
+    console.log("CAT"); 
+    var myvar = 'local value';
+  })();
+
+
+
+document.write("<h2>Objects from Literals</h2>");
+
+  var obj = { 
+  name: 'Carrot', 
+    _for: 'Max', 
+    details: { color: 'orange', size: 12 } 
+  }
+
+  //console.log("Here is my object: " + obj);
+  console.log(obj);
+
+  // note there is also a table function
+  console.table(obj);
+
+document.write("<h2>Functions</h2>");
+
+  // note that functions are like objects and also have properties
+  function myFunction(a, b) {
+    return arguments.length;
+  }
+
+  console.log(myFunction(2,3));
+
+document.write("<h2>Loops and iteration</h2>");
+ 
+  for (var step = 0; step < 5; step++) {
+   // Runs 5 times, with values of step 0 through 4.
+    document.write('<p class="red">Walking east one step: ' + step +'</p>');
+  }
+
+  document.write('<br>Labeled loop:<br>');
+  var x = 0;
+  var z = 0;
+  labelCancelLoops: while (true) {
+    console.log('Outer loops: ' + x);
+    x += 1;
+    z = 1;
+    while (true) {
+      console.log('Inner loops: ' + z);
+      z += 1;
+      if (z === 10 && x === 10) {
+        break labelCancelLoops;
+      } else if (z === 10) {
+        break;
+      }
+    }
+  }
+
+document.write("<h2>Document and Window listener example...</h2>");
+
+  document.addEventListener("click", function(e) {
+    console.log("The user clicked at: ");
+    console.log(e);
+  });
+
+  var total = 0;
+  
+  window.addEventListener('keydown', function(e) {
+    // Note this doesn't show the whole object e
+    //console.log("Event from window: " + e);
+
+    // This does!
+    console.log(e);
+
+    var keycode = e.keyCode;
+    total += keycode;
+    console.log('Total is: ' + total);
+  });
+
+</script>
+</body>
+</html>
+

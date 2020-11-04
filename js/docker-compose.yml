@@ -1,0 +1,12 @@
+version: '3.3'
+
+services:
+   node.js:
+     image: node:12
+     working_dir: /usr/src/app
+     # this will map the wordpress files into the current directory 
+     volumes:
+       - .:/usr/src/app
+     ports:
+       - "8081"
+     restart: always

@@ -1,0 +1,155 @@
+<!doctype html>
+<html>
+<head>
+<title>REW302 - JS array demos</title>
+</head>
+<body>
+<h1>JS Array examples</h1>
+<h2>See the console!</h2>
+
+<script>
+
+console.log("ARRAY EXAMPLES");
+
+var arr = [ "hello world", 42, true ];
+arr[0]; // "hello world" 
+arr[1]; // 42 
+arr[2]; // true 
+
+console.log("Length of first array is: " + arr.length);
+console.log(typeof arr); // "object"
+
+
+var arr2 = [ ["cat", "white", 35],
+			 ["mouse", "brown", 0.5],
+			 ["rabbit", "grey", 15]
+		  ];
+
+console.table(arr2);
+
+// how to loop through 2-D array?
+for (var i=0; i<arr2.length; i++) {
+	var innerArr = arr2[i];
+	var nextLine = "";
+	for (var j=0; j<innerArr.length; j++) {
+		// note that i is visible within this for loop
+		nextLine += "[" + i*j + "]\t";
+	}
+	console.log(nextLine);
+}
+
+var arr3 = Array(3);
+// what will this contain?
+console.log(arr3);
+
+var big = 1e3;  // 1x10^3
+console.log("Here is the big number: " + big);
+
+var arr4 = new Array('red', 'green', 'blue');
+console.log(arr4);
+
+// DC: See speed examples at:
+// https://jsperf.com/create-an-array-of-initial-size/2
+
+// splice example
+//
+var vegetables = ['Cabbage', 'Turnip', 'Radish', 'Carrot'];
+console.log(vegetables); 
+// ["Cabbage", "Turnip", "Radish", "Carrot"]
+
+var pos = 1, n = 2;
+
+// this is how to remove items, n defines the number of items to be removed,
+// from that position(pos) onward to the end of array.
+var removedItems = vegetables.splice(pos, n); 
+
+// DC: uncomment
+console.log(vegetables); 
+
+// DC: uncomment
+console.log(removedItems); 
+
+
+
+// example sorting arrays
+var points = [40, 100, 1, 5, 25, 10];
+//points.sort();
+console.log(points);
+
+var names = ['bob', 'zac', 'fred', 'dan'];
+names.sort();
+console.log(names);
+
+
+
+// Note the sort function should return:
+// negative, zero, or positive value, depending on the arguments
+// here we are sorting ascending order from small to large
+// (if a is greater than b return a positive value, indicating it comes after b)
+//
+points.sort(function(a, b){return a - b});
+
+console.log(points);
+
+
+// REFERENCES VS COPY
+console.log("REFERENCE VS COPY EXAMPLES");
+var num1 = 10;
+var num2 = num1;
+console.log(num1, num2);
+
+num1 = 30;
+// DC: uncomment
+console.log(num1, num2);
+
+// So, are numbers copied or referenced?
+// Strings, numbers and booleans work the same
+
+// What about arrays?
+
+var set1 = ['rabbit', 'mouse', 'cat'];
+var set2 = set1;
+console.log(set1, set2);
+
+set2[1] = 'elephant';
+
+// DC: uncomment
+console.log(set1, set2);
+// what will this do?
+
+// DC: if we really want to 'deep copy' an array
+var set3 = set1.slice();
+set3 = Object.assign({}, set1);
+console.log("Here is the copied array");
+console.log(set3);
+
+// What about objects?
+// They are also passed by reference...
+
+var house1 = { 
+	size: 2500,
+	price: 150000,
+	color: "brown",
+	{ toilet: "white" }
+}
+
+var house2 = house1;
+// DC: uncomment
+console.log(house1, house2);
+
+house2.color = "red";
+// DC: uncomment
+console.log(house1, house2);
+
+// If we want to copy?
+//
+var house3 = Object.assign({}, house1);
+house3.color = "green";
+// DC: uncomment
+console.log(house1, house3);
+
+
+</script>
+
+</body>
+</html>
