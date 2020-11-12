@@ -65,9 +65,6 @@ class ITASMapWidget extends WP_Widget {
 </script>
 
 <div id="itasmap" style="width: 800px; height: 600px"></div>
-<a href="#" id="get-data">Attack! (one round)</a>
-<br>
-<a href="#" id="reset">Reset</a>
 
 <div id="show-data"></div>
 
