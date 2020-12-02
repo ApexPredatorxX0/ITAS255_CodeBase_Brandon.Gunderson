@@ -6,11 +6,11 @@
 var admin = require("firebase-admin");
 
 // You will need to point to your own private .json file
-var serviceAccount = require("./private/housenode-5ae6d-firebase-adminsdk-515bs-acc7700b6e.json");
+var serviceAccount = require("./.private/itas255nodefb-firebase-adminsdk-1w707-c14e8dd951.json");
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
-  databaseURL: "https://housenode-5ae6d.firebaseio.com"
+  databaseURL: "https://itas255nodefb.firebaseio.com"
 });
 
 const db = admin.firestore();
