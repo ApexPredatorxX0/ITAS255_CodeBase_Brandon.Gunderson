@@ -39,6 +39,12 @@
 	<% } %>
   >
 
-  <input type="file" name="photos" multiple />
+  <input type="file" name="photos" multiple 
+  
+		<% if (house) { %>
+			value="<%house.photos %>"
+		<% } %>
+ 
+  />
   <button type="submit">Submit</button>
 </form>

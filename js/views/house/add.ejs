@@ -1,3 +1,8 @@
 <h2>Add a new House!</h2>
 
 <%- include('editForm.ejs') -%> 
+
+// create a new Firestore Document
+let newHouse = await db.collection('houses').add({
+  address: req.body.address
+});

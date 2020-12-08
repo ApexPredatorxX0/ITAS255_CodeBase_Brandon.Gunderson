@@ -6,7 +6,7 @@
 var admin = require("firebase-admin");
 
 // You will need to point to your own private .json file
-var serviceAccount = require("./private/housenode-5ae6d-firebase-adminsdk-515bs-acc7700b6e.json");
+var serviceAccount = require("./.private/itas255nodefb-firebase-adminsdk-1w707-c14e8dd951.json");
 
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
@@ -98,7 +98,7 @@ app.get('/house/add', function(req, res) {
 // Route from post when submitting a form to add a new house
 // croftd: note we added the second parameter 'upload' to use multer to 
 // handle the multipart form rather than body-parser
-app.post('/house/add', upload.array('photos', 12), function(req, res) {
+app.post('/house/add', upload.array('photos', 12),async function(req, res) {
    console.log("Processing /house/add route request...");
     
    // note body-parser allows us to access the named inputs in the body
@@ -132,12 +132,27 @@ app.post('/house/add', upload.array('photos', 12), function(req, res) {
    //  location: new admin.firestore.GeoPoint(userLat, userLong)
    // set the data for this Document
 
-   console.log("New house added at address: " + userAddress);
+   let lat = parseFloat(req.body.lat);
+   let long = parseFloat(req.body.long);
+   let geoPoint = new admin.firestore.GeoPoint(lat, long);
+   
+   // create a new Firestore Document
+   //**Amanda notes! under address make sure you add the price , location etc.. */
+   let newHouse = await db.collection('houses').add({
+     address: req.body.address,
+     price: req.body.price,
+     size: req.body.size,
+     description: req.body.description,
+     photos: userPhotos,
+     location: geoPoint
+   }); 
+
+   console.log("New house added at address: " + req.body.address);
    res.redirect('/');
 });	
 
 // EDIT - croftd: This code should be working!
-app.get('/house/edit/:variable', function(req, res) {
+app.get('/house/edit/:variable',async function(req, res) {
 
   console.log("Processing /house/edit request...");
 
@@ -166,7 +181,7 @@ app.get('/house/edit/:variable', function(req, res) {
 
 // UPDATE 
 // is very similar to edit - we need to retrieve a single house by ID
-app.post('/house/update/:variable', function(req, res) {
+app.post('/house/update/:variable', upload.array('photos', 12), function(req, res) {
 
   console.log("Processing /house/update request...");
 
@@ -189,7 +204,23 @@ app.post('/house/update/:variable', function(req, res) {
       // TODO
       // Need to write Google firestore database query to update this house!
 
-      res.send("House at address: " + houseData.address + " updated");
+      let lat = parseFloat(req.body.lat);
+      let long = parseFloat(req.body.long);
+
+      let geoPoint = new admin.firestore.GeoPoint(lat, long);
+      
+      // create a new Firestore Document
+      //**Amanda notes! under address make sure you add the price , location etc.. */
+      let newHouse = db.collection('houses').doc(id).update({
+        address: req.body.address,
+        price: req.body.price,
+        size: req.body.size,
+        description: req.body.description,
+        location: geoPoint
+      }); 
+
+      res.render('header.ejs');
+      //res.render("House at address: " + houseData.address + " updated.");
     }
   })
   .catch(err => {
