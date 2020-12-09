@@ -229,13 +229,15 @@ app.post('/house/update/:variable', upload.array('photos', 12), function(req, re
 });
 
 // DELETE
-app.get('/house/delete/:variable', function(req, res) {
+app.get('/house/delete/:variable', async function(req, res) {
 
     let houseId = req.params.variable;
 
     console.log("Processing /house/delete request for ID: " + houseId);
 
     // TODO: Firebase function to delete the house with specified ID
+  
+    let delResult = await db.collection('houses').doc(houseId).delete();
 
     console.log("House " + houseId + " deleted!");
 
