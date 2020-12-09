@@ -237,13 +237,19 @@ app.get('/house/delete/:variable', async function(req, res) {
 
     // TODO: Firebase function to delete the house with specified ID
   
-    let delResult = await db.collection('houses').doc(houseId).delete();
+  let delResult = await db.collection('houses').doc(houseId).delete();
+  
+  let wasDeleted;
+  if (delResult) {
 
     console.log("House " + houseId + " deleted!");
 
+    wasDeleted = true;
+  } else {
     // croft: we need to remember to change this after we do the 
     // actual delete on Firestore
-    let wasDeleted = false;
+    wasDeleted = false;
+  }
     
     res.render('house/delete.ejs', {id: houseId, success: wasDeleted});
 
