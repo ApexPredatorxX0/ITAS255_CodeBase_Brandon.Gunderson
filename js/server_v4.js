@@ -75,22 +75,6 @@ app.get("/", function(req, res) {
 
       // Note: render defaults to the views folder!
 
-      //. NOTE: this could we be inside a route such as app.get('/map', function (req, res) {
-
-      // ABOVE HERE - you will need to call db to get a list of houses, similar to index. res2 will be the response
-      let houseArray = [];
-      res2.forEach(doc => {
-        // create an object with Document data from Firestore
-        var houseData = doc.data();
-        // we need to add the id field (this is the unique auto generate identifier from Firestore)
-        houseData.id = doc.id;
-        // only add this house to the array if it has houseData
-        if (houseData.location != null && houseData != undefined) {
-          houseArray.push(houseData);
-          console.log(houseData);
-        }
-      });
-
       res.render("index_v4.ejs", {
         houses: houseArray,
         house: null,
